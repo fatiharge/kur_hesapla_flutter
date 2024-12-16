@@ -5,6 +5,7 @@ analyzer:
     - "lib/generated/*.dart"
     - "lib/product/init/lang/*"
     - "lib/product/model*"
+    - "package/kur_hesapla_api_client/**"
 
 linter:
   rules:
