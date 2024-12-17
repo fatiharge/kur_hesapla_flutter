@@ -4,7 +4,6 @@
     "ready_in_seconds": "Saniyeler İçinde Hazır",
     "connecting_to_market": "Piyasaya Bağlanılıyor",
     "preparing_data": "Veriler Hazırlanıyor",
-    "fetching_financial_data": "Finansal Veriler Çekiliyor",
-    "updating_exchange_rates": "Kurlar Güncelleniyor"
+    "fetching_financial_data": "Finansal Veriler Çekiliyor"
   }
 }

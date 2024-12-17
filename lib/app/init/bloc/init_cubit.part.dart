@@ -15,11 +15,11 @@ Future<void> initEasyLoad() async {
 }
 
 Future<void> initializeCurrencyService() async {
-  final instance = CurrencyPriceResourceService();
-  GetIt.I.registerSingleton<CurrencyPriceResourceService>(instance);
+  final instance = CurrencyPriceApiProvider();
+  GetIt.I.registerSingleton<CurrencyPriceApiProvider>(instance);
 }
 
 Future<void> initializeKurHesaplaApi() async {
-  final instance = KurHesaplaApi();
-  GetIt.I.registerSingleton<KurHesaplaApi>(instance);
+  final instance = KurHesaplaClient();
+  GetIt.I.registerSingleton<KurHesaplaClient>(instance);
 }

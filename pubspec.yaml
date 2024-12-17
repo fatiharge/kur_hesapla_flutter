@@ -22,11 +22,13 @@ dependencies:
   auto_route: ^9.2.2
   fluttertoast: ^8.2.8
   flutter_easyloading: ^3.0.5
+  persistent_bottom_nav_bar: ^6.2.1
 
   uikit:
     path: ../uikit
   openapi:
     path: ./package/kur_hesapla_api_client
+  envied: ^1.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -35,6 +37,7 @@ dev_dependencies:
   very_good_analysis: ^5.1.0
   analyzer: ^6.4.1
   build_runner: ^2.4.13
+  envied_generator: ^1.0.0
 
 flutter:
   uses-material-design: true

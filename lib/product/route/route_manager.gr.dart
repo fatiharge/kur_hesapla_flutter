@@ -8,33 +8,54 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i3;
-import 'package:kur_hesapla/app/init/view/init_page.dart' as _i2;
-import 'package:kur_hesapla/page/home/view/home_page.dart' as _i1;
+import 'package:auto_route/auto_route.dart' as _i4;
+import 'package:kur_hesapla/app/init/view/init_page.dart' as _i3;
+import 'package:kur_hesapla/page/home/calculator/view/calculator_page.dart'
+    as _i1;
+import 'package:kur_hesapla/page/home/home_controller.dart' as _i2;
 
 /// generated route for
-/// [_i1.HomePage]
-class HomeRoute extends _i3.PageRouteInfo<void> {
-  const HomeRoute({List<_i3.PageRouteInfo>? children})
+/// [_i1.CalculatorPage]
+class CalculatorRoute extends _i4.PageRouteInfo<void> {
+  const CalculatorRoute({List<_i4.PageRouteInfo>? children})
       : super(
-          HomeRoute.name,
+          CalculatorRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'CalculatorRoute';
 
-  static _i3.PageInfo page = _i3.PageInfo(
+  static _i4.PageInfo page = _i4.PageInfo(
     name,
     builder: (data) {
-      return const _i1.HomePage();
+      return const _i1.CalculatorPage();
     },
   );
 }
 
 /// generated route for
-/// [_i2.InitPage]
-class InitRoute extends _i3.PageRouteInfo<void> {
-  const InitRoute({List<_i3.PageRouteInfo>? children})
+/// [_i2.HomeControllerPage]
+class HomeControllerRoute extends _i4.PageRouteInfo<void> {
+  const HomeControllerRoute({List<_i4.PageRouteInfo>? children})
+      : super(
+          HomeControllerRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeControllerRoute';
+
+  static _i4.PageInfo page = _i4.PageInfo(
+    name,
+    builder: (data) {
+      return const _i2.HomeControllerPage();
+    },
+  );
+}
+
+/// generated route for
+/// [_i3.InitPage]
+class InitRoute extends _i4.PageRouteInfo<void> {
+  const InitRoute({List<_i4.PageRouteInfo>? children})
       : super(
           InitRoute.name,
           initialChildren: children,
@@ -42,10 +63,10 @@ class InitRoute extends _i3.PageRouteInfo<void> {
 
   static const String name = 'InitRoute';
 
-  static _i3.PageInfo page = _i3.PageInfo(
+  static _i4.PageInfo page = _i4.PageInfo(
     name,
     builder: (data) {
-      return const _i2.InitPage();
+      return const _i3.InitPage();
     },
   );
 }

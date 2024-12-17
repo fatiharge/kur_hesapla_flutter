@@ -1,12 +1,9 @@
 import 'package:dio/dio.dart';
+import 'package:kur_hesapla/product/manager/env.dart';
 import 'package:openapi/openapi.dart';
 
-class KurHesaplaApi {
-  KurHesaplaApi() {
-    const apiKey = String.fromEnvironment('KUR_HESAPLA_API_KEY');
-    const apiClientURL = String.fromEnvironment('KUR_HESAPLA_API_CLIENT');
-    const userAgent = String.fromEnvironment('KUR_HESAPLA_USER_AGENT');
-
+class KurHesaplaClient {
+  KurHesaplaClient() {
     _apiClient = Openapi(
       dio: Dio(
         BaseOptions(
@@ -14,12 +11,12 @@ class KurHesaplaApi {
           receiveTimeout: const Duration(milliseconds: 3000),
           contentType: 'application/json',
           headers: {
-            'X-API-KEY': apiKey,
-            'User-Agent': userAgent,
+            'X-API-KEY': Env.kurHesaplaApiKey,
+            'User-Agent': Env.kurHesaplaUserAgent,
           },
         ),
       ),
-      basePathOverride: apiClientURL,
+      basePathOverride: Env.kurHesaplaApiClient,
     );
   }
 

@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get_it/get_it.dart';
-import 'package:kur_hesapla/product/rest/currency_price_resource_service.dart';
-import 'package:kur_hesapla/product/rest/kur_hesapla_api.dart';
+import 'package:kur_hesapla/rest/currency_price_api_provider.dart';
+import 'package:kur_hesapla/rest/kur_hesapla_client.dart';
 
 part 'init_cubit.part.dart';
 
@@ -20,8 +20,12 @@ class InitCubit extends Cubit<int> {
   Future<void> start() async {
     final jobs = [
       initEasyLoad,
-      initializeKurHesaplaApi,
-      initializeCurrencyService,
+      // initializeKurHesaplaApi,
+      // initializeCurrencyService,
+      _wait,
+      _wait,
+      _wait,
+      _wait,
     ];
 
     await executeJobs(jobs);

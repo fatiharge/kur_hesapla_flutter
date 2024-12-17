@@ -11,7 +11,7 @@ class RouteManager extends RootStackRouter {
   List<AutoRoute> get routes => [
         AutoRoute(
           path: '/',
-          page: HomeRoute.page,
+          page: HomeControllerRoute.page,
           initial: true,
         ),
         AutoRoute(path: '/loading', page: InitRoute.page),
