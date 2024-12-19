@@ -1,4 +1,4 @@
-part of 'init_cubit.dart';
+part of 'splash_cubit.dart';
 
 Future<void> _wait() async {
   await Future<void>.delayed(const Duration(milliseconds: 800));

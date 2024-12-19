@@ -6,10 +6,10 @@ import 'package:get_it/get_it.dart';
 import 'package:kur_hesapla/rest/currency_price_api_provider.dart';
 import 'package:kur_hesapla/rest/kur_hesapla_client.dart';
 
-part 'init_cubit.part.dart';
+part 'splash_cubit.part.dart';
 
-class InitCubit extends Cubit<int> {
-  InitCubit() : super(0);
+class SplashCubit extends Cubit<int> {
+  SplashCubit() : super(0);
   static bool initCompleted = false;
 
   void updateValue(int newValue) {

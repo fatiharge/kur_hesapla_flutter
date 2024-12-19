@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:kur_hesapla/app/init/bloc/init_cubit.dart';
+import 'package:kur_hesapla/app/splash/bloc/splash_cubit.dart';
 import 'package:kur_hesapla/generated/locale_keys.g.dart';
 import 'package:kur_hesapla/product/route/route_manager.dart';
 import 'package:kur_hesapla/product/route/route_manager.gr.dart';
@@ -12,14 +12,14 @@ import 'package:uikit/uikit.dart' show CardPaperBadge;
 import 'package:uikit/utility/constant/padding/extension/padding_extension.dart';
 import 'package:uikit/utility/extension/context_extension.dart';
 
-class InitView extends StatelessWidget {
-  InitView({super.key});
+class SplashView extends StatelessWidget {
+  SplashView({super.key});
 
   final loadingTextList = [
     LocaleKeys.loading_speed_and_ease,
     LocaleKeys.loading_connecting_to_market,
     LocaleKeys.loading_preparing_data,
-    LocaleKeys.loading_fetching_financial_data
+    LocaleKeys.loading_fetching_financial_data,
   ];
 
   @override
@@ -56,7 +56,7 @@ class InitView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    BlocBuilder<InitCubit, int>(
+                    BlocBuilder<SplashCubit, int>(
                       builder: (context, state) {
                         if (state == 100) {
                           GetIt.instance<RouteManager>().replace(
