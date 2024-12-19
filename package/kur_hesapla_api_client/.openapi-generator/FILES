@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 analysis_options.yaml
 doc/CurrencyPriceResourceApi.md
@@ -26,9 +25,3 @@ lib/src/model/historical_currency_price.dart
 lib/src/model/meta.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/currency_price_resource_api_test.dart
-test/data_test.dart
-test/find_latest_response_test.dart
-test/historical_currency_price_resource_api_test.dart
-test/historical_currency_price_test.dart
-test/meta_test.dart

@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/date.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,10 +13,14 @@ part 'meta.g.dart';
 ///
 /// Properties:
 /// * [baseCurrency] 
+/// * [createdDate] 
 @BuiltValue()
 abstract class Meta implements Built<Meta, MetaBuilder> {
   @BuiltValueField(wireName: r'baseCurrency')
   String? get baseCurrency;
+
+  @BuiltValueField(wireName: r'createdDate')
+  Date? get createdDate;
 
   Meta._();
 
@@ -47,6 +52,13 @@ class _$MetaSerializer implements PrimitiveSerializer<Meta> {
         specifiedType: const FullType(String),
       );
     }
+    if (object.createdDate != null) {
+      yield r'createdDate';
+      yield serializers.serialize(
+        object.createdDate,
+        specifiedType: const FullType(Date),
+      );
+    }
   }
 
   @override
@@ -76,6 +88,13 @@ class _$MetaSerializer implements PrimitiveSerializer<Meta> {
             specifiedType: const FullType(String),
           ) as String;
           result.baseCurrency = valueDes;
+          break;
+        case r'createdDate':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(Date),
+          ) as Date;
+          result.createdDate = valueDes;
           break;
         default:
           unhandled.add(key);
