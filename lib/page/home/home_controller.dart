@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 
 import 'package:flutter/material.dart';
 import 'package:kur_hesapla/page/home/calculator/view/calculator_page.dart';
+import 'package:kur_hesapla/page/home/chart/view/chart_page.dart';
+import 'package:kur_hesapla/page/home/marked/view/marked_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 @RoutePage()
@@ -13,9 +15,9 @@ class HomeControllerPage extends StatelessWidget {
     return PersistentTabView(
       context,
       screens: const [
-        Placeholder(),
+        ChartPage(),
         CalculatorPage(),
-        Placeholder(),
+        MarkedPage(),
       ],
       items: _navBarsItems(),
       resizeToAvoidBottomInset: true,
