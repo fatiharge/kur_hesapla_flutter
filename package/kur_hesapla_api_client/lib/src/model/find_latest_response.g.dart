@@ -98,7 +98,9 @@ class FindLatestResponseBuilder
     try {
       _$result = _$v ??
           new _$FindLatestResponse._(
-              meta: _meta?.build(), data: _data?.build());
+            meta: _meta?.build(),
+            data: _data?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {

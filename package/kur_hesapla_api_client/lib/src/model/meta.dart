@@ -3,7 +3,6 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/date.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,7 +19,7 @@ abstract class Meta implements Built<Meta, MetaBuilder> {
   String? get baseCurrency;
 
   @BuiltValueField(wireName: r'createdDate')
-  Date? get createdDate;
+  DateTime? get createdDate;
 
   Meta._();
 
@@ -56,7 +55,7 @@ class _$MetaSerializer implements PrimitiveSerializer<Meta> {
       yield r'createdDate';
       yield serializers.serialize(
         object.createdDate,
-        specifiedType: const FullType(Date),
+        specifiedType: const FullType(DateTime),
       );
     }
   }
@@ -92,8 +91,8 @@ class _$MetaSerializer implements PrimitiveSerializer<Meta> {
         case r'createdDate':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(Date),
-          ) as Date;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdDate = valueDes;
           break;
         default:
