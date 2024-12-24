@@ -1,18 +1,18 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kur_hesapla/product/manager/theme_manager.dart';
-import 'package:kur_hesapla/product/route/route_manager.dart';
-import 'package:kur_hesapla/product/theme/theme.dart';
+import 'package:kur_hesapla/main.dart';
+import 'package:kur_hesapla/ui/manager/theme_manager.dart';
+import 'package:kur_hesapla/ui/route/route_manager.dart';
+import 'package:kur_hesapla/ui/theme/theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final _routeManager = GetIt.instance<RouteManager>();
+    final _routeManager = getIt<RouteManager>();
     final textTheme = createTextTheme(context);
     final theme = MaterialTheme(textTheme);
     return AnimatedBuilder(
