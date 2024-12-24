@@ -29,6 +29,10 @@ dependencies:
   openapi:
     path: ./package/kur_hesapla_api_client
   envied: ^1.0.0
+  injectable: ^2.5.0
+  loading_animation_widget: ^1.3.0
+  shimmer: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -38,10 +42,10 @@ dev_dependencies:
   analyzer: ^6.4.1
   build_runner: ^2.4.13
   envied_generator: ^1.0.0
+  injectable_generator: ^2.6.2
 
 flutter:
   uses-material-design: true
   generate: true
   assets:
     - assets/translations/
-    - assets/svg/

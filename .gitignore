@@ -47,5 +47,5 @@ app.*.map.json
 #custom
 .env/
 /pubspec.lock
-/lib/product/manager/env.dart
-/lib/product/manager/env.g.dart
+/lib/env.dart
+/lib/env.g.dart
