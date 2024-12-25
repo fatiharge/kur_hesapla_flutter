@@ -49,3 +49,4 @@ app.*.map.json
 /pubspec.lock
 /lib/env.dart
 /lib/env.g.dart
+/lib/generated/locale_keys.g.dart

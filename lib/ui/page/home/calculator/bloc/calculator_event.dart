@@ -1,8 +1,17 @@
 part of 'calculator_bloc.dart';
 
-@immutable
-sealed class CalculatorEvent {}
+@freezed
+sealed class CalculatorEvent with _$CalculatorEvent {
+  const factory CalculatorEvent.load() = Load;
 
-class LoadEvent extends CalculatorEvent implements base_event.LoadEvent {}
+  @Implements<RefreshEvent>()
+  const factory CalculatorEvent.refresh() = Refresh;
 
-class RefreshEvent extends CalculatorEvent implements base_event.RefreshEvent {}
+  const factory CalculatorEvent.setCurrentCurrency({
+    required CurrencyType currencyType,
+  }) = SetCurrentCurrency;
+
+  const factory CalculatorEvent.setCalculatedCurrency({
+    required CurrencyType currencyType,
+  }) = SetCalculatedCurrency;
+}

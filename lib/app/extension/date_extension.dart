@@ -5,4 +5,6 @@ extension DateTimeExtensions on DateTime? {
     final difference = now.difference(this!);
     return difference.inMinutes <= minutes && difference.isNegative == false;
   }
+
+  String get toLocaleString => this!.toLocal().toString().substring(0, 16);
 }

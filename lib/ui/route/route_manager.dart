@@ -13,8 +13,8 @@ class RouteManager extends RootStackRouter {
           path: '/',
           page: HomeControllerRoute.page,
           initial: true,
-
         ),
+        AutoRoute(path: '/test', page: NewWidgetRoute.page),
         AutoRoute(path: '/splash', page: SplashRoute.page),
       ];
 
