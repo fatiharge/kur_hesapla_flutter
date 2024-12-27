@@ -14,4 +14,14 @@ sealed class CalculatorEvent with _$CalculatorEvent {
   const factory CalculatorEvent.setCalculatedCurrency({
     required CurrencyType currencyType,
   }) = SetCalculatedCurrency;
+
+  const factory CalculatorEvent.setCurrencyValue({
+    required String value,
+  }) = SetCurrencyValue;
+
+  const factory CalculatorEvent.setCalculatedCurrencyValue({
+    required String value,
+  }) = SetCalculatedCurrencyValue;
+
+
 }

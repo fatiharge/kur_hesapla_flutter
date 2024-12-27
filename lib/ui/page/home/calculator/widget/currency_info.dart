@@ -1,25 +1,24 @@
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:kur_hesapla/app/enum/currency_type.dart';
-import 'package:kur_hesapla/app/extension/date_extension.dart';
 import 'package:kur_hesapla/ui/route/route_manager.dart';
 import 'package:kur_hesapla/ui/route/route_manager.gr.dart';
-import 'package:openapi/openapi.dart';
 import 'package:uikit/utility/extension/context_extension.dart';
 
 class CurrencyInfo extends StatelessWidget {
   const CurrencyInfo({
     required this.currencyType,
-    required this.findLatestResponse,
+    required this.time,
+    required this.rate,
     required this.calculatedType,
     super.key,
   });
 
   final CurrencyType currencyType;
   final CurrencyType calculatedType;
-  final FindLatestResponse findLatestResponse;
+  final String time;
+  final String rate;
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +33,7 @@ class CurrencyInfo extends StatelessWidget {
           ),
         ),
         Text(
-          '${currencyType.getCurrencyRate(
-                calculatedType: calculatedType,
-                findLatestResponse: findLatestResponse,
-              ).toStringAsFixed(4)} ${calculatedType.getCurrencyTypeName()}',
+          '$rate ${calculatedType.getCurrencyTypeName()}',
           style: context.textTheme.displaySmall,
         ),
         RichText(
@@ -45,7 +41,8 @@ class CurrencyInfo extends StatelessWidget {
             children: <TextSpan>[
               TextSpan(
                 text:
-                    '${findLatestResponse.meta!.createdDate?.toLocaleString} · ',
+                    // '${findLatestResponse.meta!.createdDate?.toLocaleString} · ',
+                    '$time · ',
                 style: context.textTheme.titleSmall,
               ),
               TextSpan(
@@ -60,7 +57,6 @@ class CurrencyInfo extends StatelessWidget {
                     //   screen: NewWidgetPage(),
                     //   withNavBar: true,
                     // );
-
                   },
                 style: context.textTheme.titleSmall?.copyWith(
                   fontWeight: FontWeight.w300,

@@ -24,28 +24,98 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   }) : super(const CalculatorLoading()) {
     on<Load>(_onLoadEvent);
     on<Refresh>(_onRefreshEvent);
-    on<SetCurrentCurrency>(_onSelectCurrentCurrencyEvent);
-    on<SetCalculatedCurrency>(_onSelectCalculatedCurrencyEvent);
+
+    on<SetCurrentCurrency>(_setCurrentCurrency);
+    on<SetCalculatedCurrency>(_setCalculatedCurrency);
+
+
+    on<SetCurrencyValue>(_setCurrencyValue);
+    on<SetCalculatedCurrencyValue>(_setCalculatedCurrencyValue);
+
   }
 
   final CurrencyPriceResourceApiService currencyPriceResourceApiService;
 
-  FutureOr<void> _onSelectCalculatedCurrencyEvent(
-    SetCalculatedCurrency event,
+  FutureOr<void> _setCurrencyValue(
+    SetCurrencyValue event,
     Emitter<CalculatorState> emit,
   ) {
     final calculatorLoadedState = state as CalculatorLoaded;
 
-    emit(calculatorLoadedState.copyWith(calculatedType: event.currencyType));
+    final value =
+        (double.tryParse(event.value) ?? 0) * calculatorLoadedState.rate;
+
+    final newState = calculatorLoadedState.copyWith(
+      currencyValue: event.value,
+      calculatedValue: value.toStringAsFixed(2),
+    );
+
+    emit(newState);
   }
 
-  FutureOr<void> _onSelectCurrentCurrencyEvent(
+  FutureOr<void> _setCalculatedCurrencyValue(
+    SetCalculatedCurrencyValue event,
+    Emitter<CalculatorState> emit,
+  ) {
+    final calculatorLoadedState = state as CalculatorLoaded;
+
+    final value =
+        (double.tryParse(event.value) ?? 0) / calculatorLoadedState.rate;
+
+    final newState = calculatorLoadedState.copyWith(
+      currencyValue: value.toStringAsFixed(2),
+      calculatedValue: event.value,
+    );
+
+    emit(newState);
+  }
+
+  FutureOr<void> _setCurrentCurrency(
     SetCurrentCurrency event,
     Emitter<CalculatorState> emit,
   ) {
     final calculatorLoadedState = state as CalculatorLoaded;
 
-    emit(calculatorLoadedState.copyWith(currencyType: event.currencyType));
+    final rate = _calculateRate(
+      currencyType: event.currencyType,
+      calculatedType: calculatorLoadedState.calculatedType,
+      findLatestResponse: calculatorLoadedState.findLatestResponse,
+    );
+
+    final calculatedValue =
+        (double.tryParse(calculatorLoadedState.currencyValue) ?? 0) * rate;
+
+    emit(
+      calculatorLoadedState.copyWith(
+        currencyType: event.currencyType,
+        rate: rate,
+        calculatedValue: calculatedValue.toStringAsFixed(2),
+      ),
+    );
+  }
+
+  FutureOr<void> _setCalculatedCurrency(
+    SetCalculatedCurrency event,
+    Emitter<CalculatorState> emit,
+  ) {
+    final calculatorLoadedState = state as CalculatorLoaded;
+
+    final rate = _calculateRate(
+      currencyType: calculatorLoadedState.currencyType,
+      calculatedType: event.currencyType,
+      findLatestResponse: calculatorLoadedState.findLatestResponse,
+    );
+
+    final calculatedValue =
+        (double.tryParse(calculatorLoadedState.currencyValue) ?? 0) * rate;
+
+    emit(
+      calculatorLoadedState.copyWith(
+        calculatedType: event.currencyType,
+        rate: rate,
+        calculatedValue: calculatedValue.toStringAsFixed(2),
+      ),
+    );
   }
 
   FutureOr<void> _onRefreshEvent(
@@ -64,13 +134,33 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     final findLatestResponse =
         await currencyPriceResourceApiService.getFindLatestResponse();
 
-    final calculatorLoaded =
-        CalculatorLoaded(findLatestResponse: findLatestResponse);
+    final rate = double.parse(findLatestResponse.data!.EUR!);
+
+    final calculatorLoaded = CalculatorLoaded(
+      findLatestResponse: findLatestResponse,
+      rate: rate,
+    );
 
     try {
       emit(calculatorLoaded);
     } on Exception catch (e) {
       emit(CalculatorError(exception: e));
     }
+  }
+
+  double _calculateRate({
+    required CurrencyType currencyType,
+    required CurrencyType calculatedType,
+    required FindLatestResponse findLatestResponse,
+  }) {
+    final dollarRateSelected = double.parse(
+      currencyType.findValue(findLatestResponse),
+    );
+
+    final dollarRateCalculated = double.parse(
+      calculatedType.findValue(findLatestResponse),
+    );
+
+    return dollarRateCalculated / dollarRateSelected;
   }
 }

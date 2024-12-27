@@ -22,6 +22,8 @@ mixin _$CalculatorEvent {
     required TResult Function() refresh,
     required TResult Function(CurrencyType currencyType) setCurrentCurrency,
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$CalculatorEvent {
     TResult? Function()? refresh,
     TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$CalculatorEvent {
     TResult Function()? refresh,
     TResult Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +54,9 @@ mixin _$CalculatorEvent {
     required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
     required TResult Function(SetCalculatedCurrency value)
         setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +65,9 @@ mixin _$CalculatorEvent {
     TResult? Function(Refresh value)? refresh,
     TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +76,9 @@ mixin _$CalculatorEvent {
     TResult Function(Refresh value)? refresh,
     TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -140,6 +155,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     required TResult Function() refresh,
     required TResult Function(CurrencyType currencyType) setCurrentCurrency,
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
   }) {
     return load();
   }
@@ -151,6 +168,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult? Function()? refresh,
     TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
   }) {
     return load?.call();
   }
@@ -162,6 +181,8 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult Function()? refresh,
     TResult Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -178,6 +199,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
     required TResult Function(SetCalculatedCurrency value)
         setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
   }) {
     return load(this);
   }
@@ -189,6 +213,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult? Function(Refresh value)? refresh,
     TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
   }) {
     return load?.call(this);
   }
@@ -200,6 +227,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult Function(Refresh value)? refresh,
     TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -264,6 +294,8 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     required TResult Function() refresh,
     required TResult Function(CurrencyType currencyType) setCurrentCurrency,
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
   }) {
     return refresh();
   }
@@ -275,6 +307,8 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult? Function()? refresh,
     TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
   }) {
     return refresh?.call();
   }
@@ -286,6 +320,8 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult Function()? refresh,
     TResult Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -302,6 +338,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
     required TResult Function(SetCalculatedCurrency value)
         setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
   }) {
     return refresh(this);
   }
@@ -313,6 +352,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult? Function(Refresh value)? refresh,
     TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
   }) {
     return refresh?.call(this);
   }
@@ -324,6 +366,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult Function(Refresh value)? refresh,
     TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -421,6 +466,8 @@ class _$SetCurrentCurrencyImpl
     required TResult Function() refresh,
     required TResult Function(CurrencyType currencyType) setCurrentCurrency,
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
   }) {
     return setCurrentCurrency(currencyType);
   }
@@ -432,6 +479,8 @@ class _$SetCurrentCurrencyImpl
     TResult? Function()? refresh,
     TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
   }) {
     return setCurrentCurrency?.call(currencyType);
   }
@@ -443,6 +492,8 @@ class _$SetCurrentCurrencyImpl
     TResult Function()? refresh,
     TResult Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (setCurrentCurrency != null) {
@@ -459,6 +510,9 @@ class _$SetCurrentCurrencyImpl
     required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
     required TResult Function(SetCalculatedCurrency value)
         setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
   }) {
     return setCurrentCurrency(this);
   }
@@ -470,6 +524,9 @@ class _$SetCurrentCurrencyImpl
     TResult? Function(Refresh value)? refresh,
     TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
   }) {
     return setCurrentCurrency?.call(this);
   }
@@ -481,6 +538,9 @@ class _$SetCurrentCurrencyImpl
     TResult Function(Refresh value)? refresh,
     TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (setCurrentCurrency != null) {
@@ -589,6 +649,8 @@ class _$SetCalculatedCurrencyImpl
     required TResult Function() refresh,
     required TResult Function(CurrencyType currencyType) setCurrentCurrency,
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
   }) {
     return setCalculatedCurrency(currencyType);
   }
@@ -600,6 +662,8 @@ class _$SetCalculatedCurrencyImpl
     TResult? Function()? refresh,
     TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
   }) {
     return setCalculatedCurrency?.call(currencyType);
   }
@@ -611,6 +675,8 @@ class _$SetCalculatedCurrencyImpl
     TResult Function()? refresh,
     TResult Function(CurrencyType currencyType)? setCurrentCurrency,
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (setCalculatedCurrency != null) {
@@ -627,6 +693,9 @@ class _$SetCalculatedCurrencyImpl
     required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
     required TResult Function(SetCalculatedCurrency value)
         setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
   }) {
     return setCalculatedCurrency(this);
   }
@@ -638,6 +707,9 @@ class _$SetCalculatedCurrencyImpl
     TResult? Function(Refresh value)? refresh,
     TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
   }) {
     return setCalculatedCurrency?.call(this);
   }
@@ -649,6 +721,9 @@ class _$SetCalculatedCurrencyImpl
     TResult Function(Refresh value)? refresh,
     TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
     TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
     required TResult orElse(),
   }) {
     if (setCalculatedCurrency != null) {
@@ -672,13 +747,382 @@ abstract class SetCalculatedCurrency implements CalculatorEvent {
 }
 
 /// @nodoc
+abstract class _$$SetCurrencyValueImplCopyWith<$Res> {
+  factory _$$SetCurrencyValueImplCopyWith(_$SetCurrencyValueImpl value,
+          $Res Function(_$SetCurrencyValueImpl) then) =
+      __$$SetCurrencyValueImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String value});
+}
+
+/// @nodoc
+class __$$SetCurrencyValueImplCopyWithImpl<$Res>
+    extends _$CalculatorEventCopyWithImpl<$Res, _$SetCurrencyValueImpl>
+    implements _$$SetCurrencyValueImplCopyWith<$Res> {
+  __$$SetCurrencyValueImplCopyWithImpl(_$SetCurrencyValueImpl _value,
+      $Res Function(_$SetCurrencyValueImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$SetCurrencyValueImpl(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetCurrencyValueImpl
+    with DiagnosticableTreeMixin
+    implements SetCurrencyValue {
+  const _$SetCurrencyValueImpl({required this.value});
+
+  @override
+  final String value;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CalculatorEvent.setCurrencyValue(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'CalculatorEvent.setCurrencyValue'))
+      ..add(DiagnosticsProperty('value', value));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetCurrencyValueImpl &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetCurrencyValueImplCopyWith<_$SetCurrencyValueImpl> get copyWith =>
+      __$$SetCurrencyValueImplCopyWithImpl<_$SetCurrencyValueImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() load,
+    required TResult Function() refresh,
+    required TResult Function(CurrencyType currencyType) setCurrentCurrency,
+    required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
+  }) {
+    return setCurrencyValue(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? load,
+    TResult? Function()? refresh,
+    TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
+    TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
+  }) {
+    return setCurrencyValue?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? load,
+    TResult Function()? refresh,
+    TResult Function(CurrencyType currencyType)? setCurrentCurrency,
+    TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
+    required TResult orElse(),
+  }) {
+    if (setCurrencyValue != null) {
+      return setCurrencyValue(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Load value) load,
+    required TResult Function(Refresh value) refresh,
+    required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
+    required TResult Function(SetCalculatedCurrency value)
+        setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
+  }) {
+    return setCurrencyValue(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Load value)? load,
+    TResult? Function(Refresh value)? refresh,
+    TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
+    TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
+  }) {
+    return setCurrencyValue?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Load value)? load,
+    TResult Function(Refresh value)? refresh,
+    TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
+    TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
+    required TResult orElse(),
+  }) {
+    if (setCurrencyValue != null) {
+      return setCurrencyValue(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SetCurrencyValue implements CalculatorEvent {
+  const factory SetCurrencyValue({required final String value}) =
+      _$SetCurrencyValueImpl;
+
+  String get value;
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetCurrencyValueImplCopyWith<_$SetCurrencyValueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SetCalculatedCurrencyValueImplCopyWith<$Res> {
+  factory _$$SetCalculatedCurrencyValueImplCopyWith(
+          _$SetCalculatedCurrencyValueImpl value,
+          $Res Function(_$SetCalculatedCurrencyValueImpl) then) =
+      __$$SetCalculatedCurrencyValueImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String value});
+}
+
+/// @nodoc
+class __$$SetCalculatedCurrencyValueImplCopyWithImpl<$Res>
+    extends _$CalculatorEventCopyWithImpl<$Res,
+        _$SetCalculatedCurrencyValueImpl>
+    implements _$$SetCalculatedCurrencyValueImplCopyWith<$Res> {
+  __$$SetCalculatedCurrencyValueImplCopyWithImpl(
+      _$SetCalculatedCurrencyValueImpl _value,
+      $Res Function(_$SetCalculatedCurrencyValueImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$SetCalculatedCurrencyValueImpl(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetCalculatedCurrencyValueImpl
+    with DiagnosticableTreeMixin
+    implements SetCalculatedCurrencyValue {
+  const _$SetCalculatedCurrencyValueImpl({required this.value});
+
+  @override
+  final String value;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CalculatorEvent.setCalculatedCurrencyValue(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'CalculatorEvent.setCalculatedCurrencyValue'))
+      ..add(DiagnosticsProperty('value', value));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetCalculatedCurrencyValueImpl &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetCalculatedCurrencyValueImplCopyWith<_$SetCalculatedCurrencyValueImpl>
+      get copyWith => __$$SetCalculatedCurrencyValueImplCopyWithImpl<
+          _$SetCalculatedCurrencyValueImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() load,
+    required TResult Function() refresh,
+    required TResult Function(CurrencyType currencyType) setCurrentCurrency,
+    required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
+  }) {
+    return setCalculatedCurrencyValue(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? load,
+    TResult? Function()? refresh,
+    TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
+    TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
+  }) {
+    return setCalculatedCurrencyValue?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? load,
+    TResult Function()? refresh,
+    TResult Function(CurrencyType currencyType)? setCurrentCurrency,
+    TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
+    required TResult orElse(),
+  }) {
+    if (setCalculatedCurrencyValue != null) {
+      return setCalculatedCurrencyValue(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Load value) load,
+    required TResult Function(Refresh value) refresh,
+    required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
+    required TResult Function(SetCalculatedCurrency value)
+        setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
+  }) {
+    return setCalculatedCurrencyValue(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Load value)? load,
+    TResult? Function(Refresh value)? refresh,
+    TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
+    TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
+  }) {
+    return setCalculatedCurrencyValue?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Load value)? load,
+    TResult Function(Refresh value)? refresh,
+    TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
+    TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
+    required TResult orElse(),
+  }) {
+    if (setCalculatedCurrencyValue != null) {
+      return setCalculatedCurrencyValue(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SetCalculatedCurrencyValue implements CalculatorEvent {
+  const factory SetCalculatedCurrencyValue({required final String value}) =
+      _$SetCalculatedCurrencyValueImpl;
+
+  String get value;
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetCalculatedCurrencyValueImplCopyWith<_$SetCalculatedCurrencyValueImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$CalculatorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Exception exception) error,
     required TResult Function() loading,
-    required TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)
+    required TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)
         loaded,
   }) =>
       throw _privateConstructorUsedError;
@@ -686,8 +1130,13 @@ mixin _$CalculatorState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Exception exception)? error,
     TResult? Function()? loading,
-    TResult? Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult? Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
   }) =>
       throw _privateConstructorUsedError;
@@ -695,8 +1144,13 @@ mixin _$CalculatorState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Exception exception)? error,
     TResult Function()? loading,
-    TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
     required TResult orElse(),
   }) =>
@@ -828,8 +1282,13 @@ class _$CalculatorErrorImpl
   TResult when<TResult extends Object?>({
     required TResult Function(Exception exception) error,
     required TResult Function() loading,
-    required TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)
+    required TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)
         loaded,
   }) {
     return error(exception);
@@ -840,8 +1299,13 @@ class _$CalculatorErrorImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Exception exception)? error,
     TResult? Function()? loading,
-    TResult? Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult? Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
   }) {
     return error?.call(exception);
@@ -852,8 +1316,13 @@ class _$CalculatorErrorImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Exception exception)? error,
     TResult Function()? loading,
-    TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
     required TResult orElse(),
   }) {
@@ -962,8 +1431,13 @@ class _$CalculatorLoadingImpl
   TResult when<TResult extends Object?>({
     required TResult Function(Exception exception) error,
     required TResult Function() loading,
-    required TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)
+    required TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)
         loaded,
   }) {
     return loading();
@@ -974,8 +1448,13 @@ class _$CalculatorLoadingImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Exception exception)? error,
     TResult? Function()? loading,
-    TResult? Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult? Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
   }) {
     return loading?.call();
@@ -986,8 +1465,13 @@ class _$CalculatorLoadingImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Exception exception)? error,
     TResult Function()? loading,
-    TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
     required TResult orElse(),
   }) {
@@ -1044,8 +1528,11 @@ abstract class _$$CalculatorLoadedImplCopyWith<$Res> {
   @useResult
   $Res call(
       {FindLatestResponse findLatestResponse,
+      double rate,
       CurrencyType currencyType,
-      CurrencyType calculatedType});
+      CurrencyType calculatedType,
+      String currencyValue,
+      String calculatedValue});
 }
 
 /// @nodoc
@@ -1062,14 +1549,21 @@ class __$$CalculatorLoadedImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? findLatestResponse = null,
+    Object? rate = null,
     Object? currencyType = null,
     Object? calculatedType = null,
+    Object? currencyValue = null,
+    Object? calculatedValue = null,
   }) {
     return _then(_$CalculatorLoadedImpl(
       findLatestResponse: null == findLatestResponse
           ? _value.findLatestResponse
           : findLatestResponse // ignore: cast_nullable_to_non_nullable
               as FindLatestResponse,
+      rate: null == rate
+          ? _value.rate
+          : rate // ignore: cast_nullable_to_non_nullable
+              as double,
       currencyType: null == currencyType
           ? _value.currencyType
           : currencyType // ignore: cast_nullable_to_non_nullable
@@ -1078,6 +1572,14 @@ class __$$CalculatorLoadedImplCopyWithImpl<$Res>
           ? _value.calculatedType
           : calculatedType // ignore: cast_nullable_to_non_nullable
               as CurrencyType,
+      currencyValue: null == currencyValue
+          ? _value.currencyValue
+          : currencyValue // ignore: cast_nullable_to_non_nullable
+              as String,
+      calculatedValue: null == calculatedValue
+          ? _value.calculatedValue
+          : calculatedValue // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1089,21 +1591,32 @@ class _$CalculatorLoadedImpl
     implements CalculatorLoaded {
   const _$CalculatorLoadedImpl(
       {required this.findLatestResponse,
+      required this.rate,
       this.currencyType = CurrencyType.USD,
-      this.calculatedType = CurrencyType.EUR});
+      this.calculatedType = CurrencyType.EUR,
+      this.currencyValue = '0',
+      this.calculatedValue = '0'});
 
   @override
   final FindLatestResponse findLatestResponse;
+  @override
+  final double rate;
   @override
   @JsonKey()
   final CurrencyType currencyType;
   @override
   @JsonKey()
   final CurrencyType calculatedType;
+  @override
+  @JsonKey()
+  final String currencyValue;
+  @override
+  @JsonKey()
+  final String calculatedValue;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CalculatorState.loaded(findLatestResponse: $findLatestResponse, currencyType: $currencyType, calculatedType: $calculatedType)';
+    return 'CalculatorState.loaded(findLatestResponse: $findLatestResponse, rate: $rate, currencyType: $currencyType, calculatedType: $calculatedType, currencyValue: $currencyValue, calculatedValue: $calculatedValue)';
   }
 
   @override
@@ -1112,8 +1625,11 @@ class _$CalculatorLoadedImpl
     properties
       ..add(DiagnosticsProperty('type', 'CalculatorState.loaded'))
       ..add(DiagnosticsProperty('findLatestResponse', findLatestResponse))
+      ..add(DiagnosticsProperty('rate', rate))
       ..add(DiagnosticsProperty('currencyType', currencyType))
-      ..add(DiagnosticsProperty('calculatedType', calculatedType));
+      ..add(DiagnosticsProperty('calculatedType', calculatedType))
+      ..add(DiagnosticsProperty('currencyValue', currencyValue))
+      ..add(DiagnosticsProperty('calculatedValue', calculatedValue));
   }
 
   @override
@@ -1123,15 +1639,20 @@ class _$CalculatorLoadedImpl
             other is _$CalculatorLoadedImpl &&
             (identical(other.findLatestResponse, findLatestResponse) ||
                 other.findLatestResponse == findLatestResponse) &&
+            (identical(other.rate, rate) || other.rate == rate) &&
             (identical(other.currencyType, currencyType) ||
                 other.currencyType == currencyType) &&
             (identical(other.calculatedType, calculatedType) ||
-                other.calculatedType == calculatedType));
+                other.calculatedType == calculatedType) &&
+            (identical(other.currencyValue, currencyValue) ||
+                other.currencyValue == currencyValue) &&
+            (identical(other.calculatedValue, calculatedValue) ||
+                other.calculatedValue == calculatedValue));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, findLatestResponse, currencyType, calculatedType);
+  int get hashCode => Object.hash(runtimeType, findLatestResponse, rate,
+      currencyType, calculatedType, currencyValue, calculatedValue);
 
   /// Create a copy of CalculatorState
   /// with the given fields replaced by the non-null parameter values.
@@ -1147,11 +1668,17 @@ class _$CalculatorLoadedImpl
   TResult when<TResult extends Object?>({
     required TResult Function(Exception exception) error,
     required TResult Function() loading,
-    required TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)
+    required TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)
         loaded,
   }) {
-    return loaded(findLatestResponse, currencyType, calculatedType);
+    return loaded(findLatestResponse, rate, currencyType, calculatedType,
+        currencyValue, calculatedValue);
   }
 
   @override
@@ -1159,11 +1686,17 @@ class _$CalculatorLoadedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Exception exception)? error,
     TResult? Function()? loading,
-    TResult? Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult? Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
   }) {
-    return loaded?.call(findLatestResponse, currencyType, calculatedType);
+    return loaded?.call(findLatestResponse, rate, currencyType, calculatedType,
+        currencyValue, calculatedValue);
   }
 
   @override
@@ -1171,13 +1704,19 @@ class _$CalculatorLoadedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Exception exception)? error,
     TResult Function()? loading,
-    TResult Function(FindLatestResponse findLatestResponse,
-            CurrencyType currencyType, CurrencyType calculatedType)?
+    TResult Function(
+            FindLatestResponse findLatestResponse,
+            double rate,
+            CurrencyType currencyType,
+            CurrencyType calculatedType,
+            String currencyValue,
+            String calculatedValue)?
         loaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(findLatestResponse, currencyType, calculatedType);
+      return loaded(findLatestResponse, rate, currencyType, calculatedType,
+          currencyValue, calculatedValue);
     }
     return orElse();
   }
@@ -1220,12 +1759,18 @@ class _$CalculatorLoadedImpl
 abstract class CalculatorLoaded implements CalculatorState {
   const factory CalculatorLoaded(
       {required final FindLatestResponse findLatestResponse,
+      required final double rate,
       final CurrencyType currencyType,
-      final CurrencyType calculatedType}) = _$CalculatorLoadedImpl;
+      final CurrencyType calculatedType,
+      final String currencyValue,
+      final String calculatedValue}) = _$CalculatorLoadedImpl;
 
   FindLatestResponse get findLatestResponse;
+  double get rate;
   CurrencyType get currencyType;
   CurrencyType get calculatedType;
+  String get currencyValue;
+  String get calculatedValue;
 
   /// Create a copy of CalculatorState
   /// with the given fields replaced by the non-null parameter values.

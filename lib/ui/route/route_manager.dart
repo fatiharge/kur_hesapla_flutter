@@ -11,11 +11,18 @@ class RouteManager extends RootStackRouter {
   List<AutoRoute> get routes => [
         AutoRoute(
           path: '/',
-          page: HomeControllerRoute.page,
+          page: SplashRoute.page,
           initial: true,
         ),
-        AutoRoute(path: '/test', page: NewWidgetRoute.page),
-        AutoRoute(path: '/splash', page: SplashRoute.page),
+        AutoRoute(path: '/home', page: HomeControllerRoute.page),
+        AutoRoute(
+          path: '/home/selectCurrencyPage',
+          page: SelectCurrencyRoute.page,
+        ),
+        AutoRoute(
+          path: '/test',
+          page: NewWidgetRoute.page,
+        ),
       ];
 
   @override

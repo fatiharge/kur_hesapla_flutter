@@ -11,25 +11,21 @@ class CurrencySelectorCard extends StatelessWidget {
     required this.controller,
     required this.currencyType,
     required this.onPressed,
+    this.onChanged,
     super.key,
+    this.initialValue,
   });
 
   final FocusNode focusNode;
-  final TextEditingController controller;
+  final String? initialValue;
+  final TextEditingController? controller;
   final CurrencyType currencyType;
   final void Function() onPressed;
+  final void Function(String value)? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(context.baseRadius.medium),
-        side: BorderSide(
-          color: focusNode.hasFocus
-              ? context.colorScheme.secondary
-              : Colors.transparent,
-        ),
-      ),
       child: Padding(
         padding: context.itemPadding.medium.paddingSymmetricVertical,
         child: Row(
@@ -49,6 +45,8 @@ class CurrencySelectorCard extends StatelessWidget {
                 ),
                 focusNode: focusNode,
                 controller: controller,
+                initialValue: initialValue,
+                onChanged: onChanged,
               ),
             ),
             SizedBox(
