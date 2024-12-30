@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
 import 'package:kur_hesapla/app/enum/currency_type.dart';
 import 'package:kur_hesapla/app/extension/date_extension.dart';
-import 'package:kur_hesapla/ui/extension/base_state_extension.dart';
 import 'package:kur_hesapla/ui/page/home/calculator/bloc/calculator_bloc.dart';
-import 'package:kur_hesapla/ui/page/home/calculator/view/calculator_shimmer.dart';
 import 'package:kur_hesapla/ui/page/home/calculator/widget/currency_info.dart';
 import 'package:kur_hesapla/ui/page/home/calculator/widget/currency_selector_card.dart';
 
-import 'package:kur_hesapla/ui/route/route_manager.dart';
-import 'package:kur_hesapla/ui/route/route_manager.gr.dart';
 import 'package:uikit/utility/constant/padding/extension/padding_extension.dart';
 import 'package:uikit/utility/extension/context_extension.dart';
 import 'package:uikit/utility/extension/spacer_extension.dart';
@@ -29,10 +24,8 @@ class CalculatorView extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: context.pagePadding.small.paddingSymmetricHorizontal,
-          child: context.buildWithState<CalculatorBloc, CalculatorState>(
-            loadingWidget: const CalculatorShimmer(),
-            refreshEvent: const Refresh(),
-            builderWrapper: (context, state) {
+          child: BlocBuilder<CalculatorBloc, CalculatorState>(
+            builder: (context, state) {
               if (state is CalculatorLoaded) {
                 currencyController.value = TextEditingValue(
                   text: state.currencyValue,
@@ -63,7 +56,8 @@ class CalculatorView extends StatelessWidget {
                         context.read<CalculatorBloc>().add(event);
                       },
                       currencyType: state.currencyType,
-                      onPressed: () => selectCurrency(context: context),
+
+                      // onPressed: () => selectCurrency(context: context),
                     ),
                     context.itemPadding.large.spacer,
                     CurrencySelectorCard(
@@ -76,10 +70,7 @@ class CalculatorView extends StatelessWidget {
                         context.read<CalculatorBloc>().add(event);
                       },
                       currencyType: state.calculatedType,
-                      onPressed: () => selectCurrency(
-                        context: context,
-                        isCalculated: true,
-                      ),
+                      isCalculated: true,
                     ),
                     context.itemPadding.xLarge.spacer,
                     Card(
@@ -119,7 +110,7 @@ class CalculatorView extends StatelessWidget {
                     ),
                     context.itemPadding.xLarge.spacer,
                     Text(
-                      "Other Currency", //TODO
+                      "Other Currency",
                       style: context.textTheme.headlineSmall,
                     ),
                     Expanded(
@@ -147,6 +138,8 @@ class CalculatorView extends StatelessWidget {
                             padding: context
                                 .itemPadding.small.paddingSymmetricVertical,
                             child: Card(
+                              // margin: context.itemPadding.xSmall
+                              //     .paddingSymmetricHorizontal,
                               child: ListTile(
                                 leading: Text(currency.name),
                                 title: Text('1 ${state.currencyType.name} = '
@@ -157,36 +150,15 @@ class CalculatorView extends StatelessWidget {
                           );
                         },
                       ),
-                    )
+                    ),
                   ],
                 );
               }
-              return const Placeholder();
+              return const CircularProgressIndicator();
             },
           ),
         ),
       ),
     );
-  }
-
-  Future<void> selectCurrency({
-    required BuildContext context,
-    bool isCalculated = false,
-  }) async {
-    final routeManager = GetIt.instance<RouteManager>();
-
-    final currencyType =
-        await routeManager.push<CurrencyType>(const SelectCurrencyRoute());
-    if (currencyType != null && context.mounted) {
-      final event = isCalculated
-          ? CalculatorEvent.setCalculatedCurrency(
-              currencyType: currencyType,
-            )
-          : CalculatorEvent.setCurrentCurrency(
-              currencyType: currencyType,
-            );
-
-      context.read<CalculatorBloc>().add(event);
-    }
   }
 }

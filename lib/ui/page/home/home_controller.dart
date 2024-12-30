@@ -19,6 +19,7 @@ class HomeControllerPage extends StatelessWidget {
         CalculatorPage(),
         MarkedPage(),
       ],
+      stateManagement: false,
       items: _navBarsItems(),
       resizeToAvoidBottomInset: true,
     );

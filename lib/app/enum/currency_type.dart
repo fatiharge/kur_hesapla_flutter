@@ -585,71 +585,71 @@ extension CurrencyExtension on CurrencyType {
   String getCurrencyTypeName() {
     switch (this) {
       case CurrencyType.AUD:
-        return "Australian Dollar";
+        return 'Australian Dollar';
       case CurrencyType.BGN:
-        return "Bulgarian Lev";
+        return 'Bulgarian Lev';
       case CurrencyType.BRL:
-        return "Brazilian Real";
+        return 'Brazilian Real';
       case CurrencyType.CAD:
-        return "Canadian Dollar";
+        return 'Canadian Dollar';
       case CurrencyType.CHF:
-        return "Swiss Franc";
+        return 'Swiss Franc';
       case CurrencyType.CNY:
-        return "Chinese Yuan";
+        return 'Chinese Yuan';
       case CurrencyType.CZK:
-        return "Czech Koruna";
+        return 'Czech Koruna';
       case CurrencyType.DKK:
-        return "Danish Krone";
+        return 'Danish Krone';
       case CurrencyType.EUR:
-        return "Euro";
+        return 'Euro';
       case CurrencyType.GBP:
-        return "British Pound Sterling";
+        return 'British Pound Sterling';
       case CurrencyType.HKD:
-        return "Hong Kong Dollar";
+        return 'Hong Kong Dollar';
       case CurrencyType.HRK:
-        return "Croatian Kuna";
+        return 'Croatian Kuna';
       case CurrencyType.HUF:
-        return "Hungarian Forint";
+        return 'Hungarian Forint';
       case CurrencyType.IDR:
-        return "Indonesian Rupiah";
+        return 'Indonesian Rupiah';
       case CurrencyType.ILS:
-        return "Israeli New Shekel";
+        return 'Israeli New Shekel';
       case CurrencyType.INR:
-        return "Indian Rupee";
+        return 'Indian Rupee';
       case CurrencyType.ISK:
-        return "Icelandic Króna";
+        return 'Icelandic Króna';
       case CurrencyType.JPY:
-        return "Japanese Yen";
+        return 'Japanese Yen';
       case CurrencyType.KRW:
-        return "South Korean Won";
+        return 'South Korean Won';
       case CurrencyType.MXN:
-        return "Mexican Peso";
+        return 'Mexican Peso';
       case CurrencyType.MYR:
-        return "Malaysian Ringgit";
+        return 'Malaysian Ringgit';
       case CurrencyType.NOK:
-        return "Norwegian Krone";
+        return 'Norwegian Krone';
       case CurrencyType.NZD:
-        return "New Zealand Dollar";
+        return 'New Zealand Dollar';
       case CurrencyType.PHP:
-        return "Philippine Peso";
+        return 'Philippine Peso';
       case CurrencyType.PLN:
-        return "Polish Złoty";
+        return 'Polish Złoty';
       case CurrencyType.RON:
-        return "Romanian Leu";
+        return 'Romanian Leu';
       case CurrencyType.RUB:
-        return "Russian Ruble";
+        return 'Russian Ruble';
       case CurrencyType.SEK:
-        return "Swedish Krona";
+        return 'Swedish Krona';
       case CurrencyType.SGD:
-        return "Singapore Dollar";
+        return 'Singapore Dollar';
       case CurrencyType.THB:
-        return "Thai Baht";
+        return 'Thai Baht';
       case CurrencyType.TRY:
-        return "Turkish Lira";
+        return 'Turkish Lira';
       case CurrencyType.USD:
-        return "United States Dollar";
+        return 'United States Dollar';
       case CurrencyType.ZAR:
-        return "South African Rand";
+        return 'South African Rand';
       case CurrencyType.ADA:
         // TODO: Handle this case.
         return this.name; // todo

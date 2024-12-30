@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kur_hesapla/app/state/global/wrapper/global_state_wrapper.dart';
 import 'package:kur_hesapla/main.dart';
 import 'package:kur_hesapla/ui/manager/theme_manager.dart';
 import 'package:kur_hesapla/ui/route/route_manager.dart';
@@ -30,7 +30,7 @@ class App extends StatelessWidget {
           darkTheme: theme.dark(),
           themeMode: ThemeManager.instance.themeMode,
           routerConfig: _routeManager.config(),
-          builder: EasyLoading.init(),
+          builder: GlobalStateWrapper.init(),
         );
       },
     );

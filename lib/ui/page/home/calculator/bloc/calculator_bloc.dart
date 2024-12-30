@@ -4,11 +4,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kur_hesapla/app/enum/currency_type.dart';
 import 'package:kur_hesapla/app/service/kur_hesapla_client/currency_price_resource_api_service.dart';
-import 'package:kur_hesapla/ui/abstract/base_event.dart';
-import 'package:kur_hesapla/ui/abstract/base_states.dart';
+import 'package:kur_hesapla/app/state/global/bloc/global_bloc.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/view/calculator_shimmer.dart';
 import 'package:openapi/openapi.dart';
 
 part 'calculator_bloc.freezed.dart';
@@ -21,18 +22,18 @@ part 'calculator_state.dart';
 class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   CalculatorBloc({
     required this.currencyPriceResourceApiService,
-  }) : super(const CalculatorLoading()) {
+  }) : super(const CalculatorInitial()) {
     on<Load>(_onLoadEvent);
     on<Refresh>(_onRefreshEvent);
 
     on<SetCurrentCurrency>(_setCurrentCurrency);
     on<SetCalculatedCurrency>(_setCalculatedCurrency);
 
-
     on<SetCurrencyValue>(_setCurrencyValue);
     on<SetCalculatedCurrencyValue>(_setCalculatedCurrencyValue);
-
   }
+
+  final GlobalBloc globalBloc = GetIt.instance<GlobalBloc>();
 
   final CurrencyPriceResourceApiService currencyPriceResourceApiService;
 
@@ -129,8 +130,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     Load event,
     Emitter<CalculatorState> emit,
   ) async {
-    emit(const CalculatorLoading());
-
+    globalBloc.add(const GlobalEvent.load(widget: CalculatorShimmer()));
     final findLatestResponse =
         await currencyPriceResourceApiService.getFindLatestResponse();
 
@@ -140,11 +140,11 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
       findLatestResponse: findLatestResponse,
       rate: rate,
     );
-
     try {
+      globalBloc.add(const GlobalEvent.success());
       emit(calculatorLoaded);
     } on Exception catch (e) {
-      emit(CalculatorError(exception: e));
+      globalBloc.add(GlobalEvent.error(exception: e));
     }
   }
 

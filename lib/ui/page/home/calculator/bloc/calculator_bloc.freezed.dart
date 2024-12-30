@@ -378,7 +378,7 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
   }
 }
 
-abstract class Refresh implements CalculatorEvent, RefreshEvent {
+abstract class Refresh implements CalculatorEvent {
   const factory Refresh() = _$RefreshImpl;
 }
 
@@ -1114,8 +1114,7 @@ abstract class SetCalculatedCurrencyValue implements CalculatorEvent {
 mixin _$CalculatorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Exception exception) error,
-    required TResult Function() loading,
+    required TResult Function() initial,
     required TResult Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1128,8 +1127,7 @@ mixin _$CalculatorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Exception exception)? error,
-    TResult? Function()? loading,
+    TResult? Function()? initial,
     TResult? Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1142,8 +1140,7 @@ mixin _$CalculatorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Exception exception)? error,
-    TResult Function()? loading,
+    TResult Function()? initial,
     TResult Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1157,22 +1154,19 @@ mixin _$CalculatorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorError value) error,
-    required TResult Function(CalculatorLoading value) loading,
+    required TResult Function(CalculatorInitial value) initial,
     required TResult Function(CalculatorLoaded value) loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorError value)? error,
-    TResult? Function(CalculatorLoading value)? loading,
+    TResult? Function(CalculatorInitial value)? initial,
     TResult? Function(CalculatorLoaded value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorError value)? error,
-    TResult Function(CalculatorLoading value)? loading,
+    TResult Function(CalculatorInitial value)? initial,
     TResult Function(CalculatorLoaded value)? loaded,
     required TResult orElse(),
   }) =>
@@ -1201,198 +1195,18 @@ class _$CalculatorStateCopyWithImpl<$Res, $Val extends CalculatorState>
 }
 
 /// @nodoc
-abstract class _$$CalculatorErrorImplCopyWith<$Res> {
-  factory _$$CalculatorErrorImplCopyWith(_$CalculatorErrorImpl value,
-          $Res Function(_$CalculatorErrorImpl) then) =
-      __$$CalculatorErrorImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Exception exception});
+abstract class _$$CalculatorInitialImplCopyWith<$Res> {
+  factory _$$CalculatorInitialImplCopyWith(_$CalculatorInitialImpl value,
+          $Res Function(_$CalculatorInitialImpl) then) =
+      __$$CalculatorInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$CalculatorErrorImplCopyWithImpl<$Res>
-    extends _$CalculatorStateCopyWithImpl<$Res, _$CalculatorErrorImpl>
-    implements _$$CalculatorErrorImplCopyWith<$Res> {
-  __$$CalculatorErrorImplCopyWithImpl(
-      _$CalculatorErrorImpl _value, $Res Function(_$CalculatorErrorImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of CalculatorState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? exception = null,
-  }) {
-    return _then(_$CalculatorErrorImpl(
-      exception: null == exception
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as Exception,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$CalculatorErrorImpl
-    with DiagnosticableTreeMixin
-    implements CalculatorError {
-  const _$CalculatorErrorImpl({required this.exception});
-
-  @override
-  final Exception exception;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CalculatorState.error(exception: $exception)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CalculatorState.error'))
-      ..add(DiagnosticsProperty('exception', exception));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CalculatorErrorImpl &&
-            (identical(other.exception, exception) ||
-                other.exception == exception));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, exception);
-
-  /// Create a copy of CalculatorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CalculatorErrorImplCopyWith<_$CalculatorErrorImpl> get copyWith =>
-      __$$CalculatorErrorImplCopyWithImpl<_$CalculatorErrorImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Exception exception) error,
-    required TResult Function() loading,
-    required TResult Function(
-            FindLatestResponse findLatestResponse,
-            double rate,
-            CurrencyType currencyType,
-            CurrencyType calculatedType,
-            String currencyValue,
-            String calculatedValue)
-        loaded,
-  }) {
-    return error(exception);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Exception exception)? error,
-    TResult? Function()? loading,
-    TResult? Function(
-            FindLatestResponse findLatestResponse,
-            double rate,
-            CurrencyType currencyType,
-            CurrencyType calculatedType,
-            String currencyValue,
-            String calculatedValue)?
-        loaded,
-  }) {
-    return error?.call(exception);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Exception exception)? error,
-    TResult Function()? loading,
-    TResult Function(
-            FindLatestResponse findLatestResponse,
-            double rate,
-            CurrencyType currencyType,
-            CurrencyType calculatedType,
-            String currencyValue,
-            String calculatedValue)?
-        loaded,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error(exception);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorError value) error,
-    required TResult Function(CalculatorLoading value) loading,
-    required TResult Function(CalculatorLoaded value) loaded,
-  }) {
-    return error(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorError value)? error,
-    TResult? Function(CalculatorLoading value)? loading,
-    TResult? Function(CalculatorLoaded value)? loaded,
-  }) {
-    return error?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorError value)? error,
-    TResult Function(CalculatorLoading value)? loading,
-    TResult Function(CalculatorLoaded value)? loaded,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class CalculatorError implements CalculatorState {
-  const factory CalculatorError({required final Exception exception}) =
-      _$CalculatorErrorImpl;
-
-  Exception get exception;
-
-  /// Create a copy of CalculatorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CalculatorErrorImplCopyWith<_$CalculatorErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CalculatorLoadingImplCopyWith<$Res> {
-  factory _$$CalculatorLoadingImplCopyWith(_$CalculatorLoadingImpl value,
-          $Res Function(_$CalculatorLoadingImpl) then) =
-      __$$CalculatorLoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$CalculatorLoadingImplCopyWithImpl<$Res>
-    extends _$CalculatorStateCopyWithImpl<$Res, _$CalculatorLoadingImpl>
-    implements _$$CalculatorLoadingImplCopyWith<$Res> {
-  __$$CalculatorLoadingImplCopyWithImpl(_$CalculatorLoadingImpl _value,
-      $Res Function(_$CalculatorLoadingImpl) _then)
+class __$$CalculatorInitialImplCopyWithImpl<$Res>
+    extends _$CalculatorStateCopyWithImpl<$Res, _$CalculatorInitialImpl>
+    implements _$$CalculatorInitialImplCopyWith<$Res> {
+  __$$CalculatorInitialImplCopyWithImpl(_$CalculatorInitialImpl _value,
+      $Res Function(_$CalculatorInitialImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of CalculatorState
@@ -1401,26 +1215,26 @@ class __$$CalculatorLoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CalculatorLoadingImpl
+class _$CalculatorInitialImpl
     with DiagnosticableTreeMixin
-    implements CalculatorLoading {
-  const _$CalculatorLoadingImpl();
+    implements CalculatorInitial {
+  const _$CalculatorInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CalculatorState.loading()';
+    return 'CalculatorState.initial()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CalculatorState.loading'));
+    properties.add(DiagnosticsProperty('type', 'CalculatorState.initial'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CalculatorLoadingImpl);
+        (other.runtimeType == runtimeType && other is _$CalculatorInitialImpl);
   }
 
   @override
@@ -1429,8 +1243,7 @@ class _$CalculatorLoadingImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Exception exception) error,
-    required TResult Function() loading,
+    required TResult Function() initial,
     required TResult Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1440,14 +1253,13 @@ class _$CalculatorLoadingImpl
             String calculatedValue)
         loaded,
   }) {
-    return loading();
+    return initial();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Exception exception)? error,
-    TResult? Function()? loading,
+    TResult? Function()? initial,
     TResult? Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1457,14 +1269,13 @@ class _$CalculatorLoadingImpl
             String calculatedValue)?
         loaded,
   }) {
-    return loading?.call();
+    return initial?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Exception exception)? error,
-    TResult Function()? loading,
+    TResult Function()? initial,
     TResult Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1475,8 +1286,8 @@ class _$CalculatorLoadingImpl
         loaded,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading();
+    if (initial != null) {
+      return initial();
     }
     return orElse();
   }
@@ -1484,40 +1295,37 @@ class _$CalculatorLoadingImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorError value) error,
-    required TResult Function(CalculatorLoading value) loading,
+    required TResult Function(CalculatorInitial value) initial,
     required TResult Function(CalculatorLoaded value) loaded,
   }) {
-    return loading(this);
+    return initial(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorError value)? error,
-    TResult? Function(CalculatorLoading value)? loading,
+    TResult? Function(CalculatorInitial value)? initial,
     TResult? Function(CalculatorLoaded value)? loaded,
   }) {
-    return loading?.call(this);
+    return initial?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorError value)? error,
-    TResult Function(CalculatorLoading value)? loading,
+    TResult Function(CalculatorInitial value)? initial,
     TResult Function(CalculatorLoaded value)? loaded,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading(this);
+    if (initial != null) {
+      return initial(this);
     }
     return orElse();
   }
 }
 
-abstract class CalculatorLoading implements CalculatorState, LoadingState {
-  const factory CalculatorLoading() = _$CalculatorLoadingImpl;
+abstract class CalculatorInitial implements CalculatorState {
+  const factory CalculatorInitial() = _$CalculatorInitialImpl;
 }
 
 /// @nodoc
@@ -1666,8 +1474,7 @@ class _$CalculatorLoadedImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Exception exception) error,
-    required TResult Function() loading,
+    required TResult Function() initial,
     required TResult Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1684,8 +1491,7 @@ class _$CalculatorLoadedImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Exception exception)? error,
-    TResult? Function()? loading,
+    TResult? Function()? initial,
     TResult? Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1702,8 +1508,7 @@ class _$CalculatorLoadedImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Exception exception)? error,
-    TResult Function()? loading,
+    TResult Function()? initial,
     TResult Function(
             FindLatestResponse findLatestResponse,
             double rate,
@@ -1724,8 +1529,7 @@ class _$CalculatorLoadedImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CalculatorError value) error,
-    required TResult Function(CalculatorLoading value) loading,
+    required TResult Function(CalculatorInitial value) initial,
     required TResult Function(CalculatorLoaded value) loaded,
   }) {
     return loaded(this);
@@ -1734,8 +1538,7 @@ class _$CalculatorLoadedImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CalculatorError value)? error,
-    TResult? Function(CalculatorLoading value)? loading,
+    TResult? Function(CalculatorInitial value)? initial,
     TResult? Function(CalculatorLoaded value)? loaded,
   }) {
     return loaded?.call(this);
@@ -1744,8 +1547,7 @@ class _$CalculatorLoadedImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CalculatorError value)? error,
-    TResult Function(CalculatorLoading value)? loading,
+    TResult Function(CalculatorInitial value)? initial,
     TResult Function(CalculatorLoaded value)? loaded,
     required TResult orElse(),
   }) {

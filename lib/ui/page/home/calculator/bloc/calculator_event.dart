@@ -4,7 +4,6 @@ part of 'calculator_bloc.dart';
 sealed class CalculatorEvent with _$CalculatorEvent {
   const factory CalculatorEvent.load() = Load;
 
-  @Implements<RefreshEvent>()
   const factory CalculatorEvent.refresh() = Refresh;
 
   const factory CalculatorEvent.setCurrentCurrency({

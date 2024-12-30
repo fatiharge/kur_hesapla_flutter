@@ -18,7 +18,7 @@ class SplashCubit extends Cubit<int> {
     configureDependencies();
     final initializationService = GetIt.instance<InitializationService>();
     final jobs = [
-      initializationService.initEasyLoad,
+      // initializationService.initEasyLoad,
       wait,
       wait,
       wait,
