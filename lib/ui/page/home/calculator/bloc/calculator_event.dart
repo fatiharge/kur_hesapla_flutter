@@ -22,5 +22,14 @@ sealed class CalculatorEvent with _$CalculatorEvent {
     required String value,
   }) = SetCalculatedCurrencyValue;
 
+  const factory CalculatorEvent.putMarkedCurrency({
+    required CalculatorLoaded calculatorLoadedState,
+  }) = PutMarkedCurrency;
 
+  const factory CalculatorEvent.removeMarkedCurrency({
+    required int id,
+
+  }) = RemoveMarkedCurrency;
+
+  const factory CalculatorEvent.clearMarked() = ClearMarked;
 }

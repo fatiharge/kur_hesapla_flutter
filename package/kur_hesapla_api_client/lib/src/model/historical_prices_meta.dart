@@ -3,47 +3,66 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/date.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'meta.g.dart';
+part 'historical_prices_meta.g.dart';
 
-/// Meta
+/// HistoricalPricesMeta
 ///
 /// Properties:
+/// * [startDate] 
+/// * [endDate] 
 /// * [baseCurrency] 
-/// * [createdDate] 
 @BuiltValue()
-abstract class Meta implements Built<Meta, MetaBuilder> {
+abstract class HistoricalPricesMeta implements Built<HistoricalPricesMeta, HistoricalPricesMetaBuilder> {
+  @BuiltValueField(wireName: r'startDate')
+  Date? get startDate;
+
+  @BuiltValueField(wireName: r'endDate')
+  Date? get endDate;
+
   @BuiltValueField(wireName: r'baseCurrency')
   String? get baseCurrency;
 
-  @BuiltValueField(wireName: r'createdDate')
-  DateTime? get createdDate;
+  HistoricalPricesMeta._();
 
-  Meta._();
-
-  factory Meta([void updates(MetaBuilder b)]) = _$Meta;
+  factory HistoricalPricesMeta([void updates(HistoricalPricesMetaBuilder b)]) = _$HistoricalPricesMeta;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(MetaBuilder b) => b;
+  static void _defaults(HistoricalPricesMetaBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<Meta> get serializer => _$MetaSerializer();
+  static Serializer<HistoricalPricesMeta> get serializer => _$HistoricalPricesMetaSerializer();
 }
 
-class _$MetaSerializer implements PrimitiveSerializer<Meta> {
+class _$HistoricalPricesMetaSerializer implements PrimitiveSerializer<HistoricalPricesMeta> {
   @override
-  final Iterable<Type> types = const [Meta, _$Meta];
+  final Iterable<Type> types = const [HistoricalPricesMeta, _$HistoricalPricesMeta];
 
   @override
-  final String wireName = r'Meta';
+  final String wireName = r'HistoricalPricesMeta';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    Meta object, {
+    HistoricalPricesMeta object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    if (object.startDate != null) {
+      yield r'startDate';
+      yield serializers.serialize(
+        object.startDate,
+        specifiedType: const FullType(Date),
+      );
+    }
+    if (object.endDate != null) {
+      yield r'endDate';
+      yield serializers.serialize(
+        object.endDate,
+        specifiedType: const FullType(Date),
+      );
+    }
     if (object.baseCurrency != null) {
       yield r'baseCurrency';
       yield serializers.serialize(
@@ -51,19 +70,12 @@ class _$MetaSerializer implements PrimitiveSerializer<Meta> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.createdDate != null) {
-      yield r'createdDate';
-      yield serializers.serialize(
-        object.createdDate,
-        specifiedType: const FullType(DateTime),
-      );
-    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    Meta object, {
+    HistoricalPricesMeta object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -74,26 +86,33 @@ class _$MetaSerializer implements PrimitiveSerializer<Meta> {
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required MetaBuilder result,
+    required HistoricalPricesMetaBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'startDate':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(Date),
+          ) as Date;
+          result.startDate = valueDes;
+          break;
+        case r'endDate':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(Date),
+          ) as Date;
+          result.endDate = valueDes;
+          break;
         case r'baseCurrency':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
           result.baseCurrency = valueDes;
-          break;
-        case r'createdDate':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(DateTime),
-          ) as DateTime;
-          result.createdDate = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -104,12 +123,12 @@ class _$MetaSerializer implements PrimitiveSerializer<Meta> {
   }
 
   @override
-  Meta deserialize(
+  HistoricalPricesMeta deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = MetaBuilder();
+    final result = HistoricalPricesMetaBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

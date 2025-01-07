@@ -1,14 +1,19 @@
 import 'package:test/test.dart';
 import 'package:openapi/openapi.dart';
 
-// tests for Meta
+// tests for FindLatestMeta
 void main() {
-  final instance = MetaBuilder();
+  final instance = FindLatestMetaBuilder();
   // TODO add properties to the builder and call build()
 
-  group(Meta, () {
+  group(FindLatestMeta, () {
     // String baseCurrency
     test('to test the property `baseCurrency`', () async {
+      // TODO
+    });
+
+    // DateTime createdDate
+    test('to test the property `createdDate`', () async {
       // TODO
     });
 

@@ -35,8 +35,8 @@ class CurrencyPriceResourceApi {
   ///
   /// Returns a [Future] containing a [Response] with a [FindLatestResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<FindLatestResponse>> currencyPriceBaseCurrencyGet({ 
-    required String baseCurrency,
+  Future<Response<FindLatestResponse>> currencyPriceGet({ 
+    String? baseCurrency,
     String? userAgent,
     String? X_API_KEY,
     CancelToken? cancelToken,
@@ -46,7 +46,7 @@ class CurrencyPriceResourceApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/currency-price/{baseCurrency}'.replaceAll('{' r'baseCurrency' '}', encodeQueryParameter(_serializers, baseCurrency, const FullType(String)).toString());
+    final _path = r'/currency-price';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -61,9 +61,14 @@ class CurrencyPriceResourceApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (baseCurrency != null) r'baseCurrency': encodeQueryParameter(_serializers, baseCurrency, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:kur_hesapla/app/config/injectable.dart';
-import 'package:kur_hesapla/app/service/initialization_service.dart';
+import 'package:kur_hesapla/service/initialization_service.dart';
 
 class SplashCubit extends Cubit<int> {
   SplashCubit() : super(0);
@@ -17,22 +17,12 @@ class SplashCubit extends Cubit<int> {
   Future<void> start() async {
     configureDependencies();
     final initializationService = GetIt.instance<InitializationService>();
-    final jobs = [
-      // initializationService.initEasyLoad,
-      wait,
-      wait,
-      wait,
-      wait,
-    ];
 
-    await executeJobs(jobs);
+    await executeJobs(initializationService.jobs);
 
     initCompleted = true;
-
-    await wait();
     while (state < 100) {
       updateValue(state + 1);
-      await Future<void>.delayed(const Duration(milliseconds: 100));
     }
   }
 
@@ -47,7 +37,6 @@ class SplashCubit extends Cubit<int> {
     List<Future<void> Function()> functions,
   ) async {
     final jobs = [
-      // await Future<void>.delayed(const Duration(milliseconds: 5000)),
       ...functions,
     ];
 
@@ -66,8 +55,5 @@ class SplashCubit extends Cubit<int> {
     }
   }
 
-  Future<void> wait() async {
-    await Future<void>.delayed(const Duration(milliseconds: 800));
-    // await Future<void>.delayed(const Duration(milliseconds: 100));
-  }
+
 }

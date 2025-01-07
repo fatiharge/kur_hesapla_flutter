@@ -20,8 +20,8 @@ class RouteManager extends RootStackRouter {
           page: SelectCurrencyRoute.page,
         ),
         AutoRoute(
-          path: '/test',
-          page: NewWidgetRoute.page,
+          path: '/disclaimer',
+          page:  DisclaimerRoute.page,
         ),
       ];
 

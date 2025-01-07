@@ -1,943 +1,938 @@
 import 'package:test/test.dart';
 import 'package:openapi/openapi.dart';
 
-// tests for Data
+// tests for FindLatestData
 void main() {
-  final instance = DataBuilder();
+  final instance = FindLatestDataBuilder();
   // TODO add properties to the builder and call build()
 
-  group(Data, () {
-    // String ADA
+  group(FindLatestData, () {
+    // double ADA
     test('to test the property `ADA`', () async {
       // TODO
     });
 
-    // String AED
+    // double AED
     test('to test the property `AED`', () async {
       // TODO
     });
 
-    // String AFN
+    // double AFN
     test('to test the property `AFN`', () async {
       // TODO
     });
 
-    // String ALL
+    // double ALL
     test('to test the property `ALL`', () async {
       // TODO
     });
 
-    // String AMD
+    // double AMD
     test('to test the property `AMD`', () async {
       // TODO
     });
 
-    // String ANG
+    // double ANG
     test('to test the property `ANG`', () async {
       // TODO
     });
 
-    // String AOA
+    // double AOA
     test('to test the property `AOA`', () async {
       // TODO
     });
 
-    // String ARB
+    // double ARB
     test('to test the property `ARB`', () async {
       // TODO
     });
 
-    // String ARS
+    // double ARS
     test('to test the property `ARS`', () async {
       // TODO
     });
 
-    // String AUD
+    // double AUD
     test('to test the property `AUD`', () async {
       // TODO
     });
 
-    // String AVAX
+    // double AVAX
     test('to test the property `AVAX`', () async {
       // TODO
     });
 
-    // String AWG
+    // double AWG
     test('to test the property `AWG`', () async {
       // TODO
     });
 
-    // String AZN
+    // double AZN
     test('to test the property `AZN`', () async {
       // TODO
     });
 
-    // String BAM
+    // double BAM
     test('to test the property `BAM`', () async {
       // TODO
     });
 
-    // String BBD
+    // double BBD
     test('to test the property `BBD`', () async {
       // TODO
     });
 
-    // String BDT
+    // double BDT
     test('to test the property `BDT`', () async {
       // TODO
     });
 
-    // String BGN
+    // double BGN
     test('to test the property `BGN`', () async {
       // TODO
     });
 
-    // String BHD
+    // double BHD
     test('to test the property `BHD`', () async {
       // TODO
     });
 
-    // String BIF
+    // double BIF
     test('to test the property `BIF`', () async {
       // TODO
     });
 
-    // String BMD
+    // double BMD
     test('to test the property `BMD`', () async {
       // TODO
     });
 
-    // String BNB
+    // double BNB
     test('to test the property `BNB`', () async {
       // TODO
     });
 
-    // String BND
+    // double BND
     test('to test the property `BND`', () async {
       // TODO
     });
 
-    // String BOB
+    // double BOB
     test('to test the property `BOB`', () async {
       // TODO
     });
 
-    // String BRL
+    // double BRL
     test('to test the property `BRL`', () async {
       // TODO
     });
 
-    // String BSD
+    // double BSD
     test('to test the property `BSD`', () async {
       // TODO
     });
 
-    // String BTC
+    // double BTC
     test('to test the property `BTC`', () async {
       // TODO
     });
 
-    // String BTN
+    // double BTN
     test('to test the property `BTN`', () async {
       // TODO
     });
 
-    // String BWP
+    // double BWP
     test('to test the property `BWP`', () async {
       // TODO
     });
 
-    // String BYN
+    // double BYN
     test('to test the property `BYN`', () async {
       // TODO
     });
 
-    // String BYR
+    // double BYR
     test('to test the property `BYR`', () async {
       // TODO
     });
 
-    // String BZD
+    // double BZD
     test('to test the property `BZD`', () async {
       // TODO
     });
 
-    // String CAD
+    // double CAD
     test('to test the property `CAD`', () async {
       // TODO
     });
 
-    // String CDF
+    // double CDF
     test('to test the property `CDF`', () async {
       // TODO
     });
 
-    // String CHF
+    // double CHF
     test('to test the property `CHF`', () async {
       // TODO
     });
 
-    // String CLF
-    test('to test the property `CLF`', () async {
-      // TODO
-    });
-
-    // String CLP
+    // double CLP
     test('to test the property `CLP`', () async {
       // TODO
     });
 
-    // String CNY
+    // double CNY
     test('to test the property `CNY`', () async {
       // TODO
     });
 
-    // String COP
+    // double COP
     test('to test the property `COP`', () async {
       // TODO
     });
 
-    // String CRC
+    // double CRC
     test('to test the property `CRC`', () async {
       // TODO
     });
 
-    // String CUC
+    // double CUC
     test('to test the property `CUC`', () async {
       // TODO
     });
 
-    // String CUP
+    // double CUP
     test('to test the property `CUP`', () async {
       // TODO
     });
 
-    // String CVE
+    // double CVE
     test('to test the property `CVE`', () async {
       // TODO
     });
 
-    // String CZK
+    // double CZK
     test('to test the property `CZK`', () async {
       // TODO
     });
 
-    // String DAI
+    // double DAI
     test('to test the property `DAI`', () async {
       // TODO
     });
 
-    // String DJF
+    // double DJF
     test('to test the property `DJF`', () async {
       // TODO
     });
 
-    // String DKK
+    // double DKK
     test('to test the property `DKK`', () async {
       // TODO
     });
 
-    // String DOP
+    // double DOP
     test('to test the property `DOP`', () async {
       // TODO
     });
 
-    // String DOT
+    // double DOT
     test('to test the property `DOT`', () async {
       // TODO
     });
 
-    // String DZD
+    // double DZD
     test('to test the property `DZD`', () async {
       // TODO
     });
 
-    // String EGP
+    // double EGP
     test('to test the property `EGP`', () async {
       // TODO
     });
 
-    // String ERN
+    // double ERN
     test('to test the property `ERN`', () async {
       // TODO
     });
 
-    // String ETB
+    // double ETB
     test('to test the property `ETB`', () async {
       // TODO
     });
 
-    // String ETH
+    // double ETH
     test('to test the property `ETH`', () async {
       // TODO
     });
 
-    // String EUR
+    // double EUR
     test('to test the property `EUR`', () async {
       // TODO
     });
 
-    // String FJD
+    // double FJD
     test('to test the property `FJD`', () async {
       // TODO
     });
 
-    // String FKP
+    // double FKP
     test('to test the property `FKP`', () async {
       // TODO
     });
 
-    // String GBP
+    // double GBP
     test('to test the property `GBP`', () async {
       // TODO
     });
 
-    // String GEL
+    // double GEL
     test('to test the property `GEL`', () async {
       // TODO
     });
 
-    // String GGP
+    // double GGP
     test('to test the property `GGP`', () async {
       // TODO
     });
 
-    // String GHS
+    // double GHS
     test('to test the property `GHS`', () async {
       // TODO
     });
 
-    // String GIP
+    // double GIP
     test('to test the property `GIP`', () async {
       // TODO
     });
 
-    // String GMD
+    // double GMD
     test('to test the property `GMD`', () async {
       // TODO
     });
 
-    // String GNF
+    // double GNF
     test('to test the property `GNF`', () async {
       // TODO
     });
 
-    // String GTQ
+    // double GTQ
     test('to test the property `GTQ`', () async {
       // TODO
     });
 
-    // String GYD
+    // double GYD
     test('to test the property `GYD`', () async {
       // TODO
     });
 
-    // String HKD
+    // double HKD
     test('to test the property `HKD`', () async {
       // TODO
     });
 
-    // String HNL
+    // double HNL
     test('to test the property `HNL`', () async {
       // TODO
     });
 
-    // String HRK
+    // double HRK
     test('to test the property `HRK`', () async {
       // TODO
     });
 
-    // String HTG
+    // double HTG
     test('to test the property `HTG`', () async {
       // TODO
     });
 
-    // String HUF
+    // double HUF
     test('to test the property `HUF`', () async {
       // TODO
     });
 
-    // String IDR
+    // double IDR
     test('to test the property `IDR`', () async {
       // TODO
     });
 
-    // String ILS
+    // double ILS
     test('to test the property `ILS`', () async {
       // TODO
     });
 
-    // String IMP
+    // double IMP
     test('to test the property `IMP`', () async {
       // TODO
     });
 
-    // String INR
+    // double INR
     test('to test the property `INR`', () async {
       // TODO
     });
 
-    // String IQD
+    // double IQD
     test('to test the property `IQD`', () async {
       // TODO
     });
 
-    // String IRR
+    // double IRR
     test('to test the property `IRR`', () async {
       // TODO
     });
 
-    // String ISK
+    // double ISK
     test('to test the property `ISK`', () async {
       // TODO
     });
 
-    // String JEP
+    // double JEP
     test('to test the property `JEP`', () async {
       // TODO
     });
 
-    // String JMD
+    // double JMD
     test('to test the property `JMD`', () async {
       // TODO
     });
 
-    // String JOD
+    // double JOD
     test('to test the property `JOD`', () async {
       // TODO
     });
 
-    // String JPY
+    // double JPY
     test('to test the property `JPY`', () async {
       // TODO
     });
 
-    // String KES
+    // double KES
     test('to test the property `KES`', () async {
       // TODO
     });
 
-    // String KGS
+    // double KGS
     test('to test the property `KGS`', () async {
       // TODO
     });
 
-    // String KHR
+    // double KHR
     test('to test the property `KHR`', () async {
       // TODO
     });
 
-    // String KMF
+    // double KMF
     test('to test the property `KMF`', () async {
       // TODO
     });
 
-    // String KPW
+    // double KPW
     test('to test the property `KPW`', () async {
       // TODO
     });
 
-    // String KRW
+    // double KRW
     test('to test the property `KRW`', () async {
       // TODO
     });
 
-    // String KWD
+    // double KWD
     test('to test the property `KWD`', () async {
       // TODO
     });
 
-    // String KYD
+    // double KYD
     test('to test the property `KYD`', () async {
       // TODO
     });
 
-    // String KZT
+    // double KZT
     test('to test the property `KZT`', () async {
       // TODO
     });
 
-    // String LAK
+    // double LAK
     test('to test the property `LAK`', () async {
       // TODO
     });
 
-    // String LBP
+    // double LBP
     test('to test the property `LBP`', () async {
       // TODO
     });
 
-    // String LKR
+    // double LKR
     test('to test the property `LKR`', () async {
       // TODO
     });
 
-    // String LRD
+    // double LRD
     test('to test the property `LRD`', () async {
       // TODO
     });
 
-    // String LSL
+    // double LSL
     test('to test the property `LSL`', () async {
       // TODO
     });
 
-    // String LTC
+    // double LTC
     test('to test the property `LTC`', () async {
       // TODO
     });
 
-    // String LTL
+    // double LTL
     test('to test the property `LTL`', () async {
       // TODO
     });
 
-    // String LVL
+    // double LVL
     test('to test the property `LVL`', () async {
       // TODO
     });
 
-    // String LYD
+    // double LYD
     test('to test the property `LYD`', () async {
       // TODO
     });
 
-    // String MAD
+    // double MAD
     test('to test the property `MAD`', () async {
       // TODO
     });
 
-    // String MATIC
+    // double MATIC
     test('to test the property `MATIC`', () async {
       // TODO
     });
 
-    // String MDL
+    // double MDL
     test('to test the property `MDL`', () async {
       // TODO
     });
 
-    // String MGA
+    // double MGA
     test('to test the property `MGA`', () async {
       // TODO
     });
 
-    // String MKD
+    // double MKD
     test('to test the property `MKD`', () async {
       // TODO
     });
 
-    // String MMK
+    // double MMK
     test('to test the property `MMK`', () async {
       // TODO
     });
 
-    // String MNT
+    // double MNT
     test('to test the property `MNT`', () async {
       // TODO
     });
 
-    // String MOP
+    // double MOP
     test('to test the property `MOP`', () async {
       // TODO
     });
 
-    // String MRO
+    // double MRO
     test('to test the property `MRO`', () async {
       // TODO
     });
 
-    // String MRU
+    // double MRU
     test('to test the property `MRU`', () async {
       // TODO
     });
 
-    // String MUR
+    // double MUR
     test('to test the property `MUR`', () async {
       // TODO
     });
 
-    // String MVR
+    // double MVR
     test('to test the property `MVR`', () async {
       // TODO
     });
 
-    // String MWK
+    // double MWK
     test('to test the property `MWK`', () async {
       // TODO
     });
 
-    // String MXN
+    // double MXN
     test('to test the property `MXN`', () async {
       // TODO
     });
 
-    // String MYR
+    // double MYR
     test('to test the property `MYR`', () async {
       // TODO
     });
 
-    // String MZN
+    // double MZN
     test('to test the property `MZN`', () async {
       // TODO
     });
 
-    // String NAD
+    // double NAD
     test('to test the property `NAD`', () async {
       // TODO
     });
 
-    // String NGN
+    // double NGN
     test('to test the property `NGN`', () async {
       // TODO
     });
 
-    // String NIO
+    // double NIO
     test('to test the property `NIO`', () async {
       // TODO
     });
 
-    // String NOK
+    // double NOK
     test('to test the property `NOK`', () async {
       // TODO
     });
 
-    // String NPR
+    // double NPR
     test('to test the property `NPR`', () async {
       // TODO
     });
 
-    // String NZD
+    // double NZD
     test('to test the property `NZD`', () async {
       // TODO
     });
 
-    // String OMR
+    // double OMR
     test('to test the property `OMR`', () async {
       // TODO
     });
 
-    // String OP
+    // double OP
     test('to test the property `OP`', () async {
       // TODO
     });
 
-    // String PAB
+    // double PAB
     test('to test the property `PAB`', () async {
       // TODO
     });
 
-    // String PEN
+    // double PEN
     test('to test the property `PEN`', () async {
       // TODO
     });
 
-    // String PGK
+    // double PGK
     test('to test the property `PGK`', () async {
       // TODO
     });
 
-    // String PHP
+    // double PHP
     test('to test the property `PHP`', () async {
       // TODO
     });
 
-    // String PKR
+    // double PKR
     test('to test the property `PKR`', () async {
       // TODO
     });
 
-    // String PLN
+    // double PLN
     test('to test the property `PLN`', () async {
       // TODO
     });
 
-    // String PYG
+    // double PYG
     test('to test the property `PYG`', () async {
       // TODO
     });
 
-    // String QAR
+    // double QAR
     test('to test the property `QAR`', () async {
       // TODO
     });
 
-    // String RON
+    // double RON
     test('to test the property `RON`', () async {
       // TODO
     });
 
-    // String RSD
+    // double RSD
     test('to test the property `RSD`', () async {
       // TODO
     });
 
-    // String RUB
+    // double RUB
     test('to test the property `RUB`', () async {
       // TODO
     });
 
-    // String RWF
+    // double RWF
     test('to test the property `RWF`', () async {
       // TODO
     });
 
-    // String SAR
+    // double SAR
     test('to test the property `SAR`', () async {
       // TODO
     });
 
-    // String SBD
+    // double SBD
     test('to test the property `SBD`', () async {
       // TODO
     });
 
-    // String SCR
+    // double SCR
     test('to test the property `SCR`', () async {
       // TODO
     });
 
-    // String SDG
+    // double SDG
     test('to test the property `SDG`', () async {
       // TODO
     });
 
-    // String SEK
+    // double SEK
     test('to test the property `SEK`', () async {
       // TODO
     });
 
-    // String SGD
+    // double SGD
     test('to test the property `SGD`', () async {
       // TODO
     });
 
-    // String SHP
+    // double SHP
     test('to test the property `SHP`', () async {
       // TODO
     });
 
-    // String SLL
+    // double SLL
     test('to test the property `SLL`', () async {
       // TODO
     });
 
-    // String SOL
+    // double SOL
     test('to test the property `SOL`', () async {
       // TODO
     });
 
-    // String SOS
+    // double SOS
     test('to test the property `SOS`', () async {
       // TODO
     });
 
-    // String SRD
+    // double SRD
     test('to test the property `SRD`', () async {
       // TODO
     });
 
-    // String STD
+    // double STD
     test('to test the property `STD`', () async {
       // TODO
     });
 
-    // String STN
+    // double STN
     test('to test the property `STN`', () async {
       // TODO
     });
 
-    // String SVC
+    // double SVC
     test('to test the property `SVC`', () async {
       // TODO
     });
 
-    // String SYP
+    // double SYP
     test('to test the property `SYP`', () async {
       // TODO
     });
 
-    // String SZL
+    // double SZL
     test('to test the property `SZL`', () async {
       // TODO
     });
 
-    // String THB
+    // double THB
     test('to test the property `THB`', () async {
       // TODO
     });
 
-    // String TJS
+    // double TJS
     test('to test the property `TJS`', () async {
       // TODO
     });
 
-    // String TMT
+    // double TMT
     test('to test the property `TMT`', () async {
       // TODO
     });
 
-    // String TND
+    // double TND
     test('to test the property `TND`', () async {
       // TODO
     });
 
-    // String TOP
+    // double TOP
     test('to test the property `TOP`', () async {
       // TODO
     });
 
-    // String TRY
+    // double TRY
     test('to test the property `TRY`', () async {
       // TODO
     });
 
-    // String TTD
+    // double TTD
     test('to test the property `TTD`', () async {
       // TODO
     });
 
-    // String TWD
+    // double TWD
     test('to test the property `TWD`', () async {
       // TODO
     });
 
-    // String TZS
+    // double TZS
     test('to test the property `TZS`', () async {
       // TODO
     });
 
-    // String UAH
+    // double UAH
     test('to test the property `UAH`', () async {
       // TODO
     });
 
-    // String UGX
+    // double UGX
     test('to test the property `UGX`', () async {
       // TODO
     });
 
-    // String USD
+    // double USD
     test('to test the property `USD`', () async {
       // TODO
     });
 
-    // String USDC
+    // double USDC
     test('to test the property `USDC`', () async {
       // TODO
     });
 
-    // String USDT
+    // double USDT
     test('to test the property `USDT`', () async {
       // TODO
     });
 
-    // String UYU
+    // double UYU
     test('to test the property `UYU`', () async {
       // TODO
     });
 
-    // String UZS
+    // double UZS
     test('to test the property `UZS`', () async {
       // TODO
     });
 
-    // String VEF
+    // double VEF
     test('to test the property `VEF`', () async {
       // TODO
     });
 
-    // String VES
+    // double VES
     test('to test the property `VES`', () async {
       // TODO
     });
 
-    // String VND
+    // double VND
     test('to test the property `VND`', () async {
       // TODO
     });
 
-    // String VUV
+    // double VUV
     test('to test the property `VUV`', () async {
       // TODO
     });
 
-    // String WST
+    // double WST
     test('to test the property `WST`', () async {
       // TODO
     });
 
-    // String XAF
+    // double XAF
     test('to test the property `XAF`', () async {
       // TODO
     });
 
-    // String XAG
+    // double XAG
     test('to test the property `XAG`', () async {
       // TODO
     });
 
-    // String XAU
+    // double XAU
     test('to test the property `XAU`', () async {
       // TODO
     });
 
-    // String XCD
+    // double XCD
     test('to test the property `XCD`', () async {
       // TODO
     });
 
-    // String XDR
+    // double XDR
     test('to test the property `XDR`', () async {
       // TODO
     });
 
-    // String XOF
+    // double XOF
     test('to test the property `XOF`', () async {
       // TODO
     });
 
-    // String XPD
+    // double XPD
     test('to test the property `XPD`', () async {
       // TODO
     });
 
-    // String XPF
+    // double XPF
     test('to test the property `XPF`', () async {
       // TODO
     });
 
-    // String XPT
+    // double XPT
     test('to test the property `XPT`', () async {
       // TODO
     });
 
-    // String XRP
+    // double XRP
     test('to test the property `XRP`', () async {
       // TODO
     });
 
-    // String YER
+    // double YER
     test('to test the property `YER`', () async {
       // TODO
     });
 
-    // String ZAR
+    // double ZAR
     test('to test the property `ZAR`', () async {
       // TODO
     });
 
-    // String ZMK
+    // double ZMK
     test('to test the property `ZMK`', () async {
       // TODO
     });
 
-    // String ZMW
+    // double ZMW
     test('to test the property `ZMW`', () async {
       // TODO
     });
 
-    // String ZWL
+    // double ZWL
     test('to test the property `ZWL`', () async {
       // TODO
     });

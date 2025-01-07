@@ -24,58 +24,56 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              child: Padding(
-                padding: context.padding.xLarge.paddingAll,
-                child: Stack(
-                  children: [
-                    Card(
-                      child: Center(
-                        child: DefaultTextStyle(
-                          style: context.appTheme.textTheme.titleSmall!,
-                          child: AnimatedTextKit(
-                            pause: Duration(
-                              milliseconds: context.baseDuration.medium.toInt(),
-                            ),
-                            repeatForever: true,
-                            animatedTexts: [
-                              for (final text in loadingTextList)
-                                RotateAnimatedText(
-                                  text.tr(),
-                                  duration: Duration(
-                                    milliseconds:
-                                        context.baseDuration.medium.toInt(),
-                                  ),
-                                ),
-                            ],
+      child: Column(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: context.padding.medium.paddingAll,
+              child: Stack(
+                children: [
+                  Card(
+                    child: Center(
+                      child: DefaultTextStyle(
+                        style: context.appTheme.textTheme.titleSmall!,
+                        child: AnimatedTextKit(
+                          pause: Duration(
+                            milliseconds: context.baseDuration.medium.toInt(),
                           ),
+                          repeatForever: true,
+                          animatedTexts: [
+                            for (final text in loadingTextList)
+                              RotateAnimatedText(
+                                text.tr(),
+                                duration: Duration(
+                                  milliseconds:
+                                  context.baseDuration.medium.toInt(),
+                                ),
+                              ),
+                          ],
                         ),
                       ),
                     ),
-                    BlocBuilder<SplashCubit, int>(
-                      builder: (context, state) {
-                        if (state == 100) {
-                          GetIt.instance<RouteManager>().replace(
-                            const HomeControllerRoute(),
-                          );
-                        }
-                        final isStateGreaterThan5 = state > 5;
-                        return _buildBadge(
-                          context: context,
-                          badgeVisible: isStateGreaterThan5,
-                          text: state.toString(),
+                  ),
+                  BlocBuilder<SplashCubit, int>(
+                    builder: (context, state) {
+                      if (state == 100) {
+                        GetIt.instance<RouteManager>().replace(
+                          const HomeControllerRoute(),
                         );
-                      },
-                    ),
-                  ],
-                ),
+                      }
+                      final isStateGreaterThan5 = state > 5;
+                      return _buildBadge(
+                        context: context,
+                        badgeVisible: isStateGreaterThan5,
+                        text: state.toString(),
+                      );
+                    },
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

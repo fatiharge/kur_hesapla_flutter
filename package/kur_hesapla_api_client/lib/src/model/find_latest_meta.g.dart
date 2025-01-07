@@ -1,33 +1,34 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'meta.dart';
+part of 'find_latest_meta.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$Meta extends Meta {
+class _$FindLatestMeta extends FindLatestMeta {
   @override
   final String? baseCurrency;
   @override
   final DateTime? createdDate;
 
-  factory _$Meta([void Function(MetaBuilder)? updates]) =>
-      (new MetaBuilder()..update(updates))._build();
+  factory _$FindLatestMeta([void Function(FindLatestMetaBuilder)? updates]) =>
+      (new FindLatestMetaBuilder()..update(updates))._build();
 
-  _$Meta._({this.baseCurrency, this.createdDate}) : super._();
+  _$FindLatestMeta._({this.baseCurrency, this.createdDate}) : super._();
 
   @override
-  Meta rebuild(void Function(MetaBuilder) updates) =>
+  FindLatestMeta rebuild(void Function(FindLatestMetaBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  MetaBuilder toBuilder() => new MetaBuilder()..replace(this);
+  FindLatestMetaBuilder toBuilder() =>
+      new FindLatestMetaBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Meta &&
+    return other is FindLatestMeta &&
         baseCurrency == other.baseCurrency &&
         createdDate == other.createdDate;
   }
@@ -43,15 +44,16 @@ class _$Meta extends Meta {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'Meta')
+    return (newBuiltValueToStringHelper(r'FindLatestMeta')
           ..add('baseCurrency', baseCurrency)
           ..add('createdDate', createdDate))
         .toString();
   }
 }
 
-class MetaBuilder implements Builder<Meta, MetaBuilder> {
-  _$Meta? _$v;
+class FindLatestMetaBuilder
+    implements Builder<FindLatestMeta, FindLatestMetaBuilder> {
+  _$FindLatestMeta? _$v;
 
   String? _baseCurrency;
   String? get baseCurrency => _$this._baseCurrency;
@@ -61,11 +63,11 @@ class MetaBuilder implements Builder<Meta, MetaBuilder> {
   DateTime? get createdDate => _$this._createdDate;
   set createdDate(DateTime? createdDate) => _$this._createdDate = createdDate;
 
-  MetaBuilder() {
-    Meta._defaults(this);
+  FindLatestMetaBuilder() {
+    FindLatestMeta._defaults(this);
   }
 
-  MetaBuilder get _$this {
+  FindLatestMetaBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _baseCurrency = $v.baseCurrency;
@@ -76,22 +78,22 @@ class MetaBuilder implements Builder<Meta, MetaBuilder> {
   }
 
   @override
-  void replace(Meta other) {
+  void replace(FindLatestMeta other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$Meta;
+    _$v = other as _$FindLatestMeta;
   }
 
   @override
-  void update(void Function(MetaBuilder)? updates) {
+  void update(void Function(FindLatestMetaBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  Meta build() => _build();
+  FindLatestMeta build() => _build();
 
-  _$Meta _build() {
+  _$FindLatestMeta _build() {
     final _$result = _$v ??
-        new _$Meta._(
+        new _$FindLatestMeta._(
           baseCurrency: baseCurrency,
           createdDate: createdDate,
         );

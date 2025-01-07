@@ -7,10 +7,16 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
-      ..add(Data.serializer)
+      ..add(FindLatestData.serializer)
+      ..add(FindLatestMeta.serializer)
       ..add(FindLatestResponse.serializer)
-      ..add(HistoricalCurrencyPrice.serializer)
-      ..add(Meta.serializer))
+      ..add(HistoricalPricesData.serializer)
+      ..add(HistoricalPricesMeta.serializer)
+      ..add(HistoricalPricesResponse.serializer)
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(HistoricalPricesData)]),
+          () => new ListBuilder<HistoricalPricesData>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

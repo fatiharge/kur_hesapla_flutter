@@ -11,8 +11,8 @@ void main() {
     //
     // Fetch the latest price for the given base currency.
     //
-    //Future<FindLatestResponse> currencyPriceBaseCurrencyGet(String baseCurrency, { String userAgent, String X_API_KEY }) async
-    test('test currencyPriceBaseCurrencyGet', () async {
+    //Future<FindLatestResponse> currencyPriceGet({ String baseCurrency, String userAgent, String X_API_KEY }) async
+    test('test currencyPriceGet', () async {
       // TODO
     });
 

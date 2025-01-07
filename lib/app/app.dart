@@ -30,13 +30,14 @@ class App extends StatelessWidget {
           darkTheme: theme.dark(),
           themeMode: ThemeManager.instance.themeMode,
           routerConfig: _routeManager.config(),
-          builder: GlobalStateWrapper.init(),
+          builder: GlobalStateWrapper.provider(),
         );
       },
     );
   }
 
   TextTheme createTextTheme(BuildContext context) {
+
     const fontName = 'Roboto';
     final baseTextTheme = Theme.of(context).textTheme;
     final bodyTextTheme = GoogleFonts.getTextTheme(fontName, baseTextTheme);

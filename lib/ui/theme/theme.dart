@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:kur_hesapla/ui/theme/dark_color_schema.dart';
 import 'package:kur_hesapla/ui/theme/light_color_schema.dart';
 
-import 'package:uikit/utility/manager/app_configuration_manager.dart';
-
 class MaterialTheme {
   const MaterialTheme(this.textTheme);
 
@@ -15,22 +13,27 @@ class MaterialTheme {
 
   ThemeData theme(ColorScheme colorScheme) => ThemeData(
         useMaterial3: true,
-        brightness: colorScheme.brightness,
+        // brightness: colorScheme.brightness,
         colorScheme: colorScheme,
         textTheme: textTheme.apply(
           bodyColor: colorScheme.onSurface,
           displayColor: colorScheme.onSurface,
         ),
-        scaffoldBackgroundColor: colorScheme.surface,
-        canvasColor: colorScheme.surface,
-        cardTheme: const CardTheme().copyWith(
-          margin: EdgeInsets.zero,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              AppConfigurationManager.instance.baseRadius.large,
+        // scaffoldBackgroundColor: colorScheme.surface,
+        // canvasColor: colorScheme.surface,
+        // visualDensity: VisualDensity.adaptivePlatformDensity,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: WidgetStateProperty.resolveWith<Color>(
+              (states) {
+                if (states.contains(WidgetState.selected)) {
+                  return colorScheme.primaryContainer;
+                } else {
+                  return colorScheme.surfaceContainerLow;
+                }
+              },
             ),
           ),
         ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
       );
 }

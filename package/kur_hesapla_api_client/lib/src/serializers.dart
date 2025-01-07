@@ -14,24 +14,24 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
-import 'package:openapi/src/model/data.dart';
+import 'package:openapi/src/model/find_latest_data.dart';
+import 'package:openapi/src/model/find_latest_meta.dart';
 import 'package:openapi/src/model/find_latest_response.dart';
-import 'package:openapi/src/model/historical_currency_price.dart';
-import 'package:openapi/src/model/meta.dart';
+import 'package:openapi/src/model/historical_prices_data.dart';
+import 'package:openapi/src/model/historical_prices_meta.dart';
+import 'package:openapi/src/model/historical_prices_response.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
-  Data,
+  FindLatestData,
+  FindLatestMeta,
   FindLatestResponse,
-  HistoricalCurrencyPrice,
-  Meta,
+  HistoricalPricesData,
+  HistoricalPricesMeta,
+  HistoricalPricesResponse,
 ])
 Serializers serializers = (_$serializers.toBuilder()
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(HistoricalCurrencyPrice)]),
-        () => ListBuilder<HistoricalCurrencyPrice>(),
-      )
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())
       ..add(const DateSerializer())

@@ -8,9 +8,9 @@ part of 'find_latest_response.dart';
 
 class _$FindLatestResponse extends FindLatestResponse {
   @override
-  final Meta? meta;
+  final FindLatestMeta? meta;
   @override
-  final Data? data;
+  final FindLatestData? data;
 
   factory _$FindLatestResponse(
           [void Function(FindLatestResponseBuilder)? updates]) =>
@@ -57,13 +57,15 @@ class FindLatestResponseBuilder
     implements Builder<FindLatestResponse, FindLatestResponseBuilder> {
   _$FindLatestResponse? _$v;
 
-  MetaBuilder? _meta;
-  MetaBuilder get meta => _$this._meta ??= new MetaBuilder();
-  set meta(MetaBuilder? meta) => _$this._meta = meta;
+  FindLatestMetaBuilder? _meta;
+  FindLatestMetaBuilder get meta =>
+      _$this._meta ??= new FindLatestMetaBuilder();
+  set meta(FindLatestMetaBuilder? meta) => _$this._meta = meta;
 
-  DataBuilder? _data;
-  DataBuilder get data => _$this._data ??= new DataBuilder();
-  set data(DataBuilder? data) => _$this._data = data;
+  FindLatestDataBuilder? _data;
+  FindLatestDataBuilder get data =>
+      _$this._data ??= new FindLatestDataBuilder();
+  set data(FindLatestDataBuilder? data) => _$this._data = data;
 
   FindLatestResponseBuilder() {
     FindLatestResponse._defaults(this);

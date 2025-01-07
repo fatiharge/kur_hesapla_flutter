@@ -9,11 +9,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**currencyPriceBaseCurrencyGet**](CurrencyPriceResourceApi.md#currencypricebasecurrencyget) | **GET** /currency-price/{baseCurrency} | Find the latest currency price
+[**currencyPriceGet**](CurrencyPriceResourceApi.md#currencypriceget) | **GET** /currency-price | Find the latest currency price
 
 
-# **currencyPriceBaseCurrencyGet**
-> FindLatestResponse currencyPriceBaseCurrencyGet(baseCurrency, userAgent, X_API_KEY)
+# **currencyPriceGet**
+> FindLatestResponse currencyPriceGet(baseCurrency, userAgent, X_API_KEY)
 
 Find the latest currency price
 
@@ -29,10 +29,10 @@ final String userAgent = userAgent_example; // String | The User-Agent header of
 final String X_API_KEY = X_API_KEY_example; // String | API Key for authentication
 
 try {
-    final response = api.currencyPriceBaseCurrencyGet(baseCurrency, userAgent, X_API_KEY);
+    final response = api.currencyPriceGet(baseCurrency, userAgent, X_API_KEY);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling CurrencyPriceResourceApi->currencyPriceBaseCurrencyGet: $e\n');
+    print('Exception when calling CurrencyPriceResourceApi->currencyPriceGet: $e\n');
 }
 ```
 
@@ -40,7 +40,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **baseCurrency** | **String**|  | 
+ **baseCurrency** | **String**|  | [optional] 
  **userAgent** | **String**| The User-Agent header of the request | [optional] 
  **X_API_KEY** | **String**| API Key for authentication | [optional] 
 

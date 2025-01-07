@@ -9,24 +9,28 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**historicalCurrencyPriceGet**](HistoricalCurrencyPriceResourceApi.md#historicalcurrencypriceget) | **GET** /historical-currency-price | Get Historical Prices
+[**historicalCurrencyPriceGet**](HistoricalCurrencyPriceResourceApi.md#historicalcurrencypriceget) | **GET** /historical-currency-price | Fetch historical currency prices
 
 
 # **historicalCurrencyPriceGet**
-> BuiltList<HistoricalCurrencyPrice> historicalCurrencyPriceGet(baseCurrency, date)
+> HistoricalPricesResponse historicalCurrencyPriceGet(endDate, startDate, userAgent, X_API_KEY)
 
-Get Historical Prices
+Fetch historical currency prices
+
+Fetches historical currency prices for the specified date range and base currency. The start and end dates must be provided as query parameters.
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
 
 final api = Openapi().getHistoricalCurrencyPriceResourceApi();
-final String baseCurrency = baseCurrency_example; // String | 
-final String date = date_example; // String | 
+final Date endDate = 2013-10-20; // Date | End date (e.g. 2024-12-10)
+final Date startDate = 2013-10-20; // Date | Start date (e.g. 2024-12-09)
+final String userAgent = userAgent_example; // String | The User-Agent header of the request
+final String X_API_KEY = X_API_KEY_example; // String | API Key for authentication
 
 try {
-    final response = api.historicalCurrencyPriceGet(baseCurrency, date);
+    final response = api.historicalCurrencyPriceGet(endDate, startDate, userAgent, X_API_KEY);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling HistoricalCurrencyPriceResourceApi->historicalCurrencyPriceGet: $e\n');
@@ -37,12 +41,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **baseCurrency** | **String**|  | [optional] 
- **date** | **String**|  | [optional] 
+ **endDate** | **Date**| End date (e.g. 2024-12-10) | 
+ **startDate** | **Date**| Start date (e.g. 2024-12-09) | 
+ **userAgent** | **String**| The User-Agent header of the request | [optional] 
+ **X_API_KEY** | **String**| API Key for authentication | [optional] 
 
 ### Return type
 
-[**BuiltList&lt;HistoricalCurrencyPrice&gt;**](HistoricalCurrencyPrice.md)
+[**HistoricalPricesResponse**](HistoricalPricesResponse.md)
 
 ### Authorization
 

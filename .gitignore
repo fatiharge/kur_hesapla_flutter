@@ -50,3 +50,5 @@ app.*.map.json
 /lib/env.dart
 /lib/env.g.dart
 /lib/generated/locale_keys.g.dart
+/lib/generated/objectbox.g.dart
+/lib/generated/objectbox-model.json

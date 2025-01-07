@@ -2,13 +2,17 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:kur_hesapla/app/adapter/marked_currency_adapter.dart';
+import 'package:kur_hesapla/app/client/kur_hesapla_client.dart';
 import 'package:kur_hesapla/app/enum/currency_type.dart';
-import 'package:kur_hesapla/app/service/kur_hesapla_client/currency_price_resource_api_service.dart';
+import 'package:kur_hesapla/app/mapper/currency_type_mapper.dart';
 import 'package:kur_hesapla/app/state/global/bloc/global_bloc.dart';
+import 'package:kur_hesapla/data/entity/marked_currency.dart';
+import 'package:kur_hesapla/generated/objectbox.g.dart';
+import 'package:kur_hesapla/service/marked_currency_service.dart';
 import 'package:kur_hesapla/ui/page/home/calculator/view/calculator_shimmer.dart';
 import 'package:openapi/openapi.dart';
 
@@ -21,8 +25,17 @@ part 'calculator_state.dart';
 @injectable
 class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   CalculatorBloc({
-    required this.currencyPriceResourceApiService,
+    required this.kurHesaplaClient,
+    required this.markedCurrencyService,
+    required this.markedCurrencyAdapter,
   }) : super(const CalculatorInitial()) {
+    watchedMarkedCurrency =
+        markedCurrencyService.boxRepository.box.query().watch();
+
+    subscribeMarkedCurrency = watchedMarkedCurrency.listen(
+      (Query<MarkedCurrency> query) async => _listenEventTrigger(query),
+    );
+
     on<Load>(_onLoadEvent);
     on<Refresh>(_onRefreshEvent);
 
@@ -31,44 +44,51 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
 
     on<SetCurrencyValue>(_setCurrencyValue);
     on<SetCalculatedCurrencyValue>(_setCalculatedCurrencyValue);
+
+    on<PutMarkedCurrency>(_putMarkedCurrency);
+    on<RemoveMarkedCurrency>(_removeMarkedCurrency);
+    on<ClearMarked>(_clearMarked);
   }
 
+  late final Stream<Query<MarkedCurrency>> watchedMarkedCurrency;
+  late final StreamSubscription<Query<MarkedCurrency>> subscribeMarkedCurrency;
   final GlobalBloc globalBloc = GetIt.instance<GlobalBloc>();
 
-  final CurrencyPriceResourceApiService currencyPriceResourceApiService;
+  final MarkedCurrencyService markedCurrencyService;
+  final MarkedCurrencyAdapter markedCurrencyAdapter;
+  final KurHesaplaClient kurHesaplaClient;
 
-  FutureOr<void> _setCurrencyValue(
-    SetCurrencyValue event,
-    Emitter<CalculatorState> emit,
-  ) {
-    final calculatorLoadedState = state as CalculatorLoaded;
-
-    final value =
-        (double.tryParse(event.value) ?? 0) * calculatorLoadedState.rate;
-
-    final newState = calculatorLoadedState.copyWith(
-      currencyValue: event.value,
-      calculatedValue: value.toStringAsFixed(2),
-    );
-
-    emit(newState);
+  @override
+  Future<void> close() {
+    subscribeMarkedCurrency.cancel();
+    return super.close();
   }
 
-  FutureOr<void> _setCalculatedCurrencyValue(
-    SetCalculatedCurrencyValue event,
-    Emitter<CalculatorState> emit,
-  ) {
-    final calculatorLoadedState = state as CalculatorLoaded;
+  Future<void> _onLoadEvent(Load event, Emitter<CalculatorState> emit) async {
+    globalBloc.add(const GlobalEvent.load(widget: CalculatorShimmer()));
+    try {
+      final response = await kurHesaplaClient.apiClient
+          .getCurrencyPriceResourceApi()
+          .currencyPriceGet(baseCurrency: 'USD');
 
-    final value =
-        (double.tryParse(event.value) ?? 0) / calculatorLoadedState.rate;
+      final findLatestResponse = response.data!;
+      final rate = findLatestResponse.data!.EUR!;
 
-    final newState = calculatorLoadedState.copyWith(
-      currencyValue: value.toStringAsFixed(2),
-      calculatedValue: event.value,
-    );
+      final calculatorLoaded = CalculatorLoaded(
+        findLatestResponse: findLatestResponse,
+        rate: rate,
+        calculatedValue: rate.toStringAsFixed(2),
+      );
 
-    emit(newState);
+      globalBloc.add(const GlobalEvent.success());
+      emit(calculatorLoaded);
+    } on Exception catch (e) {
+      globalBloc.add(GlobalEvent.error(exception: e));
+    }
+  }
+
+  FutureOr<void> _onRefreshEvent(Refresh event, Emitter<CalculatorState> emit) {
+    add(const Load());
   }
 
   FutureOr<void> _setCurrentCurrency(
@@ -91,6 +111,8 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         currencyType: event.currencyType,
         rate: rate,
         calculatedValue: calculatedValue.toStringAsFixed(2),
+        isMarked: false,
+        markedId: null,
       ),
     );
   }
@@ -115,37 +137,93 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         calculatedType: event.currencyType,
         rate: rate,
         calculatedValue: calculatedValue.toStringAsFixed(2),
+        isMarked: false,
+        markedId: null,
       ),
     );
   }
 
-  FutureOr<void> _onRefreshEvent(
-    Refresh event,
+  FutureOr<void> _setCurrencyValue(
+    SetCurrencyValue event,
     Emitter<CalculatorState> emit,
   ) {
-    add(const Load());
+    final calculatorLoadedState = state as CalculatorLoaded;
+
+    final value =
+        (double.tryParse(event.value) ?? 0) * calculatorLoadedState.rate;
+
+    final newState = calculatorLoadedState.copyWith(
+      currencyValue: event.value,
+      calculatedValue: value.toStringAsFixed(2),
+      isMarked: false,
+      markedId: null,
+    );
+
+    emit(newState);
   }
 
-  Future<void> _onLoadEvent(
-    Load event,
+  FutureOr<void> _setCalculatedCurrencyValue(
+    SetCalculatedCurrencyValue event,
+    Emitter<CalculatorState> emit,
+  ) {
+    final calculatorLoadedState = state as CalculatorLoaded;
+
+    final value =
+        (double.tryParse(event.value) ?? 0) / calculatorLoadedState.rate;
+
+    final newState = calculatorLoadedState.copyWith(
+      currencyValue: value.toStringAsFixed(2),
+      calculatedValue: event.value,
+      isMarked: false,
+      markedId: null,
+    );
+
+    emit(newState);
+  }
+
+  Future<void> _putMarkedCurrency(
+    PutMarkedCurrency event,
     Emitter<CalculatorState> emit,
   ) async {
-    globalBloc.add(const GlobalEvent.load(widget: CalculatorShimmer()));
-    final findLatestResponse =
-        await currencyPriceResourceApiService.getFindLatestResponse();
-
-    final rate = double.parse(findLatestResponse.data!.EUR!);
-
-    final calculatorLoaded = CalculatorLoaded(
-      findLatestResponse: findLatestResponse,
-      rate: rate,
+    final id = markedCurrencyService.putMarkedCurrency(
+      markedCurrency: markedCurrencyAdapter.calculatorLoadedAdaptee(
+        event.calculatorLoadedState,
+      ),
     );
-    try {
-      globalBloc.add(const GlobalEvent.success());
-      emit(calculatorLoaded);
-    } on Exception catch (e) {
-      globalBloc.add(GlobalEvent.error(exception: e));
-    }
+    final calculatorLoadedState = state as CalculatorLoaded;
+    emit(
+      calculatorLoadedState.copyWith(
+        isMarked: true,
+        markedId: id,
+      ),
+    );
+  }
+
+  Future<void> _removeMarkedCurrency(
+    RemoveMarkedCurrency event,
+    Emitter<CalculatorState> emit,
+  ) async {
+    final calculatorLoadedState = state as CalculatorLoaded;
+    markedCurrencyService.boxRepository.box.remove(event.id);
+    emit(
+      calculatorLoadedState.copyWith(
+        isMarked: false,
+        markedId: null,
+      ),
+    );
+  }
+
+  Future<void> _clearMarked(
+    ClearMarked event,
+    Emitter<CalculatorState> emit,
+  ) async {
+    final calculatorLoadedState = state as CalculatorLoaded;
+    emit(
+      calculatorLoadedState.copyWith(
+        isMarked: false,
+        markedId: null,
+      ),
+    );
   }
 
   double _calculateRate({
@@ -153,14 +231,23 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     required CurrencyType calculatedType,
     required FindLatestResponse findLatestResponse,
   }) {
-    final dollarRateSelected = double.parse(
-      currencyType.findValue(findLatestResponse),
-    );
+    final dollarRateSelected = currencyType.findValue(findLatestResponse.data!);
 
-    final dollarRateCalculated = double.parse(
-      calculatedType.findValue(findLatestResponse),
-    );
+    final dollarRateCalculated =
+        calculatedType.findValue(findLatestResponse.data!);
 
     return dollarRateCalculated / dollarRateSelected;
+  }
+
+  void _listenEventTrigger(Query<MarkedCurrency> query) {
+    if (state is CalculatorLoaded) {
+      final calculatorLoadedState = state as CalculatorLoaded;
+      final q = query.find().where(
+            (element) => calculatorLoadedState.markedId == element.id,
+          );
+      if (q.isEmpty) {
+        add(const ClearMarked()); // yok birrrrr dilegimmm hayatta hersey kismet
+      }
+    }
   }
 }

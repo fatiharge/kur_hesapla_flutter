@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -26,23 +27,21 @@ class CurrencyInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '1 ${currencyType.getCurrencyTypeName()}',
+          '1 ${currencyType.getLocaleKey.tr()}',
           style: context.textTheme.titleMedium?.copyWith(
             fontWeight: FontWeight.w300,
             color: Theme.of(context).hintColor,
           ),
         ),
         Text(
-          '$rate ${calculatedType.getCurrencyTypeName()}',
+          '$rate ${calculatedType.getLocaleKey.tr()}',
           style: context.textTheme.displaySmall,
         ),
         RichText(
           text: TextSpan(
             children: <TextSpan>[
               TextSpan(
-                text:
-                    // '${findLatestResponse.meta!.createdDate?.toLocaleString} · ',
-                    '$time · ',
+                text: '$time · ',
                 style: context.textTheme.titleSmall,
               ),
               TextSpan(
@@ -50,13 +49,8 @@ class CurrencyInfo extends StatelessWidget {
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
                     GetIt.instance<RouteManager>().push(
-                      const NewWidgetRoute(),
+                      const DisclaimerRoute(),
                     );
-                    // PersistentNavBarNavigator.pushNewScreen(
-                    //   context,
-                    //   screen: NewWidgetPage(),
-                    //   withNavBar: true,
-                    // );
                   },
                 style: context.textTheme.titleSmall?.copyWith(
                   fontWeight: FontWeight.w300,

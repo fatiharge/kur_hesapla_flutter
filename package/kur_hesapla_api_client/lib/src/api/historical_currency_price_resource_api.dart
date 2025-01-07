@@ -8,9 +8,9 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/api_util.dart';
-import 'package:openapi/src/model/historical_currency_price.dart';
+import 'package:openapi/src/model/date.dart';
+import 'package:openapi/src/model/historical_prices_response.dart';
 
 class HistoricalCurrencyPriceResourceApi {
 
@@ -20,12 +20,14 @@ class HistoricalCurrencyPriceResourceApi {
 
   const HistoricalCurrencyPriceResourceApi(this._dio, this._serializers);
 
-  /// Get Historical Prices
-  /// 
+  /// Fetch historical currency prices
+  /// Fetches historical currency prices for the specified date range and base currency. The start and end dates must be provided as query parameters.
   ///
   /// Parameters:
-  /// * [baseCurrency] 
-  /// * [date] 
+  /// * [endDate] - End date (e.g. 2024-12-10)
+  /// * [startDate] - Start date (e.g. 2024-12-09)
+  /// * [userAgent] - The User-Agent header of the request
+  /// * [X_API_KEY] - API Key for authentication
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -33,11 +35,13 @@ class HistoricalCurrencyPriceResourceApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<HistoricalCurrencyPrice>] as data
+  /// Returns a [Future] containing a [Response] with a [HistoricalPricesResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<HistoricalCurrencyPrice>>> historicalCurrencyPriceGet({ 
-    String? baseCurrency,
-    String? date,
+  Future<Response<HistoricalPricesResponse>> historicalCurrencyPriceGet({ 
+    required Date endDate,
+    required Date startDate,
+    String? userAgent,
+    String? X_API_KEY,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -49,6 +53,8 @@ class HistoricalCurrencyPriceResourceApi {
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
+        if (userAgent != null) r'User-Agent': userAgent,
+        if (X_API_KEY != null) r'X-API-KEY': X_API_KEY,
         ...?headers,
       },
       extra: <String, dynamic>{
@@ -59,8 +65,8 @@ class HistoricalCurrencyPriceResourceApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (baseCurrency != null) r'baseCurrency': encodeQueryParameter(_serializers, baseCurrency, const FullType(String)),
-      if (date != null) r'date': encodeQueryParameter(_serializers, date, const FullType(String)),
+      r'end-date': encodeQueryParameter(_serializers, endDate, const FullType(Date)),
+      r'start-date': encodeQueryParameter(_serializers, startDate, const FullType(Date)),
     };
 
     final _response = await _dio.request<Object>(
@@ -72,14 +78,14 @@ class HistoricalCurrencyPriceResourceApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<HistoricalCurrencyPrice>? _responseData;
+    HistoricalPricesResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(HistoricalCurrencyPrice)]),
-      ) as BuiltList<HistoricalCurrencyPrice>;
+        specifiedType: const FullType(HistoricalPricesResponse),
+      ) as HistoricalPricesResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -91,7 +97,7 @@ class HistoricalCurrencyPriceResourceApi {
       );
     }
 
-    return Response<BuiltList<HistoricalCurrencyPrice>>(
+    return Response<HistoricalPricesResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

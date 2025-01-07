@@ -1,391 +1,389 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'data.dart';
+part of 'find_latest_data.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$Data extends Data {
+class _$FindLatestData extends FindLatestData {
   @override
-  final String? ADA;
+  final double? ADA;
   @override
-  final String? AED;
+  final double? AED;
   @override
-  final String? AFN;
+  final double? AFN;
   @override
-  final String? ALL;
+  final double? ALL;
   @override
-  final String? AMD;
+  final double? AMD;
   @override
-  final String? ANG;
+  final double? ANG;
   @override
-  final String? AOA;
+  final double? AOA;
   @override
-  final String? ARB;
+  final double? ARB;
   @override
-  final String? ARS;
+  final double? ARS;
   @override
-  final String? AUD;
+  final double? AUD;
   @override
-  final String? AVAX;
+  final double? AVAX;
   @override
-  final String? AWG;
+  final double? AWG;
   @override
-  final String? AZN;
+  final double? AZN;
   @override
-  final String? BAM;
+  final double? BAM;
   @override
-  final String? BBD;
+  final double? BBD;
   @override
-  final String? BDT;
+  final double? BDT;
   @override
-  final String? BGN;
+  final double? BGN;
   @override
-  final String? BHD;
+  final double? BHD;
   @override
-  final String? BIF;
+  final double? BIF;
   @override
-  final String? BMD;
+  final double? BMD;
   @override
-  final String? BNB;
+  final double? BNB;
   @override
-  final String? BND;
+  final double? BND;
   @override
-  final String? BOB;
+  final double? BOB;
   @override
-  final String? BRL;
+  final double? BRL;
   @override
-  final String? BSD;
+  final double? BSD;
   @override
-  final String? BTC;
+  final double? BTC;
   @override
-  final String? BTN;
+  final double? BTN;
   @override
-  final String? BWP;
+  final double? BWP;
   @override
-  final String? BYN;
+  final double? BYN;
   @override
-  final String? BYR;
+  final double? BYR;
   @override
-  final String? BZD;
+  final double? BZD;
   @override
-  final String? CAD;
+  final double? CAD;
   @override
-  final String? CDF;
+  final double? CDF;
   @override
-  final String? CHF;
+  final double? CHF;
   @override
-  final String? CLF;
+  final double? CLP;
   @override
-  final String? CLP;
+  final double? CNY;
   @override
-  final String? CNY;
+  final double? COP;
   @override
-  final String? COP;
+  final double? CRC;
   @override
-  final String? CRC;
+  final double? CUC;
   @override
-  final String? CUC;
+  final double? CUP;
   @override
-  final String? CUP;
+  final double? CVE;
   @override
-  final String? CVE;
+  final double? CZK;
   @override
-  final String? CZK;
+  final double? DAI;
   @override
-  final String? DAI;
+  final double? DJF;
   @override
-  final String? DJF;
+  final double? DKK;
   @override
-  final String? DKK;
+  final double? DOP;
   @override
-  final String? DOP;
+  final double? DOT;
   @override
-  final String? DOT;
+  final double? DZD;
   @override
-  final String? DZD;
+  final double? EGP;
   @override
-  final String? EGP;
+  final double? ERN;
   @override
-  final String? ERN;
+  final double? ETB;
   @override
-  final String? ETB;
+  final double? ETH;
   @override
-  final String? ETH;
+  final double? EUR;
   @override
-  final String? EUR;
+  final double? FJD;
   @override
-  final String? FJD;
+  final double? FKP;
   @override
-  final String? FKP;
+  final double? GBP;
   @override
-  final String? GBP;
+  final double? GEL;
   @override
-  final String? GEL;
+  final double? GGP;
   @override
-  final String? GGP;
+  final double? GHS;
   @override
-  final String? GHS;
+  final double? GIP;
   @override
-  final String? GIP;
+  final double? GMD;
   @override
-  final String? GMD;
+  final double? GNF;
   @override
-  final String? GNF;
+  final double? GTQ;
   @override
-  final String? GTQ;
+  final double? GYD;
   @override
-  final String? GYD;
+  final double? HKD;
   @override
-  final String? HKD;
+  final double? HNL;
   @override
-  final String? HNL;
+  final double? HRK;
   @override
-  final String? HRK;
+  final double? HTG;
   @override
-  final String? HTG;
+  final double? HUF;
   @override
-  final String? HUF;
+  final double? IDR;
   @override
-  final String? IDR;
+  final double? ILS;
   @override
-  final String? ILS;
+  final double? IMP;
   @override
-  final String? IMP;
+  final double? INR;
   @override
-  final String? INR;
+  final double? IQD;
   @override
-  final String? IQD;
+  final double? IRR;
   @override
-  final String? IRR;
+  final double? ISK;
   @override
-  final String? ISK;
+  final double? JEP;
   @override
-  final String? JEP;
+  final double? JMD;
   @override
-  final String? JMD;
+  final double? JOD;
   @override
-  final String? JOD;
+  final double? JPY;
   @override
-  final String? JPY;
+  final double? KES;
   @override
-  final String? KES;
+  final double? KGS;
   @override
-  final String? KGS;
+  final double? KHR;
   @override
-  final String? KHR;
+  final double? KMF;
   @override
-  final String? KMF;
+  final double? KPW;
   @override
-  final String? KPW;
+  final double? KRW;
   @override
-  final String? KRW;
+  final double? KWD;
   @override
-  final String? KWD;
+  final double? KYD;
   @override
-  final String? KYD;
+  final double? KZT;
   @override
-  final String? KZT;
+  final double? LAK;
   @override
-  final String? LAK;
+  final double? LBP;
   @override
-  final String? LBP;
+  final double? LKR;
   @override
-  final String? LKR;
+  final double? LRD;
   @override
-  final String? LRD;
+  final double? LSL;
   @override
-  final String? LSL;
+  final double? LTC;
   @override
-  final String? LTC;
+  final double? LTL;
   @override
-  final String? LTL;
+  final double? LVL;
   @override
-  final String? LVL;
+  final double? LYD;
   @override
-  final String? LYD;
+  final double? MAD;
   @override
-  final String? MAD;
+  final double? MATIC;
   @override
-  final String? MATIC;
+  final double? MDL;
   @override
-  final String? MDL;
+  final double? MGA;
   @override
-  final String? MGA;
+  final double? MKD;
   @override
-  final String? MKD;
+  final double? MMK;
   @override
-  final String? MMK;
+  final double? MNT;
   @override
-  final String? MNT;
+  final double? MOP;
   @override
-  final String? MOP;
+  final double? MRO;
   @override
-  final String? MRO;
+  final double? MRU;
   @override
-  final String? MRU;
+  final double? MUR;
   @override
-  final String? MUR;
+  final double? MVR;
   @override
-  final String? MVR;
+  final double? MWK;
   @override
-  final String? MWK;
+  final double? MXN;
   @override
-  final String? MXN;
+  final double? MYR;
   @override
-  final String? MYR;
+  final double? MZN;
   @override
-  final String? MZN;
+  final double? NAD;
   @override
-  final String? NAD;
+  final double? NGN;
   @override
-  final String? NGN;
+  final double? NIO;
   @override
-  final String? NIO;
+  final double? NOK;
   @override
-  final String? NOK;
+  final double? NPR;
   @override
-  final String? NPR;
+  final double? NZD;
   @override
-  final String? NZD;
+  final double? OMR;
   @override
-  final String? OMR;
+  final double? OP;
   @override
-  final String? OP;
+  final double? PAB;
   @override
-  final String? PAB;
+  final double? PEN;
   @override
-  final String? PEN;
+  final double? PGK;
   @override
-  final String? PGK;
+  final double? PHP;
   @override
-  final String? PHP;
+  final double? PKR;
   @override
-  final String? PKR;
+  final double? PLN;
   @override
-  final String? PLN;
+  final double? PYG;
   @override
-  final String? PYG;
+  final double? QAR;
   @override
-  final String? QAR;
+  final double? RON;
   @override
-  final String? RON;
+  final double? RSD;
   @override
-  final String? RSD;
+  final double? RUB;
   @override
-  final String? RUB;
+  final double? RWF;
   @override
-  final String? RWF;
+  final double? SAR;
   @override
-  final String? SAR;
+  final double? SBD;
   @override
-  final String? SBD;
+  final double? SCR;
   @override
-  final String? SCR;
+  final double? SDG;
   @override
-  final String? SDG;
+  final double? SEK;
   @override
-  final String? SEK;
+  final double? SGD;
   @override
-  final String? SGD;
+  final double? SHP;
   @override
-  final String? SHP;
+  final double? SLL;
   @override
-  final String? SLL;
+  final double? SOL;
   @override
-  final String? SOL;
+  final double? SOS;
   @override
-  final String? SOS;
+  final double? SRD;
   @override
-  final String? SRD;
+  final double? STD;
   @override
-  final String? STD;
+  final double? STN;
   @override
-  final String? STN;
+  final double? SVC;
   @override
-  final String? SVC;
+  final double? SYP;
   @override
-  final String? SYP;
+  final double? SZL;
   @override
-  final String? SZL;
+  final double? THB;
   @override
-  final String? THB;
+  final double? TJS;
   @override
-  final String? TJS;
+  final double? TMT;
   @override
-  final String? TMT;
+  final double? TND;
   @override
-  final String? TND;
+  final double? TOP;
   @override
-  final String? TOP;
+  final double? TRY;
   @override
-  final String? TRY;
+  final double? TTD;
   @override
-  final String? TTD;
+  final double? TWD;
   @override
-  final String? TWD;
+  final double? TZS;
   @override
-  final String? TZS;
+  final double? UAH;
   @override
-  final String? UAH;
+  final double? UGX;
   @override
-  final String? UGX;
+  final double? USD;
   @override
-  final String? USD;
+  final double? USDC;
   @override
-  final String? USDC;
+  final double? USDT;
   @override
-  final String? USDT;
+  final double? UYU;
   @override
-  final String? UYU;
+  final double? UZS;
   @override
-  final String? UZS;
+  final double? VEF;
   @override
-  final String? VEF;
+  final double? VES;
   @override
-  final String? VES;
+  final double? VND;
   @override
-  final String? VND;
+  final double? VUV;
   @override
-  final String? VUV;
+  final double? WST;
   @override
-  final String? WST;
+  final double? XAF;
   @override
-  final String? XAF;
+  final double? XAG;
   @override
-  final String? XAG;
+  final double? XAU;
   @override
-  final String? XAU;
+  final double? XCD;
   @override
-  final String? XCD;
+  final double? XDR;
   @override
-  final String? XDR;
+  final double? XOF;
   @override
-  final String? XOF;
+  final double? XPD;
   @override
-  final String? XPD;
+  final double? XPF;
   @override
-  final String? XPF;
+  final double? XPT;
   @override
-  final String? XPT;
+  final double? XRP;
   @override
-  final String? XRP;
+  final double? YER;
   @override
-  final String? YER;
+  final double? ZAR;
   @override
-  final String? ZAR;
+  final double? ZMK;
   @override
-  final String? ZMK;
+  final double? ZMW;
   @override
-  final String? ZMW;
-  @override
-  final String? ZWL;
+  final double? ZWL;
 
-  factory _$Data([void Function(DataBuilder)? updates]) =>
-      (new DataBuilder()..update(updates))._build();
+  factory _$FindLatestData([void Function(FindLatestDataBuilder)? updates]) =>
+      (new FindLatestDataBuilder()..update(updates))._build();
 
-  _$Data._(
+  _$FindLatestData._(
       {this.ADA,
       this.AED,
       this.AFN,
@@ -420,7 +418,6 @@ class _$Data extends Data {
       this.CAD,
       this.CDF,
       this.CHF,
-      this.CLF,
       this.CLP,
       this.CNY,
       this.COP,
@@ -576,16 +573,17 @@ class _$Data extends Data {
       : super._();
 
   @override
-  Data rebuild(void Function(DataBuilder) updates) =>
+  FindLatestData rebuild(void Function(FindLatestDataBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  DataBuilder toBuilder() => new DataBuilder()..replace(this);
+  FindLatestDataBuilder toBuilder() =>
+      new FindLatestDataBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Data &&
+    return other is FindLatestData &&
         ADA == other.ADA &&
         AED == other.AED &&
         AFN == other.AFN &&
@@ -620,7 +618,6 @@ class _$Data extends Data {
         CAD == other.CAD &&
         CDF == other.CDF &&
         CHF == other.CHF &&
-        CLF == other.CLF &&
         CLP == other.CLP &&
         CNY == other.CNY &&
         COP == other.COP &&
@@ -812,7 +809,6 @@ class _$Data extends Data {
     _$hash = $jc(_$hash, CAD.hashCode);
     _$hash = $jc(_$hash, CDF.hashCode);
     _$hash = $jc(_$hash, CHF.hashCode);
-    _$hash = $jc(_$hash, CLF.hashCode);
     _$hash = $jc(_$hash, CLP.hashCode);
     _$hash = $jc(_$hash, CNY.hashCode);
     _$hash = $jc(_$hash, COP.hashCode);
@@ -971,7 +967,7 @@ class _$Data extends Data {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'Data')
+    return (newBuiltValueToStringHelper(r'FindLatestData')
           ..add('ADA', ADA)
           ..add('AED', AED)
           ..add('AFN', AFN)
@@ -1006,7 +1002,6 @@ class _$Data extends Data {
           ..add('CAD', CAD)
           ..add('CDF', CDF)
           ..add('CHF', CHF)
-          ..add('CLF', CLF)
           ..add('CLP', CLP)
           ..add('CNY', CNY)
           ..add('COP', COP)
@@ -1163,762 +1158,759 @@ class _$Data extends Data {
   }
 }
 
-class DataBuilder implements Builder<Data, DataBuilder> {
-  _$Data? _$v;
-
-  String? _ADA;
-  String? get ADA => _$this._ADA;
-  set ADA(String? ADA) => _$this._ADA = ADA;
-
-  String? _AED;
-  String? get AED => _$this._AED;
-  set AED(String? AED) => _$this._AED = AED;
-
-  String? _AFN;
-  String? get AFN => _$this._AFN;
-  set AFN(String? AFN) => _$this._AFN = AFN;
-
-  String? _ALL;
-  String? get ALL => _$this._ALL;
-  set ALL(String? ALL) => _$this._ALL = ALL;
-
-  String? _AMD;
-  String? get AMD => _$this._AMD;
-  set AMD(String? AMD) => _$this._AMD = AMD;
-
-  String? _ANG;
-  String? get ANG => _$this._ANG;
-  set ANG(String? ANG) => _$this._ANG = ANG;
-
-  String? _AOA;
-  String? get AOA => _$this._AOA;
-  set AOA(String? AOA) => _$this._AOA = AOA;
-
-  String? _ARB;
-  String? get ARB => _$this._ARB;
-  set ARB(String? ARB) => _$this._ARB = ARB;
-
-  String? _ARS;
-  String? get ARS => _$this._ARS;
-  set ARS(String? ARS) => _$this._ARS = ARS;
-
-  String? _AUD;
-  String? get AUD => _$this._AUD;
-  set AUD(String? AUD) => _$this._AUD = AUD;
-
-  String? _AVAX;
-  String? get AVAX => _$this._AVAX;
-  set AVAX(String? AVAX) => _$this._AVAX = AVAX;
-
-  String? _AWG;
-  String? get AWG => _$this._AWG;
-  set AWG(String? AWG) => _$this._AWG = AWG;
-
-  String? _AZN;
-  String? get AZN => _$this._AZN;
-  set AZN(String? AZN) => _$this._AZN = AZN;
-
-  String? _BAM;
-  String? get BAM => _$this._BAM;
-  set BAM(String? BAM) => _$this._BAM = BAM;
-
-  String? _BBD;
-  String? get BBD => _$this._BBD;
-  set BBD(String? BBD) => _$this._BBD = BBD;
-
-  String? _BDT;
-  String? get BDT => _$this._BDT;
-  set BDT(String? BDT) => _$this._BDT = BDT;
-
-  String? _BGN;
-  String? get BGN => _$this._BGN;
-  set BGN(String? BGN) => _$this._BGN = BGN;
-
-  String? _BHD;
-  String? get BHD => _$this._BHD;
-  set BHD(String? BHD) => _$this._BHD = BHD;
-
-  String? _BIF;
-  String? get BIF => _$this._BIF;
-  set BIF(String? BIF) => _$this._BIF = BIF;
-
-  String? _BMD;
-  String? get BMD => _$this._BMD;
-  set BMD(String? BMD) => _$this._BMD = BMD;
-
-  String? _BNB;
-  String? get BNB => _$this._BNB;
-  set BNB(String? BNB) => _$this._BNB = BNB;
-
-  String? _BND;
-  String? get BND => _$this._BND;
-  set BND(String? BND) => _$this._BND = BND;
-
-  String? _BOB;
-  String? get BOB => _$this._BOB;
-  set BOB(String? BOB) => _$this._BOB = BOB;
-
-  String? _BRL;
-  String? get BRL => _$this._BRL;
-  set BRL(String? BRL) => _$this._BRL = BRL;
-
-  String? _BSD;
-  String? get BSD => _$this._BSD;
-  set BSD(String? BSD) => _$this._BSD = BSD;
-
-  String? _BTC;
-  String? get BTC => _$this._BTC;
-  set BTC(String? BTC) => _$this._BTC = BTC;
-
-  String? _BTN;
-  String? get BTN => _$this._BTN;
-  set BTN(String? BTN) => _$this._BTN = BTN;
-
-  String? _BWP;
-  String? get BWP => _$this._BWP;
-  set BWP(String? BWP) => _$this._BWP = BWP;
-
-  String? _BYN;
-  String? get BYN => _$this._BYN;
-  set BYN(String? BYN) => _$this._BYN = BYN;
-
-  String? _BYR;
-  String? get BYR => _$this._BYR;
-  set BYR(String? BYR) => _$this._BYR = BYR;
-
-  String? _BZD;
-  String? get BZD => _$this._BZD;
-  set BZD(String? BZD) => _$this._BZD = BZD;
-
-  String? _CAD;
-  String? get CAD => _$this._CAD;
-  set CAD(String? CAD) => _$this._CAD = CAD;
-
-  String? _CDF;
-  String? get CDF => _$this._CDF;
-  set CDF(String? CDF) => _$this._CDF = CDF;
-
-  String? _CHF;
-  String? get CHF => _$this._CHF;
-  set CHF(String? CHF) => _$this._CHF = CHF;
-
-  String? _CLF;
-  String? get CLF => _$this._CLF;
-  set CLF(String? CLF) => _$this._CLF = CLF;
-
-  String? _CLP;
-  String? get CLP => _$this._CLP;
-  set CLP(String? CLP) => _$this._CLP = CLP;
-
-  String? _CNY;
-  String? get CNY => _$this._CNY;
-  set CNY(String? CNY) => _$this._CNY = CNY;
-
-  String? _COP;
-  String? get COP => _$this._COP;
-  set COP(String? COP) => _$this._COP = COP;
-
-  String? _CRC;
-  String? get CRC => _$this._CRC;
-  set CRC(String? CRC) => _$this._CRC = CRC;
-
-  String? _CUC;
-  String? get CUC => _$this._CUC;
-  set CUC(String? CUC) => _$this._CUC = CUC;
-
-  String? _CUP;
-  String? get CUP => _$this._CUP;
-  set CUP(String? CUP) => _$this._CUP = CUP;
-
-  String? _CVE;
-  String? get CVE => _$this._CVE;
-  set CVE(String? CVE) => _$this._CVE = CVE;
-
-  String? _CZK;
-  String? get CZK => _$this._CZK;
-  set CZK(String? CZK) => _$this._CZK = CZK;
-
-  String? _DAI;
-  String? get DAI => _$this._DAI;
-  set DAI(String? DAI) => _$this._DAI = DAI;
-
-  String? _DJF;
-  String? get DJF => _$this._DJF;
-  set DJF(String? DJF) => _$this._DJF = DJF;
-
-  String? _DKK;
-  String? get DKK => _$this._DKK;
-  set DKK(String? DKK) => _$this._DKK = DKK;
-
-  String? _DOP;
-  String? get DOP => _$this._DOP;
-  set DOP(String? DOP) => _$this._DOP = DOP;
-
-  String? _DOT;
-  String? get DOT => _$this._DOT;
-  set DOT(String? DOT) => _$this._DOT = DOT;
-
-  String? _DZD;
-  String? get DZD => _$this._DZD;
-  set DZD(String? DZD) => _$this._DZD = DZD;
-
-  String? _EGP;
-  String? get EGP => _$this._EGP;
-  set EGP(String? EGP) => _$this._EGP = EGP;
-
-  String? _ERN;
-  String? get ERN => _$this._ERN;
-  set ERN(String? ERN) => _$this._ERN = ERN;
-
-  String? _ETB;
-  String? get ETB => _$this._ETB;
-  set ETB(String? ETB) => _$this._ETB = ETB;
-
-  String? _ETH;
-  String? get ETH => _$this._ETH;
-  set ETH(String? ETH) => _$this._ETH = ETH;
-
-  String? _EUR;
-  String? get EUR => _$this._EUR;
-  set EUR(String? EUR) => _$this._EUR = EUR;
-
-  String? _FJD;
-  String? get FJD => _$this._FJD;
-  set FJD(String? FJD) => _$this._FJD = FJD;
-
-  String? _FKP;
-  String? get FKP => _$this._FKP;
-  set FKP(String? FKP) => _$this._FKP = FKP;
-
-  String? _GBP;
-  String? get GBP => _$this._GBP;
-  set GBP(String? GBP) => _$this._GBP = GBP;
-
-  String? _GEL;
-  String? get GEL => _$this._GEL;
-  set GEL(String? GEL) => _$this._GEL = GEL;
-
-  String? _GGP;
-  String? get GGP => _$this._GGP;
-  set GGP(String? GGP) => _$this._GGP = GGP;
-
-  String? _GHS;
-  String? get GHS => _$this._GHS;
-  set GHS(String? GHS) => _$this._GHS = GHS;
-
-  String? _GIP;
-  String? get GIP => _$this._GIP;
-  set GIP(String? GIP) => _$this._GIP = GIP;
-
-  String? _GMD;
-  String? get GMD => _$this._GMD;
-  set GMD(String? GMD) => _$this._GMD = GMD;
-
-  String? _GNF;
-  String? get GNF => _$this._GNF;
-  set GNF(String? GNF) => _$this._GNF = GNF;
-
-  String? _GTQ;
-  String? get GTQ => _$this._GTQ;
-  set GTQ(String? GTQ) => _$this._GTQ = GTQ;
-
-  String? _GYD;
-  String? get GYD => _$this._GYD;
-  set GYD(String? GYD) => _$this._GYD = GYD;
-
-  String? _HKD;
-  String? get HKD => _$this._HKD;
-  set HKD(String? HKD) => _$this._HKD = HKD;
-
-  String? _HNL;
-  String? get HNL => _$this._HNL;
-  set HNL(String? HNL) => _$this._HNL = HNL;
-
-  String? _HRK;
-  String? get HRK => _$this._HRK;
-  set HRK(String? HRK) => _$this._HRK = HRK;
-
-  String? _HTG;
-  String? get HTG => _$this._HTG;
-  set HTG(String? HTG) => _$this._HTG = HTG;
-
-  String? _HUF;
-  String? get HUF => _$this._HUF;
-  set HUF(String? HUF) => _$this._HUF = HUF;
-
-  String? _IDR;
-  String? get IDR => _$this._IDR;
-  set IDR(String? IDR) => _$this._IDR = IDR;
-
-  String? _ILS;
-  String? get ILS => _$this._ILS;
-  set ILS(String? ILS) => _$this._ILS = ILS;
-
-  String? _IMP;
-  String? get IMP => _$this._IMP;
-  set IMP(String? IMP) => _$this._IMP = IMP;
-
-  String? _INR;
-  String? get INR => _$this._INR;
-  set INR(String? INR) => _$this._INR = INR;
-
-  String? _IQD;
-  String? get IQD => _$this._IQD;
-  set IQD(String? IQD) => _$this._IQD = IQD;
-
-  String? _IRR;
-  String? get IRR => _$this._IRR;
-  set IRR(String? IRR) => _$this._IRR = IRR;
-
-  String? _ISK;
-  String? get ISK => _$this._ISK;
-  set ISK(String? ISK) => _$this._ISK = ISK;
-
-  String? _JEP;
-  String? get JEP => _$this._JEP;
-  set JEP(String? JEP) => _$this._JEP = JEP;
-
-  String? _JMD;
-  String? get JMD => _$this._JMD;
-  set JMD(String? JMD) => _$this._JMD = JMD;
-
-  String? _JOD;
-  String? get JOD => _$this._JOD;
-  set JOD(String? JOD) => _$this._JOD = JOD;
-
-  String? _JPY;
-  String? get JPY => _$this._JPY;
-  set JPY(String? JPY) => _$this._JPY = JPY;
-
-  String? _KES;
-  String? get KES => _$this._KES;
-  set KES(String? KES) => _$this._KES = KES;
-
-  String? _KGS;
-  String? get KGS => _$this._KGS;
-  set KGS(String? KGS) => _$this._KGS = KGS;
-
-  String? _KHR;
-  String? get KHR => _$this._KHR;
-  set KHR(String? KHR) => _$this._KHR = KHR;
-
-  String? _KMF;
-  String? get KMF => _$this._KMF;
-  set KMF(String? KMF) => _$this._KMF = KMF;
-
-  String? _KPW;
-  String? get KPW => _$this._KPW;
-  set KPW(String? KPW) => _$this._KPW = KPW;
-
-  String? _KRW;
-  String? get KRW => _$this._KRW;
-  set KRW(String? KRW) => _$this._KRW = KRW;
-
-  String? _KWD;
-  String? get KWD => _$this._KWD;
-  set KWD(String? KWD) => _$this._KWD = KWD;
-
-  String? _KYD;
-  String? get KYD => _$this._KYD;
-  set KYD(String? KYD) => _$this._KYD = KYD;
-
-  String? _KZT;
-  String? get KZT => _$this._KZT;
-  set KZT(String? KZT) => _$this._KZT = KZT;
-
-  String? _LAK;
-  String? get LAK => _$this._LAK;
-  set LAK(String? LAK) => _$this._LAK = LAK;
-
-  String? _LBP;
-  String? get LBP => _$this._LBP;
-  set LBP(String? LBP) => _$this._LBP = LBP;
-
-  String? _LKR;
-  String? get LKR => _$this._LKR;
-  set LKR(String? LKR) => _$this._LKR = LKR;
-
-  String? _LRD;
-  String? get LRD => _$this._LRD;
-  set LRD(String? LRD) => _$this._LRD = LRD;
-
-  String? _LSL;
-  String? get LSL => _$this._LSL;
-  set LSL(String? LSL) => _$this._LSL = LSL;
-
-  String? _LTC;
-  String? get LTC => _$this._LTC;
-  set LTC(String? LTC) => _$this._LTC = LTC;
-
-  String? _LTL;
-  String? get LTL => _$this._LTL;
-  set LTL(String? LTL) => _$this._LTL = LTL;
-
-  String? _LVL;
-  String? get LVL => _$this._LVL;
-  set LVL(String? LVL) => _$this._LVL = LVL;
-
-  String? _LYD;
-  String? get LYD => _$this._LYD;
-  set LYD(String? LYD) => _$this._LYD = LYD;
-
-  String? _MAD;
-  String? get MAD => _$this._MAD;
-  set MAD(String? MAD) => _$this._MAD = MAD;
-
-  String? _MATIC;
-  String? get MATIC => _$this._MATIC;
-  set MATIC(String? MATIC) => _$this._MATIC = MATIC;
-
-  String? _MDL;
-  String? get MDL => _$this._MDL;
-  set MDL(String? MDL) => _$this._MDL = MDL;
-
-  String? _MGA;
-  String? get MGA => _$this._MGA;
-  set MGA(String? MGA) => _$this._MGA = MGA;
-
-  String? _MKD;
-  String? get MKD => _$this._MKD;
-  set MKD(String? MKD) => _$this._MKD = MKD;
-
-  String? _MMK;
-  String? get MMK => _$this._MMK;
-  set MMK(String? MMK) => _$this._MMK = MMK;
-
-  String? _MNT;
-  String? get MNT => _$this._MNT;
-  set MNT(String? MNT) => _$this._MNT = MNT;
-
-  String? _MOP;
-  String? get MOP => _$this._MOP;
-  set MOP(String? MOP) => _$this._MOP = MOP;
-
-  String? _MRO;
-  String? get MRO => _$this._MRO;
-  set MRO(String? MRO) => _$this._MRO = MRO;
-
-  String? _MRU;
-  String? get MRU => _$this._MRU;
-  set MRU(String? MRU) => _$this._MRU = MRU;
-
-  String? _MUR;
-  String? get MUR => _$this._MUR;
-  set MUR(String? MUR) => _$this._MUR = MUR;
-
-  String? _MVR;
-  String? get MVR => _$this._MVR;
-  set MVR(String? MVR) => _$this._MVR = MVR;
-
-  String? _MWK;
-  String? get MWK => _$this._MWK;
-  set MWK(String? MWK) => _$this._MWK = MWK;
-
-  String? _MXN;
-  String? get MXN => _$this._MXN;
-  set MXN(String? MXN) => _$this._MXN = MXN;
-
-  String? _MYR;
-  String? get MYR => _$this._MYR;
-  set MYR(String? MYR) => _$this._MYR = MYR;
-
-  String? _MZN;
-  String? get MZN => _$this._MZN;
-  set MZN(String? MZN) => _$this._MZN = MZN;
-
-  String? _NAD;
-  String? get NAD => _$this._NAD;
-  set NAD(String? NAD) => _$this._NAD = NAD;
-
-  String? _NGN;
-  String? get NGN => _$this._NGN;
-  set NGN(String? NGN) => _$this._NGN = NGN;
-
-  String? _NIO;
-  String? get NIO => _$this._NIO;
-  set NIO(String? NIO) => _$this._NIO = NIO;
-
-  String? _NOK;
-  String? get NOK => _$this._NOK;
-  set NOK(String? NOK) => _$this._NOK = NOK;
-
-  String? _NPR;
-  String? get NPR => _$this._NPR;
-  set NPR(String? NPR) => _$this._NPR = NPR;
-
-  String? _NZD;
-  String? get NZD => _$this._NZD;
-  set NZD(String? NZD) => _$this._NZD = NZD;
-
-  String? _OMR;
-  String? get OMR => _$this._OMR;
-  set OMR(String? OMR) => _$this._OMR = OMR;
-
-  String? _OP;
-  String? get OP => _$this._OP;
-  set OP(String? OP) => _$this._OP = OP;
-
-  String? _PAB;
-  String? get PAB => _$this._PAB;
-  set PAB(String? PAB) => _$this._PAB = PAB;
-
-  String? _PEN;
-  String? get PEN => _$this._PEN;
-  set PEN(String? PEN) => _$this._PEN = PEN;
-
-  String? _PGK;
-  String? get PGK => _$this._PGK;
-  set PGK(String? PGK) => _$this._PGK = PGK;
-
-  String? _PHP;
-  String? get PHP => _$this._PHP;
-  set PHP(String? PHP) => _$this._PHP = PHP;
-
-  String? _PKR;
-  String? get PKR => _$this._PKR;
-  set PKR(String? PKR) => _$this._PKR = PKR;
-
-  String? _PLN;
-  String? get PLN => _$this._PLN;
-  set PLN(String? PLN) => _$this._PLN = PLN;
-
-  String? _PYG;
-  String? get PYG => _$this._PYG;
-  set PYG(String? PYG) => _$this._PYG = PYG;
-
-  String? _QAR;
-  String? get QAR => _$this._QAR;
-  set QAR(String? QAR) => _$this._QAR = QAR;
-
-  String? _RON;
-  String? get RON => _$this._RON;
-  set RON(String? RON) => _$this._RON = RON;
-
-  String? _RSD;
-  String? get RSD => _$this._RSD;
-  set RSD(String? RSD) => _$this._RSD = RSD;
-
-  String? _RUB;
-  String? get RUB => _$this._RUB;
-  set RUB(String? RUB) => _$this._RUB = RUB;
-
-  String? _RWF;
-  String? get RWF => _$this._RWF;
-  set RWF(String? RWF) => _$this._RWF = RWF;
-
-  String? _SAR;
-  String? get SAR => _$this._SAR;
-  set SAR(String? SAR) => _$this._SAR = SAR;
-
-  String? _SBD;
-  String? get SBD => _$this._SBD;
-  set SBD(String? SBD) => _$this._SBD = SBD;
-
-  String? _SCR;
-  String? get SCR => _$this._SCR;
-  set SCR(String? SCR) => _$this._SCR = SCR;
-
-  String? _SDG;
-  String? get SDG => _$this._SDG;
-  set SDG(String? SDG) => _$this._SDG = SDG;
-
-  String? _SEK;
-  String? get SEK => _$this._SEK;
-  set SEK(String? SEK) => _$this._SEK = SEK;
-
-  String? _SGD;
-  String? get SGD => _$this._SGD;
-  set SGD(String? SGD) => _$this._SGD = SGD;
-
-  String? _SHP;
-  String? get SHP => _$this._SHP;
-  set SHP(String? SHP) => _$this._SHP = SHP;
-
-  String? _SLL;
-  String? get SLL => _$this._SLL;
-  set SLL(String? SLL) => _$this._SLL = SLL;
-
-  String? _SOL;
-  String? get SOL => _$this._SOL;
-  set SOL(String? SOL) => _$this._SOL = SOL;
-
-  String? _SOS;
-  String? get SOS => _$this._SOS;
-  set SOS(String? SOS) => _$this._SOS = SOS;
-
-  String? _SRD;
-  String? get SRD => _$this._SRD;
-  set SRD(String? SRD) => _$this._SRD = SRD;
-
-  String? _STD;
-  String? get STD => _$this._STD;
-  set STD(String? STD) => _$this._STD = STD;
-
-  String? _STN;
-  String? get STN => _$this._STN;
-  set STN(String? STN) => _$this._STN = STN;
-
-  String? _SVC;
-  String? get SVC => _$this._SVC;
-  set SVC(String? SVC) => _$this._SVC = SVC;
-
-  String? _SYP;
-  String? get SYP => _$this._SYP;
-  set SYP(String? SYP) => _$this._SYP = SYP;
-
-  String? _SZL;
-  String? get SZL => _$this._SZL;
-  set SZL(String? SZL) => _$this._SZL = SZL;
-
-  String? _THB;
-  String? get THB => _$this._THB;
-  set THB(String? THB) => _$this._THB = THB;
-
-  String? _TJS;
-  String? get TJS => _$this._TJS;
-  set TJS(String? TJS) => _$this._TJS = TJS;
-
-  String? _TMT;
-  String? get TMT => _$this._TMT;
-  set TMT(String? TMT) => _$this._TMT = TMT;
-
-  String? _TND;
-  String? get TND => _$this._TND;
-  set TND(String? TND) => _$this._TND = TND;
-
-  String? _TOP;
-  String? get TOP => _$this._TOP;
-  set TOP(String? TOP) => _$this._TOP = TOP;
-
-  String? _TRY;
-  String? get TRY => _$this._TRY;
-  set TRY(String? TRY) => _$this._TRY = TRY;
-
-  String? _TTD;
-  String? get TTD => _$this._TTD;
-  set TTD(String? TTD) => _$this._TTD = TTD;
-
-  String? _TWD;
-  String? get TWD => _$this._TWD;
-  set TWD(String? TWD) => _$this._TWD = TWD;
-
-  String? _TZS;
-  String? get TZS => _$this._TZS;
-  set TZS(String? TZS) => _$this._TZS = TZS;
-
-  String? _UAH;
-  String? get UAH => _$this._UAH;
-  set UAH(String? UAH) => _$this._UAH = UAH;
-
-  String? _UGX;
-  String? get UGX => _$this._UGX;
-  set UGX(String? UGX) => _$this._UGX = UGX;
-
-  String? _USD;
-  String? get USD => _$this._USD;
-  set USD(String? USD) => _$this._USD = USD;
-
-  String? _USDC;
-  String? get USDC => _$this._USDC;
-  set USDC(String? USDC) => _$this._USDC = USDC;
-
-  String? _USDT;
-  String? get USDT => _$this._USDT;
-  set USDT(String? USDT) => _$this._USDT = USDT;
-
-  String? _UYU;
-  String? get UYU => _$this._UYU;
-  set UYU(String? UYU) => _$this._UYU = UYU;
-
-  String? _UZS;
-  String? get UZS => _$this._UZS;
-  set UZS(String? UZS) => _$this._UZS = UZS;
-
-  String? _VEF;
-  String? get VEF => _$this._VEF;
-  set VEF(String? VEF) => _$this._VEF = VEF;
-
-  String? _VES;
-  String? get VES => _$this._VES;
-  set VES(String? VES) => _$this._VES = VES;
-
-  String? _VND;
-  String? get VND => _$this._VND;
-  set VND(String? VND) => _$this._VND = VND;
-
-  String? _VUV;
-  String? get VUV => _$this._VUV;
-  set VUV(String? VUV) => _$this._VUV = VUV;
-
-  String? _WST;
-  String? get WST => _$this._WST;
-  set WST(String? WST) => _$this._WST = WST;
-
-  String? _XAF;
-  String? get XAF => _$this._XAF;
-  set XAF(String? XAF) => _$this._XAF = XAF;
-
-  String? _XAG;
-  String? get XAG => _$this._XAG;
-  set XAG(String? XAG) => _$this._XAG = XAG;
-
-  String? _XAU;
-  String? get XAU => _$this._XAU;
-  set XAU(String? XAU) => _$this._XAU = XAU;
-
-  String? _XCD;
-  String? get XCD => _$this._XCD;
-  set XCD(String? XCD) => _$this._XCD = XCD;
-
-  String? _XDR;
-  String? get XDR => _$this._XDR;
-  set XDR(String? XDR) => _$this._XDR = XDR;
-
-  String? _XOF;
-  String? get XOF => _$this._XOF;
-  set XOF(String? XOF) => _$this._XOF = XOF;
-
-  String? _XPD;
-  String? get XPD => _$this._XPD;
-  set XPD(String? XPD) => _$this._XPD = XPD;
-
-  String? _XPF;
-  String? get XPF => _$this._XPF;
-  set XPF(String? XPF) => _$this._XPF = XPF;
-
-  String? _XPT;
-  String? get XPT => _$this._XPT;
-  set XPT(String? XPT) => _$this._XPT = XPT;
-
-  String? _XRP;
-  String? get XRP => _$this._XRP;
-  set XRP(String? XRP) => _$this._XRP = XRP;
-
-  String? _YER;
-  String? get YER => _$this._YER;
-  set YER(String? YER) => _$this._YER = YER;
-
-  String? _ZAR;
-  String? get ZAR => _$this._ZAR;
-  set ZAR(String? ZAR) => _$this._ZAR = ZAR;
-
-  String? _ZMK;
-  String? get ZMK => _$this._ZMK;
-  set ZMK(String? ZMK) => _$this._ZMK = ZMK;
-
-  String? _ZMW;
-  String? get ZMW => _$this._ZMW;
-  set ZMW(String? ZMW) => _$this._ZMW = ZMW;
-
-  String? _ZWL;
-  String? get ZWL => _$this._ZWL;
-  set ZWL(String? ZWL) => _$this._ZWL = ZWL;
-
-  DataBuilder() {
-    Data._defaults(this);
+class FindLatestDataBuilder
+    implements Builder<FindLatestData, FindLatestDataBuilder> {
+  _$FindLatestData? _$v;
+
+  double? _ADA;
+  double? get ADA => _$this._ADA;
+  set ADA(double? ADA) => _$this._ADA = ADA;
+
+  double? _AED;
+  double? get AED => _$this._AED;
+  set AED(double? AED) => _$this._AED = AED;
+
+  double? _AFN;
+  double? get AFN => _$this._AFN;
+  set AFN(double? AFN) => _$this._AFN = AFN;
+
+  double? _ALL;
+  double? get ALL => _$this._ALL;
+  set ALL(double? ALL) => _$this._ALL = ALL;
+
+  double? _AMD;
+  double? get AMD => _$this._AMD;
+  set AMD(double? AMD) => _$this._AMD = AMD;
+
+  double? _ANG;
+  double? get ANG => _$this._ANG;
+  set ANG(double? ANG) => _$this._ANG = ANG;
+
+  double? _AOA;
+  double? get AOA => _$this._AOA;
+  set AOA(double? AOA) => _$this._AOA = AOA;
+
+  double? _ARB;
+  double? get ARB => _$this._ARB;
+  set ARB(double? ARB) => _$this._ARB = ARB;
+
+  double? _ARS;
+  double? get ARS => _$this._ARS;
+  set ARS(double? ARS) => _$this._ARS = ARS;
+
+  double? _AUD;
+  double? get AUD => _$this._AUD;
+  set AUD(double? AUD) => _$this._AUD = AUD;
+
+  double? _AVAX;
+  double? get AVAX => _$this._AVAX;
+  set AVAX(double? AVAX) => _$this._AVAX = AVAX;
+
+  double? _AWG;
+  double? get AWG => _$this._AWG;
+  set AWG(double? AWG) => _$this._AWG = AWG;
+
+  double? _AZN;
+  double? get AZN => _$this._AZN;
+  set AZN(double? AZN) => _$this._AZN = AZN;
+
+  double? _BAM;
+  double? get BAM => _$this._BAM;
+  set BAM(double? BAM) => _$this._BAM = BAM;
+
+  double? _BBD;
+  double? get BBD => _$this._BBD;
+  set BBD(double? BBD) => _$this._BBD = BBD;
+
+  double? _BDT;
+  double? get BDT => _$this._BDT;
+  set BDT(double? BDT) => _$this._BDT = BDT;
+
+  double? _BGN;
+  double? get BGN => _$this._BGN;
+  set BGN(double? BGN) => _$this._BGN = BGN;
+
+  double? _BHD;
+  double? get BHD => _$this._BHD;
+  set BHD(double? BHD) => _$this._BHD = BHD;
+
+  double? _BIF;
+  double? get BIF => _$this._BIF;
+  set BIF(double? BIF) => _$this._BIF = BIF;
+
+  double? _BMD;
+  double? get BMD => _$this._BMD;
+  set BMD(double? BMD) => _$this._BMD = BMD;
+
+  double? _BNB;
+  double? get BNB => _$this._BNB;
+  set BNB(double? BNB) => _$this._BNB = BNB;
+
+  double? _BND;
+  double? get BND => _$this._BND;
+  set BND(double? BND) => _$this._BND = BND;
+
+  double? _BOB;
+  double? get BOB => _$this._BOB;
+  set BOB(double? BOB) => _$this._BOB = BOB;
+
+  double? _BRL;
+  double? get BRL => _$this._BRL;
+  set BRL(double? BRL) => _$this._BRL = BRL;
+
+  double? _BSD;
+  double? get BSD => _$this._BSD;
+  set BSD(double? BSD) => _$this._BSD = BSD;
+
+  double? _BTC;
+  double? get BTC => _$this._BTC;
+  set BTC(double? BTC) => _$this._BTC = BTC;
+
+  double? _BTN;
+  double? get BTN => _$this._BTN;
+  set BTN(double? BTN) => _$this._BTN = BTN;
+
+  double? _BWP;
+  double? get BWP => _$this._BWP;
+  set BWP(double? BWP) => _$this._BWP = BWP;
+
+  double? _BYN;
+  double? get BYN => _$this._BYN;
+  set BYN(double? BYN) => _$this._BYN = BYN;
+
+  double? _BYR;
+  double? get BYR => _$this._BYR;
+  set BYR(double? BYR) => _$this._BYR = BYR;
+
+  double? _BZD;
+  double? get BZD => _$this._BZD;
+  set BZD(double? BZD) => _$this._BZD = BZD;
+
+  double? _CAD;
+  double? get CAD => _$this._CAD;
+  set CAD(double? CAD) => _$this._CAD = CAD;
+
+  double? _CDF;
+  double? get CDF => _$this._CDF;
+  set CDF(double? CDF) => _$this._CDF = CDF;
+
+  double? _CHF;
+  double? get CHF => _$this._CHF;
+  set CHF(double? CHF) => _$this._CHF = CHF;
+
+  double? _CLP;
+  double? get CLP => _$this._CLP;
+  set CLP(double? CLP) => _$this._CLP = CLP;
+
+  double? _CNY;
+  double? get CNY => _$this._CNY;
+  set CNY(double? CNY) => _$this._CNY = CNY;
+
+  double? _COP;
+  double? get COP => _$this._COP;
+  set COP(double? COP) => _$this._COP = COP;
+
+  double? _CRC;
+  double? get CRC => _$this._CRC;
+  set CRC(double? CRC) => _$this._CRC = CRC;
+
+  double? _CUC;
+  double? get CUC => _$this._CUC;
+  set CUC(double? CUC) => _$this._CUC = CUC;
+
+  double? _CUP;
+  double? get CUP => _$this._CUP;
+  set CUP(double? CUP) => _$this._CUP = CUP;
+
+  double? _CVE;
+  double? get CVE => _$this._CVE;
+  set CVE(double? CVE) => _$this._CVE = CVE;
+
+  double? _CZK;
+  double? get CZK => _$this._CZK;
+  set CZK(double? CZK) => _$this._CZK = CZK;
+
+  double? _DAI;
+  double? get DAI => _$this._DAI;
+  set DAI(double? DAI) => _$this._DAI = DAI;
+
+  double? _DJF;
+  double? get DJF => _$this._DJF;
+  set DJF(double? DJF) => _$this._DJF = DJF;
+
+  double? _DKK;
+  double? get DKK => _$this._DKK;
+  set DKK(double? DKK) => _$this._DKK = DKK;
+
+  double? _DOP;
+  double? get DOP => _$this._DOP;
+  set DOP(double? DOP) => _$this._DOP = DOP;
+
+  double? _DOT;
+  double? get DOT => _$this._DOT;
+  set DOT(double? DOT) => _$this._DOT = DOT;
+
+  double? _DZD;
+  double? get DZD => _$this._DZD;
+  set DZD(double? DZD) => _$this._DZD = DZD;
+
+  double? _EGP;
+  double? get EGP => _$this._EGP;
+  set EGP(double? EGP) => _$this._EGP = EGP;
+
+  double? _ERN;
+  double? get ERN => _$this._ERN;
+  set ERN(double? ERN) => _$this._ERN = ERN;
+
+  double? _ETB;
+  double? get ETB => _$this._ETB;
+  set ETB(double? ETB) => _$this._ETB = ETB;
+
+  double? _ETH;
+  double? get ETH => _$this._ETH;
+  set ETH(double? ETH) => _$this._ETH = ETH;
+
+  double? _EUR;
+  double? get EUR => _$this._EUR;
+  set EUR(double? EUR) => _$this._EUR = EUR;
+
+  double? _FJD;
+  double? get FJD => _$this._FJD;
+  set FJD(double? FJD) => _$this._FJD = FJD;
+
+  double? _FKP;
+  double? get FKP => _$this._FKP;
+  set FKP(double? FKP) => _$this._FKP = FKP;
+
+  double? _GBP;
+  double? get GBP => _$this._GBP;
+  set GBP(double? GBP) => _$this._GBP = GBP;
+
+  double? _GEL;
+  double? get GEL => _$this._GEL;
+  set GEL(double? GEL) => _$this._GEL = GEL;
+
+  double? _GGP;
+  double? get GGP => _$this._GGP;
+  set GGP(double? GGP) => _$this._GGP = GGP;
+
+  double? _GHS;
+  double? get GHS => _$this._GHS;
+  set GHS(double? GHS) => _$this._GHS = GHS;
+
+  double? _GIP;
+  double? get GIP => _$this._GIP;
+  set GIP(double? GIP) => _$this._GIP = GIP;
+
+  double? _GMD;
+  double? get GMD => _$this._GMD;
+  set GMD(double? GMD) => _$this._GMD = GMD;
+
+  double? _GNF;
+  double? get GNF => _$this._GNF;
+  set GNF(double? GNF) => _$this._GNF = GNF;
+
+  double? _GTQ;
+  double? get GTQ => _$this._GTQ;
+  set GTQ(double? GTQ) => _$this._GTQ = GTQ;
+
+  double? _GYD;
+  double? get GYD => _$this._GYD;
+  set GYD(double? GYD) => _$this._GYD = GYD;
+
+  double? _HKD;
+  double? get HKD => _$this._HKD;
+  set HKD(double? HKD) => _$this._HKD = HKD;
+
+  double? _HNL;
+  double? get HNL => _$this._HNL;
+  set HNL(double? HNL) => _$this._HNL = HNL;
+
+  double? _HRK;
+  double? get HRK => _$this._HRK;
+  set HRK(double? HRK) => _$this._HRK = HRK;
+
+  double? _HTG;
+  double? get HTG => _$this._HTG;
+  set HTG(double? HTG) => _$this._HTG = HTG;
+
+  double? _HUF;
+  double? get HUF => _$this._HUF;
+  set HUF(double? HUF) => _$this._HUF = HUF;
+
+  double? _IDR;
+  double? get IDR => _$this._IDR;
+  set IDR(double? IDR) => _$this._IDR = IDR;
+
+  double? _ILS;
+  double? get ILS => _$this._ILS;
+  set ILS(double? ILS) => _$this._ILS = ILS;
+
+  double? _IMP;
+  double? get IMP => _$this._IMP;
+  set IMP(double? IMP) => _$this._IMP = IMP;
+
+  double? _INR;
+  double? get INR => _$this._INR;
+  set INR(double? INR) => _$this._INR = INR;
+
+  double? _IQD;
+  double? get IQD => _$this._IQD;
+  set IQD(double? IQD) => _$this._IQD = IQD;
+
+  double? _IRR;
+  double? get IRR => _$this._IRR;
+  set IRR(double? IRR) => _$this._IRR = IRR;
+
+  double? _ISK;
+  double? get ISK => _$this._ISK;
+  set ISK(double? ISK) => _$this._ISK = ISK;
+
+  double? _JEP;
+  double? get JEP => _$this._JEP;
+  set JEP(double? JEP) => _$this._JEP = JEP;
+
+  double? _JMD;
+  double? get JMD => _$this._JMD;
+  set JMD(double? JMD) => _$this._JMD = JMD;
+
+  double? _JOD;
+  double? get JOD => _$this._JOD;
+  set JOD(double? JOD) => _$this._JOD = JOD;
+
+  double? _JPY;
+  double? get JPY => _$this._JPY;
+  set JPY(double? JPY) => _$this._JPY = JPY;
+
+  double? _KES;
+  double? get KES => _$this._KES;
+  set KES(double? KES) => _$this._KES = KES;
+
+  double? _KGS;
+  double? get KGS => _$this._KGS;
+  set KGS(double? KGS) => _$this._KGS = KGS;
+
+  double? _KHR;
+  double? get KHR => _$this._KHR;
+  set KHR(double? KHR) => _$this._KHR = KHR;
+
+  double? _KMF;
+  double? get KMF => _$this._KMF;
+  set KMF(double? KMF) => _$this._KMF = KMF;
+
+  double? _KPW;
+  double? get KPW => _$this._KPW;
+  set KPW(double? KPW) => _$this._KPW = KPW;
+
+  double? _KRW;
+  double? get KRW => _$this._KRW;
+  set KRW(double? KRW) => _$this._KRW = KRW;
+
+  double? _KWD;
+  double? get KWD => _$this._KWD;
+  set KWD(double? KWD) => _$this._KWD = KWD;
+
+  double? _KYD;
+  double? get KYD => _$this._KYD;
+  set KYD(double? KYD) => _$this._KYD = KYD;
+
+  double? _KZT;
+  double? get KZT => _$this._KZT;
+  set KZT(double? KZT) => _$this._KZT = KZT;
+
+  double? _LAK;
+  double? get LAK => _$this._LAK;
+  set LAK(double? LAK) => _$this._LAK = LAK;
+
+  double? _LBP;
+  double? get LBP => _$this._LBP;
+  set LBP(double? LBP) => _$this._LBP = LBP;
+
+  double? _LKR;
+  double? get LKR => _$this._LKR;
+  set LKR(double? LKR) => _$this._LKR = LKR;
+
+  double? _LRD;
+  double? get LRD => _$this._LRD;
+  set LRD(double? LRD) => _$this._LRD = LRD;
+
+  double? _LSL;
+  double? get LSL => _$this._LSL;
+  set LSL(double? LSL) => _$this._LSL = LSL;
+
+  double? _LTC;
+  double? get LTC => _$this._LTC;
+  set LTC(double? LTC) => _$this._LTC = LTC;
+
+  double? _LTL;
+  double? get LTL => _$this._LTL;
+  set LTL(double? LTL) => _$this._LTL = LTL;
+
+  double? _LVL;
+  double? get LVL => _$this._LVL;
+  set LVL(double? LVL) => _$this._LVL = LVL;
+
+  double? _LYD;
+  double? get LYD => _$this._LYD;
+  set LYD(double? LYD) => _$this._LYD = LYD;
+
+  double? _MAD;
+  double? get MAD => _$this._MAD;
+  set MAD(double? MAD) => _$this._MAD = MAD;
+
+  double? _MATIC;
+  double? get MATIC => _$this._MATIC;
+  set MATIC(double? MATIC) => _$this._MATIC = MATIC;
+
+  double? _MDL;
+  double? get MDL => _$this._MDL;
+  set MDL(double? MDL) => _$this._MDL = MDL;
+
+  double? _MGA;
+  double? get MGA => _$this._MGA;
+  set MGA(double? MGA) => _$this._MGA = MGA;
+
+  double? _MKD;
+  double? get MKD => _$this._MKD;
+  set MKD(double? MKD) => _$this._MKD = MKD;
+
+  double? _MMK;
+  double? get MMK => _$this._MMK;
+  set MMK(double? MMK) => _$this._MMK = MMK;
+
+  double? _MNT;
+  double? get MNT => _$this._MNT;
+  set MNT(double? MNT) => _$this._MNT = MNT;
+
+  double? _MOP;
+  double? get MOP => _$this._MOP;
+  set MOP(double? MOP) => _$this._MOP = MOP;
+
+  double? _MRO;
+  double? get MRO => _$this._MRO;
+  set MRO(double? MRO) => _$this._MRO = MRO;
+
+  double? _MRU;
+  double? get MRU => _$this._MRU;
+  set MRU(double? MRU) => _$this._MRU = MRU;
+
+  double? _MUR;
+  double? get MUR => _$this._MUR;
+  set MUR(double? MUR) => _$this._MUR = MUR;
+
+  double? _MVR;
+  double? get MVR => _$this._MVR;
+  set MVR(double? MVR) => _$this._MVR = MVR;
+
+  double? _MWK;
+  double? get MWK => _$this._MWK;
+  set MWK(double? MWK) => _$this._MWK = MWK;
+
+  double? _MXN;
+  double? get MXN => _$this._MXN;
+  set MXN(double? MXN) => _$this._MXN = MXN;
+
+  double? _MYR;
+  double? get MYR => _$this._MYR;
+  set MYR(double? MYR) => _$this._MYR = MYR;
+
+  double? _MZN;
+  double? get MZN => _$this._MZN;
+  set MZN(double? MZN) => _$this._MZN = MZN;
+
+  double? _NAD;
+  double? get NAD => _$this._NAD;
+  set NAD(double? NAD) => _$this._NAD = NAD;
+
+  double? _NGN;
+  double? get NGN => _$this._NGN;
+  set NGN(double? NGN) => _$this._NGN = NGN;
+
+  double? _NIO;
+  double? get NIO => _$this._NIO;
+  set NIO(double? NIO) => _$this._NIO = NIO;
+
+  double? _NOK;
+  double? get NOK => _$this._NOK;
+  set NOK(double? NOK) => _$this._NOK = NOK;
+
+  double? _NPR;
+  double? get NPR => _$this._NPR;
+  set NPR(double? NPR) => _$this._NPR = NPR;
+
+  double? _NZD;
+  double? get NZD => _$this._NZD;
+  set NZD(double? NZD) => _$this._NZD = NZD;
+
+  double? _OMR;
+  double? get OMR => _$this._OMR;
+  set OMR(double? OMR) => _$this._OMR = OMR;
+
+  double? _OP;
+  double? get OP => _$this._OP;
+  set OP(double? OP) => _$this._OP = OP;
+
+  double? _PAB;
+  double? get PAB => _$this._PAB;
+  set PAB(double? PAB) => _$this._PAB = PAB;
+
+  double? _PEN;
+  double? get PEN => _$this._PEN;
+  set PEN(double? PEN) => _$this._PEN = PEN;
+
+  double? _PGK;
+  double? get PGK => _$this._PGK;
+  set PGK(double? PGK) => _$this._PGK = PGK;
+
+  double? _PHP;
+  double? get PHP => _$this._PHP;
+  set PHP(double? PHP) => _$this._PHP = PHP;
+
+  double? _PKR;
+  double? get PKR => _$this._PKR;
+  set PKR(double? PKR) => _$this._PKR = PKR;
+
+  double? _PLN;
+  double? get PLN => _$this._PLN;
+  set PLN(double? PLN) => _$this._PLN = PLN;
+
+  double? _PYG;
+  double? get PYG => _$this._PYG;
+  set PYG(double? PYG) => _$this._PYG = PYG;
+
+  double? _QAR;
+  double? get QAR => _$this._QAR;
+  set QAR(double? QAR) => _$this._QAR = QAR;
+
+  double? _RON;
+  double? get RON => _$this._RON;
+  set RON(double? RON) => _$this._RON = RON;
+
+  double? _RSD;
+  double? get RSD => _$this._RSD;
+  set RSD(double? RSD) => _$this._RSD = RSD;
+
+  double? _RUB;
+  double? get RUB => _$this._RUB;
+  set RUB(double? RUB) => _$this._RUB = RUB;
+
+  double? _RWF;
+  double? get RWF => _$this._RWF;
+  set RWF(double? RWF) => _$this._RWF = RWF;
+
+  double? _SAR;
+  double? get SAR => _$this._SAR;
+  set SAR(double? SAR) => _$this._SAR = SAR;
+
+  double? _SBD;
+  double? get SBD => _$this._SBD;
+  set SBD(double? SBD) => _$this._SBD = SBD;
+
+  double? _SCR;
+  double? get SCR => _$this._SCR;
+  set SCR(double? SCR) => _$this._SCR = SCR;
+
+  double? _SDG;
+  double? get SDG => _$this._SDG;
+  set SDG(double? SDG) => _$this._SDG = SDG;
+
+  double? _SEK;
+  double? get SEK => _$this._SEK;
+  set SEK(double? SEK) => _$this._SEK = SEK;
+
+  double? _SGD;
+  double? get SGD => _$this._SGD;
+  set SGD(double? SGD) => _$this._SGD = SGD;
+
+  double? _SHP;
+  double? get SHP => _$this._SHP;
+  set SHP(double? SHP) => _$this._SHP = SHP;
+
+  double? _SLL;
+  double? get SLL => _$this._SLL;
+  set SLL(double? SLL) => _$this._SLL = SLL;
+
+  double? _SOL;
+  double? get SOL => _$this._SOL;
+  set SOL(double? SOL) => _$this._SOL = SOL;
+
+  double? _SOS;
+  double? get SOS => _$this._SOS;
+  set SOS(double? SOS) => _$this._SOS = SOS;
+
+  double? _SRD;
+  double? get SRD => _$this._SRD;
+  set SRD(double? SRD) => _$this._SRD = SRD;
+
+  double? _STD;
+  double? get STD => _$this._STD;
+  set STD(double? STD) => _$this._STD = STD;
+
+  double? _STN;
+  double? get STN => _$this._STN;
+  set STN(double? STN) => _$this._STN = STN;
+
+  double? _SVC;
+  double? get SVC => _$this._SVC;
+  set SVC(double? SVC) => _$this._SVC = SVC;
+
+  double? _SYP;
+  double? get SYP => _$this._SYP;
+  set SYP(double? SYP) => _$this._SYP = SYP;
+
+  double? _SZL;
+  double? get SZL => _$this._SZL;
+  set SZL(double? SZL) => _$this._SZL = SZL;
+
+  double? _THB;
+  double? get THB => _$this._THB;
+  set THB(double? THB) => _$this._THB = THB;
+
+  double? _TJS;
+  double? get TJS => _$this._TJS;
+  set TJS(double? TJS) => _$this._TJS = TJS;
+
+  double? _TMT;
+  double? get TMT => _$this._TMT;
+  set TMT(double? TMT) => _$this._TMT = TMT;
+
+  double? _TND;
+  double? get TND => _$this._TND;
+  set TND(double? TND) => _$this._TND = TND;
+
+  double? _TOP;
+  double? get TOP => _$this._TOP;
+  set TOP(double? TOP) => _$this._TOP = TOP;
+
+  double? _TRY;
+  double? get TRY => _$this._TRY;
+  set TRY(double? TRY) => _$this._TRY = TRY;
+
+  double? _TTD;
+  double? get TTD => _$this._TTD;
+  set TTD(double? TTD) => _$this._TTD = TTD;
+
+  double? _TWD;
+  double? get TWD => _$this._TWD;
+  set TWD(double? TWD) => _$this._TWD = TWD;
+
+  double? _TZS;
+  double? get TZS => _$this._TZS;
+  set TZS(double? TZS) => _$this._TZS = TZS;
+
+  double? _UAH;
+  double? get UAH => _$this._UAH;
+  set UAH(double? UAH) => _$this._UAH = UAH;
+
+  double? _UGX;
+  double? get UGX => _$this._UGX;
+  set UGX(double? UGX) => _$this._UGX = UGX;
+
+  double? _USD;
+  double? get USD => _$this._USD;
+  set USD(double? USD) => _$this._USD = USD;
+
+  double? _USDC;
+  double? get USDC => _$this._USDC;
+  set USDC(double? USDC) => _$this._USDC = USDC;
+
+  double? _USDT;
+  double? get USDT => _$this._USDT;
+  set USDT(double? USDT) => _$this._USDT = USDT;
+
+  double? _UYU;
+  double? get UYU => _$this._UYU;
+  set UYU(double? UYU) => _$this._UYU = UYU;
+
+  double? _UZS;
+  double? get UZS => _$this._UZS;
+  set UZS(double? UZS) => _$this._UZS = UZS;
+
+  double? _VEF;
+  double? get VEF => _$this._VEF;
+  set VEF(double? VEF) => _$this._VEF = VEF;
+
+  double? _VES;
+  double? get VES => _$this._VES;
+  set VES(double? VES) => _$this._VES = VES;
+
+  double? _VND;
+  double? get VND => _$this._VND;
+  set VND(double? VND) => _$this._VND = VND;
+
+  double? _VUV;
+  double? get VUV => _$this._VUV;
+  set VUV(double? VUV) => _$this._VUV = VUV;
+
+  double? _WST;
+  double? get WST => _$this._WST;
+  set WST(double? WST) => _$this._WST = WST;
+
+  double? _XAF;
+  double? get XAF => _$this._XAF;
+  set XAF(double? XAF) => _$this._XAF = XAF;
+
+  double? _XAG;
+  double? get XAG => _$this._XAG;
+  set XAG(double? XAG) => _$this._XAG = XAG;
+
+  double? _XAU;
+  double? get XAU => _$this._XAU;
+  set XAU(double? XAU) => _$this._XAU = XAU;
+
+  double? _XCD;
+  double? get XCD => _$this._XCD;
+  set XCD(double? XCD) => _$this._XCD = XCD;
+
+  double? _XDR;
+  double? get XDR => _$this._XDR;
+  set XDR(double? XDR) => _$this._XDR = XDR;
+
+  double? _XOF;
+  double? get XOF => _$this._XOF;
+  set XOF(double? XOF) => _$this._XOF = XOF;
+
+  double? _XPD;
+  double? get XPD => _$this._XPD;
+  set XPD(double? XPD) => _$this._XPD = XPD;
+
+  double? _XPF;
+  double? get XPF => _$this._XPF;
+  set XPF(double? XPF) => _$this._XPF = XPF;
+
+  double? _XPT;
+  double? get XPT => _$this._XPT;
+  set XPT(double? XPT) => _$this._XPT = XPT;
+
+  double? _XRP;
+  double? get XRP => _$this._XRP;
+  set XRP(double? XRP) => _$this._XRP = XRP;
+
+  double? _YER;
+  double? get YER => _$this._YER;
+  set YER(double? YER) => _$this._YER = YER;
+
+  double? _ZAR;
+  double? get ZAR => _$this._ZAR;
+  set ZAR(double? ZAR) => _$this._ZAR = ZAR;
+
+  double? _ZMK;
+  double? get ZMK => _$this._ZMK;
+  set ZMK(double? ZMK) => _$this._ZMK = ZMK;
+
+  double? _ZMW;
+  double? get ZMW => _$this._ZMW;
+  set ZMW(double? ZMW) => _$this._ZMW = ZMW;
+
+  double? _ZWL;
+  double? get ZWL => _$this._ZWL;
+  set ZWL(double? ZWL) => _$this._ZWL = ZWL;
+
+  FindLatestDataBuilder() {
+    FindLatestData._defaults(this);
   }
 
-  DataBuilder get _$this {
+  FindLatestDataBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _ADA = $v.ADA;
@@ -1955,7 +1947,6 @@ class DataBuilder implements Builder<Data, DataBuilder> {
       _CAD = $v.CAD;
       _CDF = $v.CDF;
       _CHF = $v.CHF;
-      _CLF = $v.CLF;
       _CLP = $v.CLP;
       _CNY = $v.CNY;
       _COP = $v.COP;
@@ -2114,209 +2105,209 @@ class DataBuilder implements Builder<Data, DataBuilder> {
   }
 
   @override
-  void replace(Data other) {
+  void replace(FindLatestData other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$Data;
+    _$v = other as _$FindLatestData;
   }
 
   @override
-  void update(void Function(DataBuilder)? updates) {
+  void update(void Function(FindLatestDataBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  Data build() => _build();
+  FindLatestData build() => _build();
 
-  _$Data _build() {
+  _$FindLatestData _build() {
     final _$result = _$v ??
-        new _$Data._(
-            ADA: ADA,
-            AED: AED,
-            AFN: AFN,
-            ALL: ALL,
-            AMD: AMD,
-            ANG: ANG,
-            AOA: AOA,
-            ARB: ARB,
-            ARS: ARS,
-            AUD: AUD,
-            AVAX: AVAX,
-            AWG: AWG,
-            AZN: AZN,
-            BAM: BAM,
-            BBD: BBD,
-            BDT: BDT,
-            BGN: BGN,
-            BHD: BHD,
-            BIF: BIF,
-            BMD: BMD,
-            BNB: BNB,
-            BND: BND,
-            BOB: BOB,
-            BRL: BRL,
-            BSD: BSD,
-            BTC: BTC,
-            BTN: BTN,
-            BWP: BWP,
-            BYN: BYN,
-            BYR: BYR,
-            BZD: BZD,
-            CAD: CAD,
-            CDF: CDF,
-            CHF: CHF,
-            CLF: CLF,
-            CLP: CLP,
-            CNY: CNY,
-            COP: COP,
-            CRC: CRC,
-            CUC: CUC,
-            CUP: CUP,
-            CVE: CVE,
-            CZK: CZK,
-            DAI: DAI,
-            DJF: DJF,
-            DKK: DKK,
-            DOP: DOP,
-            DOT: DOT,
-            DZD: DZD,
-            EGP: EGP,
-            ERN: ERN,
-            ETB: ETB,
-            ETH: ETH,
-            EUR: EUR,
-            FJD: FJD,
-            FKP: FKP,
-            GBP: GBP,
-            GEL: GEL,
-            GGP: GGP,
-            GHS: GHS,
-            GIP: GIP,
-            GMD: GMD,
-            GNF: GNF,
-            GTQ: GTQ,
-            GYD: GYD,
-            HKD: HKD,
-            HNL: HNL,
-            HRK: HRK,
-            HTG: HTG,
-            HUF: HUF,
-            IDR: IDR,
-            ILS: ILS,
-            IMP: IMP,
-            INR: INR,
-            IQD: IQD,
-            IRR: IRR,
-            ISK: ISK,
-            JEP: JEP,
-            JMD: JMD,
-            JOD: JOD,
-            JPY: JPY,
-            KES: KES,
-            KGS: KGS,
-            KHR: KHR,
-            KMF: KMF,
-            KPW: KPW,
-            KRW: KRW,
-            KWD: KWD,
-            KYD: KYD,
-            KZT: KZT,
-            LAK: LAK,
-            LBP: LBP,
-            LKR: LKR,
-            LRD: LRD,
-            LSL: LSL,
-            LTC: LTC,
-            LTL: LTL,
-            LVL: LVL,
-            LYD: LYD,
-            MAD: MAD,
-            MATIC: MATIC,
-            MDL: MDL,
-            MGA: MGA,
-            MKD: MKD,
-            MMK: MMK,
-            MNT: MNT,
-            MOP: MOP,
-            MRO: MRO,
-            MRU: MRU,
-            MUR: MUR,
-            MVR: MVR,
-            MWK: MWK,
-            MXN: MXN,
-            MYR: MYR,
-            MZN: MZN,
-            NAD: NAD,
-            NGN: NGN,
-            NIO: NIO,
-            NOK: NOK,
-            NPR: NPR,
-            NZD: NZD,
-            OMR: OMR,
-            OP: OP,
-            PAB: PAB,
-            PEN: PEN,
-            PGK: PGK,
-            PHP: PHP,
-            PKR: PKR,
-            PLN: PLN,
-            PYG: PYG,
-            QAR: QAR,
-            RON: RON,
-            RSD: RSD,
-            RUB: RUB,
-            RWF: RWF,
-            SAR: SAR,
-            SBD: SBD,
-            SCR: SCR,
-            SDG: SDG,
-            SEK: SEK,
-            SGD: SGD,
-            SHP: SHP,
-            SLL: SLL,
-            SOL: SOL,
-            SOS: SOS,
-            SRD: SRD,
-            STD: STD,
-            STN: STN,
-            SVC: SVC,
-            SYP: SYP,
-            SZL: SZL,
-            THB: THB,
-            TJS: TJS,
-            TMT: TMT,
-            TND: TND,
-            TOP: TOP,
-            TRY: TRY,
-            TTD: TTD,
-            TWD: TWD,
-            TZS: TZS,
-            UAH: UAH,
-            UGX: UGX,
-            USD: USD,
-            USDC: USDC,
-            USDT: USDT,
-            UYU: UYU,
-            UZS: UZS,
-            VEF: VEF,
-            VES: VES,
-            VND: VND,
-            VUV: VUV,
-            WST: WST,
-            XAF: XAF,
-            XAG: XAG,
-            XAU: XAU,
-            XCD: XCD,
-            XDR: XDR,
-            XOF: XOF,
-            XPD: XPD,
-            XPF: XPF,
-            XPT: XPT,
-            XRP: XRP,
-            YER: YER,
-            ZAR: ZAR,
-            ZMK: ZMK,
-            ZMW: ZMW,
-            ZWL: ZWL);
+        new _$FindLatestData._(
+          ADA: ADA,
+          AED: AED,
+          AFN: AFN,
+          ALL: ALL,
+          AMD: AMD,
+          ANG: ANG,
+          AOA: AOA,
+          ARB: ARB,
+          ARS: ARS,
+          AUD: AUD,
+          AVAX: AVAX,
+          AWG: AWG,
+          AZN: AZN,
+          BAM: BAM,
+          BBD: BBD,
+          BDT: BDT,
+          BGN: BGN,
+          BHD: BHD,
+          BIF: BIF,
+          BMD: BMD,
+          BNB: BNB,
+          BND: BND,
+          BOB: BOB,
+          BRL: BRL,
+          BSD: BSD,
+          BTC: BTC,
+          BTN: BTN,
+          BWP: BWP,
+          BYN: BYN,
+          BYR: BYR,
+          BZD: BZD,
+          CAD: CAD,
+          CDF: CDF,
+          CHF: CHF,
+          CLP: CLP,
+          CNY: CNY,
+          COP: COP,
+          CRC: CRC,
+          CUC: CUC,
+          CUP: CUP,
+          CVE: CVE,
+          CZK: CZK,
+          DAI: DAI,
+          DJF: DJF,
+          DKK: DKK,
+          DOP: DOP,
+          DOT: DOT,
+          DZD: DZD,
+          EGP: EGP,
+          ERN: ERN,
+          ETB: ETB,
+          ETH: ETH,
+          EUR: EUR,
+          FJD: FJD,
+          FKP: FKP,
+          GBP: GBP,
+          GEL: GEL,
+          GGP: GGP,
+          GHS: GHS,
+          GIP: GIP,
+          GMD: GMD,
+          GNF: GNF,
+          GTQ: GTQ,
+          GYD: GYD,
+          HKD: HKD,
+          HNL: HNL,
+          HRK: HRK,
+          HTG: HTG,
+          HUF: HUF,
+          IDR: IDR,
+          ILS: ILS,
+          IMP: IMP,
+          INR: INR,
+          IQD: IQD,
+          IRR: IRR,
+          ISK: ISK,
+          JEP: JEP,
+          JMD: JMD,
+          JOD: JOD,
+          JPY: JPY,
+          KES: KES,
+          KGS: KGS,
+          KHR: KHR,
+          KMF: KMF,
+          KPW: KPW,
+          KRW: KRW,
+          KWD: KWD,
+          KYD: KYD,
+          KZT: KZT,
+          LAK: LAK,
+          LBP: LBP,
+          LKR: LKR,
+          LRD: LRD,
+          LSL: LSL,
+          LTC: LTC,
+          LTL: LTL,
+          LVL: LVL,
+          LYD: LYD,
+          MAD: MAD,
+          MATIC: MATIC,
+          MDL: MDL,
+          MGA: MGA,
+          MKD: MKD,
+          MMK: MMK,
+          MNT: MNT,
+          MOP: MOP,
+          MRO: MRO,
+          MRU: MRU,
+          MUR: MUR,
+          MVR: MVR,
+          MWK: MWK,
+          MXN: MXN,
+          MYR: MYR,
+          MZN: MZN,
+          NAD: NAD,
+          NGN: NGN,
+          NIO: NIO,
+          NOK: NOK,
+          NPR: NPR,
+          NZD: NZD,
+          OMR: OMR,
+          OP: OP,
+          PAB: PAB,
+          PEN: PEN,
+          PGK: PGK,
+          PHP: PHP,
+          PKR: PKR,
+          PLN: PLN,
+          PYG: PYG,
+          QAR: QAR,
+          RON: RON,
+          RSD: RSD,
+          RUB: RUB,
+          RWF: RWF,
+          SAR: SAR,
+          SBD: SBD,
+          SCR: SCR,
+          SDG: SDG,
+          SEK: SEK,
+          SGD: SGD,
+          SHP: SHP,
+          SLL: SLL,
+          SOL: SOL,
+          SOS: SOS,
+          SRD: SRD,
+          STD: STD,
+          STN: STN,
+          SVC: SVC,
+          SYP: SYP,
+          SZL: SZL,
+          THB: THB,
+          TJS: TJS,
+          TMT: TMT,
+          TND: TND,
+          TOP: TOP,
+          TRY: TRY,
+          TTD: TTD,
+          TWD: TWD,
+          TZS: TZS,
+          UAH: UAH,
+          UGX: UGX,
+          USD: USD,
+          USDC: USDC,
+          USDT: USDT,
+          UYU: UYU,
+          UZS: UZS,
+          VEF: VEF,
+          VES: VES,
+          VND: VND,
+          VUV: VUV,
+          WST: WST,
+          XAF: XAF,
+          XAG: XAG,
+          XAU: XAU,
+          XCD: XCD,
+          XDR: XDR,
+          XOF: XOF,
+          XPD: XPD,
+          XPF: XPF,
+          XPT: XPT,
+          XRP: XRP,
+          YER: YER,
+          ZAR: ZAR,
+          ZMK: ZMK,
+          ZMW: ZMW,
+          ZWL: ZWL,
+        );
     replace(_$result);
     return _$result;
   }

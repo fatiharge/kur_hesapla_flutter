@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:openapi/src/model/meta.dart';
-import 'package:openapi/src/model/data.dart';
+import 'package:openapi/src/model/find_latest_data.dart';
+import 'package:openapi/src/model/find_latest_meta.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,10 +18,10 @@ part 'find_latest_response.g.dart';
 @BuiltValue()
 abstract class FindLatestResponse implements Built<FindLatestResponse, FindLatestResponseBuilder> {
   @BuiltValueField(wireName: r'meta')
-  Meta? get meta;
+  FindLatestMeta? get meta;
 
   @BuiltValueField(wireName: r'data')
-  Data? get data;
+  FindLatestData? get data;
 
   FindLatestResponse._();
 
@@ -50,14 +50,14 @@ class _$FindLatestResponseSerializer implements PrimitiveSerializer<FindLatestRe
       yield r'meta';
       yield serializers.serialize(
         object.meta,
-        specifiedType: const FullType(Meta),
+        specifiedType: const FullType(FindLatestMeta),
       );
     }
     if (object.data != null) {
       yield r'data';
       yield serializers.serialize(
         object.data,
-        specifiedType: const FullType(Data),
+        specifiedType: const FullType(FindLatestData),
       );
     }
   }
@@ -86,15 +86,15 @@ class _$FindLatestResponseSerializer implements PrimitiveSerializer<FindLatestRe
         case r'meta':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(Meta),
-          ) as Meta;
+            specifiedType: const FullType(FindLatestMeta),
+          ) as FindLatestMeta;
           result.meta.replace(valueDes);
           break;
         case r'data':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(Data),
-          ) as Data;
+            specifiedType: const FullType(FindLatestData),
+          ) as FindLatestData;
           result.data.replace(valueDes);
           break;
         default:

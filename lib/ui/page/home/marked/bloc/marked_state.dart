@@ -1,6 +1,10 @@
 part of 'marked_bloc.dart';
 
-@immutable
-sealed class MarkedState {}
+@freezed
+class MarkedState with _$MarkedState {
+  const factory MarkedState.initial() = Initial;
 
-final class MarkedInitial extends MarkedState {}
+  const factory MarkedState.loaded({
+    required List<MarkedCurrency> markedList,
+  }) = Loaded;
+}

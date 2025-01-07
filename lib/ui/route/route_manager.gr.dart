@@ -9,14 +9,15 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i8;
-import 'package:kur_hesapla/ui/page/home/calculator/select_currency_page/select_currency_page.dart'
+import 'package:kur_hesapla/ui/page/home/calculator/disclaimer/disclaimer_page.dart'
+    as _i3;
+import 'package:kur_hesapla/ui/page/home/calculator/select_currency_page/view/select_currency_page.dart'
     as _i6;
 import 'package:kur_hesapla/ui/page/home/calculator/view/calculator_page.dart'
     as _i1;
 import 'package:kur_hesapla/ui/page/home/chart/view/chart_page.dart' as _i2;
-import 'package:kur_hesapla/ui/page/home/home_controller.dart' as _i3;
-import 'package:kur_hesapla/ui/page/home/marked/view/marked_page.dart' as _i4;
-import 'package:kur_hesapla/ui/page/new_widget_page.dart' as _i5;
+import 'package:kur_hesapla/ui/page/home/home_controller.dart' as _i4;
+import 'package:kur_hesapla/ui/page/home/marked/view/marked_page.dart' as _i5;
 import 'package:kur_hesapla/ui/page/splash/view/splash_page.dart' as _i7;
 
 /// generated route for
@@ -58,7 +59,26 @@ class ChartRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.HomeControllerPage]
+/// [_i3.DisclaimerPage]
+class DisclaimerRoute extends _i8.PageRouteInfo<void> {
+  const DisclaimerRoute({List<_i8.PageRouteInfo>? children})
+      : super(
+          DisclaimerRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DisclaimerRoute';
+
+  static _i8.PageInfo page = _i8.PageInfo(
+    name,
+    builder: (data) {
+      return const _i3.DisclaimerPage();
+    },
+  );
+}
+
+/// generated route for
+/// [_i4.HomeControllerPage]
 class HomeControllerRoute extends _i8.PageRouteInfo<void> {
   const HomeControllerRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -71,13 +91,13 @@ class HomeControllerRoute extends _i8.PageRouteInfo<void> {
   static _i8.PageInfo page = _i8.PageInfo(
     name,
     builder: (data) {
-      return const _i3.HomeControllerPage();
+      return const _i4.HomeControllerPage();
     },
   );
 }
 
 /// generated route for
-/// [_i4.MarkedPage]
+/// [_i5.MarkedPage]
 class MarkedRoute extends _i8.PageRouteInfo<void> {
   const MarkedRoute({List<_i8.PageRouteInfo>? children})
       : super(
@@ -90,26 +110,7 @@ class MarkedRoute extends _i8.PageRouteInfo<void> {
   static _i8.PageInfo page = _i8.PageInfo(
     name,
     builder: (data) {
-      return const _i4.MarkedPage();
-    },
-  );
-}
-
-/// generated route for
-/// [_i5.NewWidgetPage]
-class NewWidgetRoute extends _i8.PageRouteInfo<void> {
-  const NewWidgetRoute({List<_i8.PageRouteInfo>? children})
-      : super(
-          NewWidgetRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'NewWidgetRoute';
-
-  static _i8.PageInfo page = _i8.PageInfo(
-    name,
-    builder: (data) {
-      return const _i5.NewWidgetPage();
+      return const _i5.MarkedPage();
     },
   );
 }

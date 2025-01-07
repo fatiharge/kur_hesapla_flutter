@@ -7,12 +7,12 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(FindLatestResponse, () {
-    // Meta meta
+    // FindLatestMeta meta
     test('to test the property `meta`', () async {
       // TODO
     });
 
-    // Data data
+    // FindLatestData data
     test('to test the property `data`', () async {
       // TODO
     });

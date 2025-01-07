@@ -24,9 +24,7 @@ class GlobalBloc extends Bloc<GlobalEvent, GlobalState> {
     });
 
     on<_GlobalLoadEvent>((event, emit) {
-      emit(GlobalState.loading(
-        widget: event.widget,
-      ));
+      emit(GlobalState.loading(widget: event.widget));
     });
   }
 }

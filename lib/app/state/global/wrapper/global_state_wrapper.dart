@@ -9,15 +9,9 @@ class GlobalStateWrapper extends StatefulWidget {
     super.key,
   });
 
-  static TransitionBuilder init({
-    TransitionBuilder? builder,
-  }) {
+  static TransitionBuilder provider() {
     return (BuildContext context, Widget? child) {
-      if (builder != null) {
-        return builder(context, GlobalStateWrapper(child: child));
-      } else {
-        return GlobalStateWrapper(child: child);
-      }
+      return GlobalStateWrapper(child: child);
     };
   }
 

@@ -12,7 +12,6 @@ class CalculatorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      lazy: false,
       create: (_) => GetIt.instance<CalculatorBloc>()
         ..add(
           const CalculatorEvent.load(),

@@ -43,7 +43,7 @@ const lightColorSchema = ColorScheme(
   surfaceDim: Color(0xffd9d9e0),
   surfaceBright: Color(0xfff9f9ff),
   surfaceContainerLowest: Color(0xffffffff),
-  surfaceContainerLow: Color(0xfff3f3fa),
+  surfaceContainerLow:  Color(0xfff3f3fa),// button default color
   surfaceContainer: Color(0xffededf4),
   surfaceContainerHigh: Color(0xffe7e8ee),
   surfaceContainerHighest: Color(0xffe2e2e9),
