@@ -1,9 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
+
 import 'package:kur_hesapla/app/enum/currency_type.dart';
-import 'package:kur_hesapla/ui/route/route_manager.dart';
+
 import 'package:kur_hesapla/ui/route/route_manager.gr.dart';
 import 'package:uikit/utility/extension/context_extension.dart';
 
@@ -11,15 +12,17 @@ class CurrencyInfo extends StatelessWidget {
   const CurrencyInfo({
     required this.currencyType,
     required this.time,
-    required this.rate,
     required this.calculatedType,
     super.key,
+    required this.calculatedValue,
+    required this.currencyValue,
   });
 
   final CurrencyType currencyType;
   final CurrencyType calculatedType;
+  final String calculatedValue;
+  final String currencyValue;
   final String time;
-  final String rate;
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +30,14 @@ class CurrencyInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '1 ${currencyType.getLocaleKey.tr()}',
-          style: context.textTheme.titleMedium?.copyWith(
-            fontWeight: FontWeight.w300,
+          '$currencyValue ${currencyType.getLocaleKey.tr()}',
+          style: context.textTheme.headlineSmall?.copyWith(
             color: Theme.of(context).hintColor,
           ),
         ),
         Text(
-          '$rate ${calculatedType.getLocaleKey.tr()}',
-          style: context.textTheme.displaySmall,
+          '$calculatedValue ${calculatedType.getLocaleKey.tr()}',
+          style: context.textTheme.headlineMedium,
         ),
         RichText(
           text: TextSpan(
@@ -48,9 +50,7 @@ class CurrencyInfo extends StatelessWidget {
                 text: 'Sorumluluk Reddi Beyanı',
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    GetIt.instance<RouteManager>().push(
-                      const DisclaimerRoute(),
-                    );
+                    context.pushRoute(const DisclaimerRoute());
                   },
                 style: context.textTheme.titleSmall?.copyWith(
                   fontWeight: FontWeight.w300,

@@ -11,7 +11,5 @@ sealed class CalculatorState with _$CalculatorState {
     @Default(CurrencyType.USD) CurrencyType currencyType,
     @Default(CurrencyType.EUR) CurrencyType calculatedType,
     @Default('1') String currencyValue,
-    @Default(false) bool isMarked,
-    int? markedId,
   }) = CalculatorLoaded;
 }

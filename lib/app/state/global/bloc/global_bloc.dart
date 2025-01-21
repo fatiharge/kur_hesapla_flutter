@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
 part 'global_event.dart';
 
 part 'global_state.dart';
 
 part 'global_bloc.freezed.dart';
+
 
 class GlobalBloc extends Bloc<GlobalEvent, GlobalState> {
   GlobalBloc() : super(const GlobalState.success()) {

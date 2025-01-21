@@ -1,0 +1,1 @@
+enum PercentDeltaCardState { positive, negative, equal }

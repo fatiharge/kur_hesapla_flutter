@@ -1,12 +1,12 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
+
 import 'package:kur_hesapla/generated/locale_keys.g.dart';
 import 'package:kur_hesapla/ui//route/route_manager.gr.dart';
 import 'package:kur_hesapla/ui/page/splash/bloc/splash_cubit.dart';
-import 'package:kur_hesapla/ui/route/route_manager.dart';
 import 'package:uikit/uikit.dart' show CardPaperBadge;
 import 'package:uikit/utility/constant/padding/extension/padding_extension.dart';
 import 'package:uikit/utility/extension/context_extension.dart';
@@ -46,7 +46,7 @@ class SplashView extends StatelessWidget {
                                 text.tr(),
                                 duration: Duration(
                                   milliseconds:
-                                  context.baseDuration.medium.toInt(),
+                                      context.baseDuration.medium.toInt(),
                                 ),
                               ),
                           ],
@@ -57,7 +57,7 @@ class SplashView extends StatelessWidget {
                   BlocBuilder<SplashCubit, int>(
                     builder: (context, state) {
                       if (state == 100) {
-                        GetIt.instance<RouteManager>().replace(
+                        context.replaceRoute(
                           const HomeControllerRoute(),
                         );
                       }

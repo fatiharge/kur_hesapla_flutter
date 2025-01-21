@@ -37,10 +37,12 @@ class CalculatorShimmer extends StatelessWidget {
               context.itemPadding.xLarge.spacer,
               context.itemPadding.medium.spacer,
               ShimmerContainer(height: context.cardSize.medium),
+              context.itemPadding.large.spacer,
+              ShimmerContainer(height: context.cardSize.large),
               context.itemPadding.xLarge.spacer,
-              ShimmerContainer(height: context.cardSize.medium),
-              context.itemPadding.xLarge.spacer,
+              ShimmerContainer(height: context.cardSize.large),
               context.itemPadding.medium.spacer,
+              context.itemPadding.xLarge.spacer,
 
               // buttons
 

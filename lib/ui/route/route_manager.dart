@@ -21,7 +21,7 @@ class RouteManager extends RootStackRouter {
         ),
         AutoRoute(
           path: '/disclaimer',
-          page:  DisclaimerRoute.page,
+          page: DisclaimerRoute.page,
         ),
       ];
 

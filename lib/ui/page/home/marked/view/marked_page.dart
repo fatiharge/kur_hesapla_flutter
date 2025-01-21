@@ -12,10 +12,6 @@ class MarkedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return BlocProvider(
-    //   create: (_) => MarkedBloc(),
-    //   child: const MarkedView(),
-    // );
     return BlocProvider(
       create: (_) => GetIt.instance<MarkedBloc>()
         ..add(

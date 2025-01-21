@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:kur_hesapla/app/state/global/bloc/global_bloc.dart';
 import 'package:kur_hesapla/data/entity/marked_currency.dart';
+import 'package:kur_hesapla/data/repository/marked_currency_box.dart';
 import 'package:kur_hesapla/generated/objectbox.g.dart';
-import 'package:kur_hesapla/service/marked_currency_service.dart';
 
 part 'marked_event.dart';
 
@@ -17,35 +15,31 @@ part 'marked_bloc.freezed.dart';
 @injectable
 class MarkedBloc extends Bloc<MarkedEvent, MarkedState> {
   MarkedBloc({
-    required this.markedCurrencyService,
-  }) : super(const MarkedState.initial()) {
+    required MarkedCurrencyBox markedCurrencyBox,
+  })  : _markedCurrencyBox = markedCurrencyBox,
+        super(const MarkedState.initial()) {
     on<Load>(_load);
     on<Remove>(_remove);
-    watchedMarkedCurrency =
-        markedCurrencyService.boxRepository.box.query().watch();
 
-    subscribeMarkedCurrency =
-        watchedMarkedCurrency.listen((Query<MarkedCurrency> query) async {
-      add(const MarkedEvent.load());
-    });
+    _subscribeMarkedCurrency = _markedCurrencyBox
+        .subscribeGenerator((p0) => add(const MarkedEvent.load()));
   }
 
-  final MarkedCurrencyService markedCurrencyService;
-  final GlobalBloc globalBloc = GetIt.instance<GlobalBloc>();
-  late final Stream<Query<MarkedCurrency>> watchedMarkedCurrency;
-  late final StreamSubscription<Query<MarkedCurrency>> subscribeMarkedCurrency;
+  final MarkedCurrencyBox _markedCurrencyBox;
+
+  late final StreamSubscription<Query<MarkedCurrency>> _subscribeMarkedCurrency;
 
   FutureOr<void> _load(Load event, Emitter<MarkedState> emit) {
-    emit(Loaded(markedList: markedCurrencyService.boxRepository.box.getAll()));
+    emit(Loaded(markedList: _markedCurrencyBox.getAll));
   }
 
   FutureOr<void> _remove(Remove event, Emitter<MarkedState> emit) {
-    markedCurrencyService.boxRepository.box.remove(event.id);
+    _markedCurrencyBox.remove(event.id);
   }
 
   @override
   Future<void> close() {
-    subscribeMarkedCurrency.cancel();
+    _subscribeMarkedCurrency.cancel();
     return super.close();
   }
 }

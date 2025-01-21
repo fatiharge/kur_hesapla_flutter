@@ -1,23 +1,31 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kur_hesapla/app/enum/currency_type.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:get_it/get_it.dart';
 import 'package:kur_hesapla/app/extension/date_extension.dart';
 import 'package:kur_hesapla/app/mapper/currency_type_mapper.dart';
+
 import 'package:kur_hesapla/ui/page/home/calculator/bloc/calculator_bloc.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/view/calculator_state_cm.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/widget/currency_delta_list/view/currency_delta_list_view.dart';
 import 'package:kur_hesapla/ui/page/home/calculator/widget/currency_info.dart';
-import 'package:kur_hesapla/ui/page/home/calculator/widget/currency_selector_card.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/widget/marked_currency/bloc/marked_currency_bloc.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/widget/marked_currency/marked_currency_view.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/widget/starry_currency/starry_currency_view.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/widget/starry_currency/bloc/starry_currency_bloc.dart';
+
+import 'package:kur_hesapla/ui/widget/card/flagged_item_selector_card.dart';
+import 'package:uikit/ui/atoms/animated/slide_fade_switcher/view/slide_fade_switcher_view.dart';
 import 'package:uikit/utility/constant/padding/extension/padding_extension.dart';
 import 'package:uikit/utility/extension/context_extension.dart';
 import 'package:uikit/utility/extension/spacer_extension.dart';
+import 'package:uikit/utility/extension/text_input_formatter_extension.dart';
 
 class CalculatorView extends StatelessWidget {
   CalculatorView({super.key});
 
-  final FocusNode focusNode = FocusNode();
-  final FocusNode focusNodeCalculated = FocusNode();
   final currencyController = TextEditingController();
-  final calculatedCurrencyController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,137 +33,182 @@ class CalculatorView extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: context.pagePadding.small.paddingSymmetricHorizontal,
-          child: BlocBuilder<CalculatorBloc, CalculatorState>(
-            builder: (context, state) {
-              if (state is CalculatorLoaded) {
-                currencyController.value =
-                    TextEditingValue(text: state.currencyValue);
-                calculatedCurrencyController.value =
-                    TextEditingValue(text: state.calculatedValue);
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    context.pagePadding.medium.spacer,
-                    CurrencyInfo(
-                      currencyType: state.currencyType,
-                      calculatedType: state.calculatedType,
-                      rate: state.rate.toStringAsFixed(4),
-                      time: state
-                          .findLatestResponse.meta!.createdDate!.toLocaleString,
-                    ),
-                    context.pagePadding.medium.spacer,
-                    CurrencySelectorCard(
-                      controller: currencyController,
-                      focusNode: focusNode,
-                      onChanged: (value) => context.read<CalculatorBloc>().add(
-                            CalculatorEvent.setCurrencyValue(value: value),
-                          ),
-                      currencyType: state.currencyType,
-                    ),
-                    context.itemPadding.medium.spacer,
-                    CurrencySelectorCard(
-                      controller: calculatedCurrencyController,
-                      focusNode: focusNodeCalculated,
-                      onChanged: (value) => context.read<CalculatorBloc>().add(
-                            SetCalculatedCurrencyValue(value: value),
-                          ),
-                      currencyType: state.calculatedType,
-                      isCalculated: true,
-                    ),
-                    context.itemPadding.large.spacer,
-                    _buildResultCard(context, state),
-                    context.itemPadding.small.spacer,
-                    _buildSaveRateCard(context, state),
-                    context.itemPadding.xLarge.spacer,
-                    Text(
-                      'Other Currency',
-                      style: context.textTheme.headlineSmall,
-                    ),
-                    Expanded(child: _buildOtherCurrenciesList(context, state)),
-                  ],
-                );
-              }
-              return const SizedBox.shrink();
-            },
+          child: ListView(
+            children: [
+              BlocBuilder<CalculatorBloc, CalculatorState>(
+                builder: (calculatorContext, calculatorState) {
+                  if (calculatorState is CalculatorLoaded) {
+                    currencyController.value =
+                        TextEditingValue(text: calculatorState.currencyValue);
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        context.pagePadding.medium.spacer,
+                        CurrencyInfo(
+                          currencyType: calculatorState.currencyType,
+                          calculatedType: calculatorState.calculatedType,
+                          currencyValue: calculatorState.currencyValue,
+                          calculatedValue: calculatorState.calculatedValue,
+                          time: calculatorState.findLatestResponse.meta!
+                              .createdDate!.toLocaleString,
+                        ),
+                        context.pagePadding.medium.spacer,
+                        _buildAmountField(context, currencyController),
+                        _buildCurrencySelectStack(context, calculatorState),
+                        context.itemPadding.large.spacer,
+                      ],
+                    );
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+              context.itemPadding.medium.spacer,
+              Text(
+                'Kur Degisimleri',
+                style: context.textTheme.headlineSmall,
+              ),
+              context.itemPadding.medium.spacer,
+              SizedBox(
+                height: context.cardSize.xLarge,
+                child: CurrencyDeltaListView(),
+              ),
+              context.pagePadding.xLarge.spacer,
+              context.pagePadding.xLarge.spacer,
+            ],
           ),
         ),
       ),
+      floatingActionButton: _buildFloatingActionButton(),
     );
   }
 
-  Widget _buildResultCard(BuildContext context, CalculatorLoaded state) {
-    return Card(
-      child: ListTile(
-        title: Text('${state.currencyValue} ${state.currencyType.name} = '
-            '${state.calculatedValue} ${state.calculatedType.name}'),
-      ),
-    );
-  }
-
-  Widget _buildSaveRateCard(BuildContext context, CalculatorLoaded state) {
-    return Card(
-      color: Theme.of(context).colorScheme.secondary,
-      child: ListTile(
-        title: Text(
-          'Save Rate',
-          style: context.textTheme.bodyLarge?.copyWith(
-            color: context.colorScheme.onSecondary,
-          ),
-        ),
-        trailing: ElevatedButton(
-          statesController: WidgetStatesController(
-            {if (state.isMarked) WidgetState.selected else WidgetState.hovered},
-          ),
-          onPressed: () => _markedButtonOnPressed(context, state),
-          child: Icon(
-            state.isMarked
-                ? Icons.bookmark_rounded
-                : Icons.bookmark_add_outlined,
-          ),
-        ),
-      ),
-    );
-  }
-
-  void _markedButtonOnPressed(BuildContext context, CalculatorLoaded state) {
-    final event = state.isMarked
-        ? CalculatorEvent.removeMarkedCurrency(id: state.markedId!)
-        : CalculatorEvent.putMarkedCurrency(calculatorLoadedState: state);
-    context.read<CalculatorBloc>().add(event);
-  }
-
-  Widget _buildOtherCurrenciesList(
-    BuildContext context,
-    CalculatorLoaded state,
-  ) {
-    return ListView.builder(
-      itemCount: CurrencyType.values.length,
-      itemBuilder: (context, index) {
-        final currency = CurrencyType.values[index];
-        return _buildCurrencyCard(context, currency, state);
+  Widget _buildFloatingActionButton() {
+    return BlocBuilder<CalculatorBloc, CalculatorState>(
+      builder: (context, calculatorState) {
+        if (calculatorState is CalculatorLoaded) {
+          return SpeedDial(
+            animatedIcon: AnimatedIcons.menu_close,
+            visible: true,
+            curve: Curves.bounceIn,
+            spaceBetweenChildren: context.itemPadding.medium,
+            children: [
+              SpeedDialChild(
+                child: BlocProvider(
+                  create: (context) => GetIt.instance<MarkedCurrencyBloc>(),
+                  child: MarkedCurrencyView(
+                    calculatorLoaded: calculatorState,
+                  ),
+                ),
+                label: 'Save Rate',
+              ),
+              SpeedDialChild(
+                child: BlocProvider(
+                  create: (context) => GetIt.instance<StarryCurrencyBloc>()
+                    ..add(
+                      StarryCurrencyEvent.init(
+                        currencyType: calculatorState.currencyType,
+                        calculatedCurrencyType: calculatorState.calculatedType,
+                      ),
+                    ),
+                  child: StarryCurrencyView(
+                    calculatedCurrencyType: calculatorState.calculatedType,
+                    currencyType: calculatorState.currencyType,
+                  ),
+                ),
+                label: 'Add Favorite',
+              ),
+            ],
+          );
+        }
+        return SizedBox();
       },
     );
   }
 
-  Widget _buildCurrencyCard(
-    BuildContext context,
-    CurrencyType currency,
-    CalculatorLoaded state,
-  ) {
-    final calculatedCurrencyName = currency.getLocaleKey.tr();
-    final currencyDollarRate =
-        currency.findValue(state.findLatestResponse.data!);
-    final stateDollarRate =
-        state.currencyType.findValue(state.findLatestResponse.data!);
-    final pVal = currencyDollarRate / stateDollarRate;
+  SizedBox _buildCurrencySelectStack(
+      BuildContext context, CalculatorLoaded calculatorState) {
+    return SizedBox(
+      height: context.cardSize.large * 2.3,
+      child: Stack(
+        children: [
+          Column(
+            children: [
+              SlideFadeSwitcherView(
+                duration: context.baseDuration.small.toInt(),
+                child: FlaggedItemSelectorCard(
+                  key: ValueKey(calculatorState.currencyType.name),
+                  title: 'From',
+                  text: calculatorState.currencyType.name,
+                  secondText: calculatorState.currencyType.getLocaleKey.tr(),
+                  onPressed: () =>
+                      calculatorState.selectCurrency(context: context),
+                  flag: calculatorState.currencyType.getSvgGenImage?.svg(),
+                  flagName: calculatorState.currencyType.name,
+                ),
+              ),
+              SlideFadeSwitcherView(
+                duration: context.baseDuration.small.toInt(),
+                offset: const Offset(0, -1),
+                child: FlaggedItemSelectorCard(
+                  key: ValueKey(calculatorState.calculatedType.name),
+                  title: 'To',
+                  text: calculatorState.calculatedType.name,
+                  secondText: calculatorState.calculatedType.getLocaleKey.tr(),
+                  onPressed: () => calculatorState.selectCurrency(
+                      context: context, isCalculated: true),
+                  flag: calculatorState.calculatedType.getSvgGenImage?.svg(),
+                  flagName: calculatorState.calculatedType.name,
+                ),
+              ),
+            ],
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: const CircleBorder(),
+                padding: context.itemPadding.large.paddingAll,
+              ),
+              onPressed: () {
+                context.read<CalculatorBloc>().add(ChangeCurrency());
+              },
+              child: Icon(
+                Icons.swap_vert_outlined,
+                size: context.iconSize.large,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
+  Padding _buildAmountField(
+      BuildContext context, TextEditingController textEditingController) {
     return Padding(
-      padding: context.itemPadding.xSmall.paddingSymmetricVertical,
+      padding: context.itemPadding.medium.paddingSymmetricVertical,
       child: Card(
-        child: ListTile(
-          leading: Text(currency.name),
-          title: Text('1 ${state.currencyType.name} = '
-              '${pVal.toStringAsFixed(2)} $calculatedCurrencyName'),
+        child: Padding(
+          padding: context.itemPadding.medium.paddingAll,
+          child: Center(
+            child: TextFormField(
+              style: context.textTheme.titleLarge,
+              keyboardType:
+                  const TextInputType.numberWithOptions(decimal: true),
+              inputFormatters: context.numericWithTwoDecimals,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                labelText: 'Amount',
+              ),
+              controller: textEditingController,
+              onChanged: (value) => context.read<CalculatorBloc>().add(
+                    CalculatorEvent.setCurrencyValue(
+                      value: value,
+                    ),
+                  ),
+            ),
+          ),
         ),
       ),
     );

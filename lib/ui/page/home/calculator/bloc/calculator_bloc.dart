@@ -10,11 +10,10 @@ import 'package:kur_hesapla/app/client/kur_hesapla_client.dart';
 import 'package:kur_hesapla/app/enum/currency_type.dart';
 import 'package:kur_hesapla/app/mapper/currency_type_mapper.dart';
 import 'package:kur_hesapla/app/state/global/bloc/global_bloc.dart';
-import 'package:kur_hesapla/data/entity/marked_currency.dart';
-import 'package:kur_hesapla/generated/objectbox.g.dart';
-import 'package:kur_hesapla/service/marked_currency_service.dart';
+import 'package:kur_hesapla/data/repository/marked_currency_box.dart';
+import 'package:kur_hesapla/ui/page/home/calculator/page/select_currency_page/bloc/select_currency_from_starry/select_starry_cubit.dart';
 import 'package:kur_hesapla/ui/page/home/calculator/view/calculator_shimmer.dart';
-import 'package:openapi/openapi.dart';
+import 'package:kur_hesapla_api/kur_hesapla_api.dart';
 
 part 'calculator_bloc.freezed.dart';
 
@@ -26,16 +25,9 @@ part 'calculator_state.dart';
 class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   CalculatorBloc({
     required this.kurHesaplaClient,
-    required this.markedCurrencyService,
+    required this.markedCurrencyBox,
     required this.markedCurrencyAdapter,
   }) : super(const CalculatorInitial()) {
-    watchedMarkedCurrency =
-        markedCurrencyService.boxRepository.box.query().watch();
-
-    subscribeMarkedCurrency = watchedMarkedCurrency.listen(
-      (Query<MarkedCurrency> query) async => _listenEventTrigger(query),
-    );
-
     on<Load>(_onLoadEvent);
     on<Refresh>(_onRefreshEvent);
 
@@ -44,25 +36,15 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
 
     on<SetCurrencyValue>(_setCurrencyValue);
     on<SetCalculatedCurrencyValue>(_setCalculatedCurrencyValue);
-
-    on<PutMarkedCurrency>(_putMarkedCurrency);
-    on<RemoveMarkedCurrency>(_removeMarkedCurrency);
-    on<ClearMarked>(_clearMarked);
+    on<ChangeCurrency>(_changeCurrency);
+    on<ChangeCurrencyFromStarryCurrencies>(_changeCurrencyFromStarryCurrencies);
   }
 
-  late final Stream<Query<MarkedCurrency>> watchedMarkedCurrency;
-  late final StreamSubscription<Query<MarkedCurrency>> subscribeMarkedCurrency;
   final GlobalBloc globalBloc = GetIt.instance<GlobalBloc>();
 
-  final MarkedCurrencyService markedCurrencyService;
+  final MarkedCurrencyBox markedCurrencyBox;
   final MarkedCurrencyAdapter markedCurrencyAdapter;
   final KurHesaplaClient kurHesaplaClient;
-
-  @override
-  Future<void> close() {
-    subscribeMarkedCurrency.cancel();
-    return super.close();
-  }
 
   Future<void> _onLoadEvent(Load event, Emitter<CalculatorState> emit) async {
     globalBloc.add(const GlobalEvent.load(widget: CalculatorShimmer()));
@@ -111,8 +93,6 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         currencyType: event.currencyType,
         rate: rate,
         calculatedValue: calculatedValue.toStringAsFixed(2),
-        isMarked: false,
-        markedId: null,
       ),
     );
   }
@@ -137,8 +117,6 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         calculatedType: event.currencyType,
         rate: rate,
         calculatedValue: calculatedValue.toStringAsFixed(2),
-        isMarked: false,
-        markedId: null,
       ),
     );
   }
@@ -155,8 +133,6 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     final newState = calculatorLoadedState.copyWith(
       currencyValue: event.value,
       calculatedValue: value.toStringAsFixed(2),
-      isMarked: false,
-      markedId: null,
     );
 
     emit(newState);
@@ -174,56 +150,63 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     final newState = calculatorLoadedState.copyWith(
       currencyValue: value.toStringAsFixed(2),
       calculatedValue: event.value,
-      isMarked: false,
-      markedId: null,
     );
 
     emit(newState);
   }
 
-  Future<void> _putMarkedCurrency(
-    PutMarkedCurrency event,
+  Future<void> _changeCurrency(
+    ChangeCurrency event,
     Emitter<CalculatorState> emit,
   ) async {
-    final id = markedCurrencyService.putMarkedCurrency(
-      markedCurrency: markedCurrencyAdapter.calculatorLoadedAdaptee(
-        event.calculatorLoadedState,
-      ),
-    );
     final calculatorLoadedState = state as CalculatorLoaded;
-    emit(
-      calculatorLoadedState.copyWith(
-        isMarked: true,
-        markedId: id,
-      ),
+
+    final rate = _calculateRate(
+      currencyType: calculatorLoadedState.calculatedType,
+      calculatedType: calculatorLoadedState.currencyType,
+      findLatestResponse: calculatorLoadedState.findLatestResponse,
     );
+
+    final value =
+        (double.tryParse(calculatorLoadedState.currencyValue) ?? 0) / rate;
+
+    final newState = CalculatorLoaded(
+      findLatestResponse: calculatorLoadedState.findLatestResponse,
+      rate: rate,
+      calculatedValue: value.toStringAsFixed(2),
+      currencyValue: calculatorLoadedState.currencyValue,
+      currencyType: calculatorLoadedState.calculatedType,
+      calculatedType: calculatorLoadedState.currencyType,
+    );
+
+    emit(newState);
   }
 
-  Future<void> _removeMarkedCurrency(
-    RemoveMarkedCurrency event,
+  Future<void> _changeCurrencyFromStarryCurrencies(
+    ChangeCurrencyFromStarryCurrencies event,
     Emitter<CalculatorState> emit,
   ) async {
     final calculatorLoadedState = state as CalculatorLoaded;
-    markedCurrencyService.boxRepository.box.remove(event.id);
-    emit(
-      calculatorLoadedState.copyWith(
-        isMarked: false,
-        markedId: null,
-      ),
-    );
-  }
 
-  Future<void> _clearMarked(
-    ClearMarked event,
-    Emitter<CalculatorState> emit,
-  ) async {
-    final calculatorLoadedState = state as CalculatorLoaded;
-    emit(
-      calculatorLoadedState.copyWith(
-        isMarked: false,
-        markedId: null,
-      ),
+    final rate = _calculateRate(
+      currencyType: event.starryCurrencies.fCurrencyType,
+      calculatedType: event.starryCurrencies.sCurrencyType,
+      findLatestResponse: calculatorLoadedState.findLatestResponse,
     );
+
+    final value =
+        (double.tryParse(calculatorLoadedState.currencyValue) ?? 0) / rate;
+
+    final newState = CalculatorLoaded(
+      findLatestResponse: calculatorLoadedState.findLatestResponse,
+      rate: rate,
+      calculatedValue: value.toStringAsFixed(2),
+      currencyValue: calculatorLoadedState.currencyValue,
+      currencyType: event.starryCurrencies.fCurrencyType,
+      calculatedType: event.starryCurrencies.sCurrencyType,
+    );
+
+    emit(newState);
   }
 
   double _calculateRate({
@@ -231,23 +214,12 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
     required CurrencyType calculatedType,
     required FindLatestResponse findLatestResponse,
   }) {
-    final dollarRateSelected = currencyType.findValue(findLatestResponse.data!);
+    final dollarRateSelected =
+        currencyType.findValueFindLatestData(findLatestResponse.data!);
 
     final dollarRateCalculated =
-        calculatedType.findValue(findLatestResponse.data!);
+        calculatedType.findValueFindLatestData(findLatestResponse.data!);
 
     return dollarRateCalculated / dollarRateSelected;
-  }
-
-  void _listenEventTrigger(Query<MarkedCurrency> query) {
-    if (state is CalculatorLoaded) {
-      final calculatorLoadedState = state as CalculatorLoaded;
-      final q = query.find().where(
-            (element) => calculatorLoadedState.markedId == element.id,
-          );
-      if (q.isEmpty) {
-        add(const ClearMarked()); // yok birrrrr dilegimmm hayatta hersey kismet
-      }
-    }
   }
 }

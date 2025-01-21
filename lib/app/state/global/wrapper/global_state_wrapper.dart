@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:kur_hesapla/app/state/global/bloc/global_bloc.dart';
+import 'package:uikit/utility/extension/context_extension.dart';
 
 class GlobalStateWrapper extends StatefulWidget {
   const GlobalStateWrapper({
@@ -39,7 +40,11 @@ class _GlobalStateWrapperState extends State<GlobalStateWrapper> {
     return BlocBuilder<GlobalBloc, GlobalState>(
       builder: (context, state) {
         if (state is GlobalLoading) {
-          return state.widget ?? const CircularProgressIndicator();
+          return state.widget ??
+              ColoredBox(
+                color: context.colorScheme.secondary.withAlpha(50),
+                child: const Center(child: CircularProgressIndicator()),
+              );
         } else if (state is GlobalError) {
           return state.widget ?? const Placeholder();
         }

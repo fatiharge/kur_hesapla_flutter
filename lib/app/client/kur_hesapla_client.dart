@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kur_hesapla/env.dart';
-import 'package:openapi/openapi.dart';
+import 'package:kur_hesapla_api/kur_hesapla_api.dart';
 
 @singleton
 class KurHesaplaClient {
   KurHesaplaClient()
-      : _apiClient = Openapi(
+      : _apiClient = KurHesaplaApi(
           dio: Dio(
             BaseOptions(
               baseUrl: Env.kurHesaplaApiClient,
@@ -20,7 +20,7 @@ class KurHesaplaClient {
           basePathOverride: Env.kurHesaplaApiClient,
         );
 
-  final Openapi _apiClient;
+  final KurHesaplaApi _apiClient;
 
-  Openapi get apiClient => _apiClient;
+  KurHesaplaApi get apiClient => _apiClient;
 }

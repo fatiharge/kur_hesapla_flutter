@@ -24,10 +24,9 @@ mixin _$CalculatorEvent {
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,10 +37,9 @@ mixin _$CalculatorEvent {
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,9 +50,9 @@ mixin _$CalculatorEvent {
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,9 +66,9 @@ mixin _$CalculatorEvent {
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,9 +80,9 @@ mixin _$CalculatorEvent {
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,9 +94,9 @@ mixin _$CalculatorEvent {
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -177,10 +175,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return load();
   }
@@ -194,10 +191,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return load?.call();
   }
@@ -211,9 +207,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -233,9 +229,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return load(this);
   }
@@ -250,9 +246,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return load?.call(this);
   }
@@ -267,9 +263,9 @@ class _$LoadImpl with DiagnosticableTreeMixin implements Load {
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -336,10 +332,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return refresh();
   }
@@ -353,10 +348,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return refresh?.call();
   }
@@ -370,9 +364,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -392,9 +386,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return refresh(this);
   }
@@ -409,9 +403,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return refresh?.call(this);
   }
@@ -426,9 +420,9 @@ class _$RefreshImpl with DiagnosticableTreeMixin implements Refresh {
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -528,10 +522,9 @@ class _$SetCurrentCurrencyImpl
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrentCurrency(currencyType);
   }
@@ -545,10 +538,9 @@ class _$SetCurrentCurrencyImpl
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrentCurrency?.call(currencyType);
   }
@@ -562,9 +554,9 @@ class _$SetCurrentCurrencyImpl
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCurrentCurrency != null) {
@@ -584,9 +576,9 @@ class _$SetCurrentCurrencyImpl
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrentCurrency(this);
   }
@@ -601,9 +593,9 @@ class _$SetCurrentCurrencyImpl
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrentCurrency?.call(this);
   }
@@ -618,9 +610,9 @@ class _$SetCurrentCurrencyImpl
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCurrentCurrency != null) {
@@ -731,10 +723,9 @@ class _$SetCalculatedCurrencyImpl
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrency(currencyType);
   }
@@ -748,10 +739,9 @@ class _$SetCalculatedCurrencyImpl
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrency?.call(currencyType);
   }
@@ -765,9 +755,9 @@ class _$SetCalculatedCurrencyImpl
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCalculatedCurrency != null) {
@@ -787,9 +777,9 @@ class _$SetCalculatedCurrencyImpl
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrency(this);
   }
@@ -804,9 +794,9 @@ class _$SetCalculatedCurrencyImpl
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrency?.call(this);
   }
@@ -821,9 +811,9 @@ class _$SetCalculatedCurrencyImpl
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCalculatedCurrency != null) {
@@ -931,10 +921,9 @@ class _$SetCurrencyValueImpl
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrencyValue(value);
   }
@@ -948,10 +937,9 @@ class _$SetCurrencyValueImpl
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrencyValue?.call(value);
   }
@@ -965,9 +953,9 @@ class _$SetCurrencyValueImpl
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCurrencyValue != null) {
@@ -987,9 +975,9 @@ class _$SetCurrencyValueImpl
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrencyValue(this);
   }
@@ -1004,9 +992,9 @@ class _$SetCurrencyValueImpl
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCurrencyValue?.call(this);
   }
@@ -1021,9 +1009,9 @@ class _$SetCurrencyValueImpl
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCurrencyValue != null) {
@@ -1135,10 +1123,9 @@ class _$SetCalculatedCurrencyValueImpl
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrencyValue(value);
   }
@@ -1152,10 +1139,9 @@ class _$SetCalculatedCurrencyValueImpl
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrencyValue?.call(value);
   }
@@ -1169,9 +1155,9 @@ class _$SetCalculatedCurrencyValueImpl
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCalculatedCurrencyValue != null) {
@@ -1191,9 +1177,9 @@ class _$SetCalculatedCurrencyValueImpl
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrencyValue(this);
   }
@@ -1208,9 +1194,9 @@ class _$SetCalculatedCurrencyValueImpl
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) {
     return setCalculatedCurrencyValue?.call(this);
   }
@@ -1225,9 +1211,9 @@ class _$SetCalculatedCurrencyValueImpl
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
     if (setCalculatedCurrencyValue != null) {
@@ -1251,449 +1237,47 @@ abstract class SetCalculatedCurrencyValue implements CalculatorEvent {
 }
 
 /// @nodoc
-abstract class _$$PutMarkedCurrencyImplCopyWith<$Res> {
-  factory _$$PutMarkedCurrencyImplCopyWith(_$PutMarkedCurrencyImpl value,
-          $Res Function(_$PutMarkedCurrencyImpl) then) =
-      __$$PutMarkedCurrencyImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({CalculatorLoaded calculatorLoadedState});
+abstract class _$$ChangeCurrencyImplCopyWith<$Res> {
+  factory _$$ChangeCurrencyImplCopyWith(_$ChangeCurrencyImpl value,
+          $Res Function(_$ChangeCurrencyImpl) then) =
+      __$$ChangeCurrencyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$PutMarkedCurrencyImplCopyWithImpl<$Res>
-    extends _$CalculatorEventCopyWithImpl<$Res, _$PutMarkedCurrencyImpl>
-    implements _$$PutMarkedCurrencyImplCopyWith<$Res> {
-  __$$PutMarkedCurrencyImplCopyWithImpl(_$PutMarkedCurrencyImpl _value,
-      $Res Function(_$PutMarkedCurrencyImpl) _then)
+class __$$ChangeCurrencyImplCopyWithImpl<$Res>
+    extends _$CalculatorEventCopyWithImpl<$Res, _$ChangeCurrencyImpl>
+    implements _$$ChangeCurrencyImplCopyWith<$Res> {
+  __$$ChangeCurrencyImplCopyWithImpl(
+      _$ChangeCurrencyImpl _value, $Res Function(_$ChangeCurrencyImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of CalculatorEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? calculatorLoadedState = freezed,
-  }) {
-    return _then(_$PutMarkedCurrencyImpl(
-      calculatorLoadedState: freezed == calculatorLoadedState
-          ? _value.calculatorLoadedState
-          : calculatorLoadedState // ignore: cast_nullable_to_non_nullable
-              as CalculatorLoaded,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$PutMarkedCurrencyImpl
+class _$ChangeCurrencyImpl
     with DiagnosticableTreeMixin
-    implements PutMarkedCurrency {
-  const _$PutMarkedCurrencyImpl({required this.calculatorLoadedState});
-
-  @override
-  final CalculatorLoaded calculatorLoadedState;
+    implements ChangeCurrency {
+  const _$ChangeCurrencyImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CalculatorEvent.putMarkedCurrency(calculatorLoadedState: $calculatorLoadedState)';
+    return 'CalculatorEvent.changeCurrency()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'CalculatorEvent.putMarkedCurrency'))
-      ..add(
-          DiagnosticsProperty('calculatorLoadedState', calculatorLoadedState));
+        .add(DiagnosticsProperty('type', 'CalculatorEvent.changeCurrency'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PutMarkedCurrencyImpl &&
-            const DeepCollectionEquality()
-                .equals(other.calculatorLoadedState, calculatorLoadedState));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(calculatorLoadedState));
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PutMarkedCurrencyImplCopyWith<_$PutMarkedCurrencyImpl> get copyWith =>
-      __$$PutMarkedCurrencyImplCopyWithImpl<_$PutMarkedCurrencyImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() load,
-    required TResult Function() refresh,
-    required TResult Function(CurrencyType currencyType) setCurrentCurrency,
-    required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
-    required TResult Function(String value) setCurrencyValue,
-    required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
-  }) {
-    return putMarkedCurrency(calculatorLoadedState);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? load,
-    TResult? Function()? refresh,
-    TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
-    TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
-    TResult? Function(String value)? setCurrencyValue,
-    TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
-  }) {
-    return putMarkedCurrency?.call(calculatorLoadedState);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? load,
-    TResult Function()? refresh,
-    TResult Function(CurrencyType currencyType)? setCurrentCurrency,
-    TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
-    TResult Function(String value)? setCurrencyValue,
-    TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
-    required TResult orElse(),
-  }) {
-    if (putMarkedCurrency != null) {
-      return putMarkedCurrency(calculatorLoadedState);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Load value) load,
-    required TResult Function(Refresh value) refresh,
-    required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
-    required TResult Function(SetCalculatedCurrency value)
-        setCalculatedCurrency,
-    required TResult Function(SetCurrencyValue value) setCurrencyValue,
-    required TResult Function(SetCalculatedCurrencyValue value)
-        setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
-  }) {
-    return putMarkedCurrency(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Load value)? load,
-    TResult? Function(Refresh value)? refresh,
-    TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
-    TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
-    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
-    TResult? Function(SetCalculatedCurrencyValue value)?
-        setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
-  }) {
-    return putMarkedCurrency?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Load value)? load,
-    TResult Function(Refresh value)? refresh,
-    TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
-    TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
-    TResult Function(SetCurrencyValue value)? setCurrencyValue,
-    TResult Function(SetCalculatedCurrencyValue value)?
-        setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
-    required TResult orElse(),
-  }) {
-    if (putMarkedCurrency != null) {
-      return putMarkedCurrency(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PutMarkedCurrency implements CalculatorEvent {
-  const factory PutMarkedCurrency(
-          {required final CalculatorLoaded calculatorLoadedState}) =
-      _$PutMarkedCurrencyImpl;
-
-  CalculatorLoaded get calculatorLoadedState;
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PutMarkedCurrencyImplCopyWith<_$PutMarkedCurrencyImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$RemoveMarkedCurrencyImplCopyWith<$Res> {
-  factory _$$RemoveMarkedCurrencyImplCopyWith(_$RemoveMarkedCurrencyImpl value,
-          $Res Function(_$RemoveMarkedCurrencyImpl) then) =
-      __$$RemoveMarkedCurrencyImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int id});
-}
-
-/// @nodoc
-class __$$RemoveMarkedCurrencyImplCopyWithImpl<$Res>
-    extends _$CalculatorEventCopyWithImpl<$Res, _$RemoveMarkedCurrencyImpl>
-    implements _$$RemoveMarkedCurrencyImplCopyWith<$Res> {
-  __$$RemoveMarkedCurrencyImplCopyWithImpl(_$RemoveMarkedCurrencyImpl _value,
-      $Res Function(_$RemoveMarkedCurrencyImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$RemoveMarkedCurrencyImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$RemoveMarkedCurrencyImpl
-    with DiagnosticableTreeMixin
-    implements RemoveMarkedCurrency {
-  const _$RemoveMarkedCurrencyImpl({required this.id});
-
-  @override
-  final int id;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CalculatorEvent.removeMarkedCurrency(id: $id)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CalculatorEvent.removeMarkedCurrency'))
-      ..add(DiagnosticsProperty('id', id));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RemoveMarkedCurrencyImpl &&
-            (identical(other.id, id) || other.id == id));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, id);
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RemoveMarkedCurrencyImplCopyWith<_$RemoveMarkedCurrencyImpl>
-      get copyWith =>
-          __$$RemoveMarkedCurrencyImplCopyWithImpl<_$RemoveMarkedCurrencyImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() load,
-    required TResult Function() refresh,
-    required TResult Function(CurrencyType currencyType) setCurrentCurrency,
-    required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
-    required TResult Function(String value) setCurrencyValue,
-    required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
-  }) {
-    return removeMarkedCurrency(id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? load,
-    TResult? Function()? refresh,
-    TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
-    TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
-    TResult? Function(String value)? setCurrencyValue,
-    TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
-  }) {
-    return removeMarkedCurrency?.call(id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? load,
-    TResult Function()? refresh,
-    TResult Function(CurrencyType currencyType)? setCurrentCurrency,
-    TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
-    TResult Function(String value)? setCurrencyValue,
-    TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
-    required TResult orElse(),
-  }) {
-    if (removeMarkedCurrency != null) {
-      return removeMarkedCurrency(id);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Load value) load,
-    required TResult Function(Refresh value) refresh,
-    required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
-    required TResult Function(SetCalculatedCurrency value)
-        setCalculatedCurrency,
-    required TResult Function(SetCurrencyValue value) setCurrencyValue,
-    required TResult Function(SetCalculatedCurrencyValue value)
-        setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
-  }) {
-    return removeMarkedCurrency(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Load value)? load,
-    TResult? Function(Refresh value)? refresh,
-    TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
-    TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
-    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
-    TResult? Function(SetCalculatedCurrencyValue value)?
-        setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
-  }) {
-    return removeMarkedCurrency?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Load value)? load,
-    TResult Function(Refresh value)? refresh,
-    TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
-    TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
-    TResult Function(SetCurrencyValue value)? setCurrencyValue,
-    TResult Function(SetCalculatedCurrencyValue value)?
-        setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
-    required TResult orElse(),
-  }) {
-    if (removeMarkedCurrency != null) {
-      return removeMarkedCurrency(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RemoveMarkedCurrency implements CalculatorEvent {
-  const factory RemoveMarkedCurrency({required final int id}) =
-      _$RemoveMarkedCurrencyImpl;
-
-  int get id;
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RemoveMarkedCurrencyImplCopyWith<_$RemoveMarkedCurrencyImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ClearMarkedImplCopyWith<$Res> {
-  factory _$$ClearMarkedImplCopyWith(
-          _$ClearMarkedImpl value, $Res Function(_$ClearMarkedImpl) then) =
-      __$$ClearMarkedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ClearMarkedImplCopyWithImpl<$Res>
-    extends _$CalculatorEventCopyWithImpl<$Res, _$ClearMarkedImpl>
-    implements _$$ClearMarkedImplCopyWith<$Res> {
-  __$$ClearMarkedImplCopyWithImpl(
-      _$ClearMarkedImpl _value, $Res Function(_$ClearMarkedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of CalculatorEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ClearMarkedImpl with DiagnosticableTreeMixin implements ClearMarked {
-  const _$ClearMarkedImpl();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CalculatorEvent.clearMarked()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CalculatorEvent.clearMarked'));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ClearMarkedImpl);
+        (other.runtimeType == runtimeType && other is _$ChangeCurrencyImpl);
   }
 
   @override
@@ -1708,12 +1292,11 @@ class _$ClearMarkedImpl with DiagnosticableTreeMixin implements ClearMarked {
     required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
     required TResult Function(String value) setCurrencyValue,
     required TResult Function(String value) setCalculatedCurrencyValue,
-    required TResult Function(CalculatorLoaded calculatorLoadedState)
-        putMarkedCurrency,
-    required TResult Function(int id) removeMarkedCurrency,
-    required TResult Function() clearMarked,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
   }) {
-    return clearMarked();
+    return changeCurrency();
   }
 
   @override
@@ -1725,12 +1308,11 @@ class _$ClearMarkedImpl with DiagnosticableTreeMixin implements ClearMarked {
     TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult? Function(String value)? setCurrencyValue,
     TResult? Function(String value)? setCalculatedCurrencyValue,
-    TResult? Function(CalculatorLoaded calculatorLoadedState)?
-        putMarkedCurrency,
-    TResult? Function(int id)? removeMarkedCurrency,
-    TResult? Function()? clearMarked,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
   }) {
-    return clearMarked?.call();
+    return changeCurrency?.call();
   }
 
   @override
@@ -1742,13 +1324,13 @@ class _$ClearMarkedImpl with DiagnosticableTreeMixin implements ClearMarked {
     TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
     TResult Function(String value)? setCurrencyValue,
     TResult Function(String value)? setCalculatedCurrencyValue,
-    TResult Function(CalculatorLoaded calculatorLoadedState)? putMarkedCurrency,
-    TResult Function(int id)? removeMarkedCurrency,
-    TResult Function()? clearMarked,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
-    if (clearMarked != null) {
-      return clearMarked();
+    if (changeCurrency != null) {
+      return changeCurrency();
     }
     return orElse();
   }
@@ -1764,11 +1346,11 @@ class _$ClearMarkedImpl with DiagnosticableTreeMixin implements ClearMarked {
     required TResult Function(SetCurrencyValue value) setCurrencyValue,
     required TResult Function(SetCalculatedCurrencyValue value)
         setCalculatedCurrencyValue,
-    required TResult Function(PutMarkedCurrency value) putMarkedCurrency,
-    required TResult Function(RemoveMarkedCurrency value) removeMarkedCurrency,
-    required TResult Function(ClearMarked value) clearMarked,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
   }) {
-    return clearMarked(this);
+    return changeCurrency(this);
   }
 
   @override
@@ -1781,11 +1363,11 @@ class _$ClearMarkedImpl with DiagnosticableTreeMixin implements ClearMarked {
     TResult? Function(SetCurrencyValue value)? setCurrencyValue,
     TResult? Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult? Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult? Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult? Function(ClearMarked value)? clearMarked,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
   }) {
-    return clearMarked?.call(this);
+    return changeCurrency?.call(this);
   }
 
   @override
@@ -1798,20 +1380,227 @@ class _$ClearMarkedImpl with DiagnosticableTreeMixin implements ClearMarked {
     TResult Function(SetCurrencyValue value)? setCurrencyValue,
     TResult Function(SetCalculatedCurrencyValue value)?
         setCalculatedCurrencyValue,
-    TResult Function(PutMarkedCurrency value)? putMarkedCurrency,
-    TResult Function(RemoveMarkedCurrency value)? removeMarkedCurrency,
-    TResult Function(ClearMarked value)? clearMarked,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
     required TResult orElse(),
   }) {
-    if (clearMarked != null) {
-      return clearMarked(this);
+    if (changeCurrency != null) {
+      return changeCurrency(this);
     }
     return orElse();
   }
 }
 
-abstract class ClearMarked implements CalculatorEvent {
-  const factory ClearMarked() = _$ClearMarkedImpl;
+abstract class ChangeCurrency implements CalculatorEvent {
+  const factory ChangeCurrency() = _$ChangeCurrencyImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeCurrencyFromStarryCurrenciesImplCopyWith<$Res> {
+  factory _$$ChangeCurrencyFromStarryCurrenciesImplCopyWith(
+          _$ChangeCurrencyFromStarryCurrenciesImpl value,
+          $Res Function(_$ChangeCurrencyFromStarryCurrenciesImpl) then) =
+      __$$ChangeCurrencyFromStarryCurrenciesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({StarryCurrencies starryCurrencies});
+}
+
+/// @nodoc
+class __$$ChangeCurrencyFromStarryCurrenciesImplCopyWithImpl<$Res>
+    extends _$CalculatorEventCopyWithImpl<$Res,
+        _$ChangeCurrencyFromStarryCurrenciesImpl>
+    implements _$$ChangeCurrencyFromStarryCurrenciesImplCopyWith<$Res> {
+  __$$ChangeCurrencyFromStarryCurrenciesImplCopyWithImpl(
+      _$ChangeCurrencyFromStarryCurrenciesImpl _value,
+      $Res Function(_$ChangeCurrencyFromStarryCurrenciesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? starryCurrencies = null,
+  }) {
+    return _then(_$ChangeCurrencyFromStarryCurrenciesImpl(
+      starryCurrencies: null == starryCurrencies
+          ? _value.starryCurrencies
+          : starryCurrencies // ignore: cast_nullable_to_non_nullable
+              as StarryCurrencies,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeCurrencyFromStarryCurrenciesImpl
+    with DiagnosticableTreeMixin
+    implements ChangeCurrencyFromStarryCurrencies {
+  const _$ChangeCurrencyFromStarryCurrenciesImpl(
+      {required this.starryCurrencies});
+
+  @override
+  final StarryCurrencies starryCurrencies;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CalculatorEvent.changeCurrencyFromStarryCurrencies(starryCurrencies: $starryCurrencies)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'CalculatorEvent.changeCurrencyFromStarryCurrencies'))
+      ..add(DiagnosticsProperty('starryCurrencies', starryCurrencies));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeCurrencyFromStarryCurrenciesImpl &&
+            (identical(other.starryCurrencies, starryCurrencies) ||
+                other.starryCurrencies == starryCurrencies));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, starryCurrencies);
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeCurrencyFromStarryCurrenciesImplCopyWith<
+          _$ChangeCurrencyFromStarryCurrenciesImpl>
+      get copyWith => __$$ChangeCurrencyFromStarryCurrenciesImplCopyWithImpl<
+          _$ChangeCurrencyFromStarryCurrenciesImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() load,
+    required TResult Function() refresh,
+    required TResult Function(CurrencyType currencyType) setCurrentCurrency,
+    required TResult Function(CurrencyType currencyType) setCalculatedCurrency,
+    required TResult Function(String value) setCurrencyValue,
+    required TResult Function(String value) setCalculatedCurrencyValue,
+    required TResult Function() changeCurrency,
+    required TResult Function(StarryCurrencies starryCurrencies)
+        changeCurrencyFromStarryCurrencies,
+  }) {
+    return changeCurrencyFromStarryCurrencies(starryCurrencies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? load,
+    TResult? Function()? refresh,
+    TResult? Function(CurrencyType currencyType)? setCurrentCurrency,
+    TResult? Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult? Function(String value)? setCurrencyValue,
+    TResult? Function(String value)? setCalculatedCurrencyValue,
+    TResult? Function()? changeCurrency,
+    TResult? Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
+  }) {
+    return changeCurrencyFromStarryCurrencies?.call(starryCurrencies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? load,
+    TResult Function()? refresh,
+    TResult Function(CurrencyType currencyType)? setCurrentCurrency,
+    TResult Function(CurrencyType currencyType)? setCalculatedCurrency,
+    TResult Function(String value)? setCurrencyValue,
+    TResult Function(String value)? setCalculatedCurrencyValue,
+    TResult Function()? changeCurrency,
+    TResult Function(StarryCurrencies starryCurrencies)?
+        changeCurrencyFromStarryCurrencies,
+    required TResult orElse(),
+  }) {
+    if (changeCurrencyFromStarryCurrencies != null) {
+      return changeCurrencyFromStarryCurrencies(starryCurrencies);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Load value) load,
+    required TResult Function(Refresh value) refresh,
+    required TResult Function(SetCurrentCurrency value) setCurrentCurrency,
+    required TResult Function(SetCalculatedCurrency value)
+        setCalculatedCurrency,
+    required TResult Function(SetCurrencyValue value) setCurrencyValue,
+    required TResult Function(SetCalculatedCurrencyValue value)
+        setCalculatedCurrencyValue,
+    required TResult Function(ChangeCurrency value) changeCurrency,
+    required TResult Function(ChangeCurrencyFromStarryCurrencies value)
+        changeCurrencyFromStarryCurrencies,
+  }) {
+    return changeCurrencyFromStarryCurrencies(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Load value)? load,
+    TResult? Function(Refresh value)? refresh,
+    TResult? Function(SetCurrentCurrency value)? setCurrentCurrency,
+    TResult? Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult? Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult? Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
+    TResult? Function(ChangeCurrency value)? changeCurrency,
+    TResult? Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
+  }) {
+    return changeCurrencyFromStarryCurrencies?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Load value)? load,
+    TResult Function(Refresh value)? refresh,
+    TResult Function(SetCurrentCurrency value)? setCurrentCurrency,
+    TResult Function(SetCalculatedCurrency value)? setCalculatedCurrency,
+    TResult Function(SetCurrencyValue value)? setCurrencyValue,
+    TResult Function(SetCalculatedCurrencyValue value)?
+        setCalculatedCurrencyValue,
+    TResult Function(ChangeCurrency value)? changeCurrency,
+    TResult Function(ChangeCurrencyFromStarryCurrencies value)?
+        changeCurrencyFromStarryCurrencies,
+    required TResult orElse(),
+  }) {
+    if (changeCurrencyFromStarryCurrencies != null) {
+      return changeCurrencyFromStarryCurrencies(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeCurrencyFromStarryCurrencies implements CalculatorEvent {
+  const factory ChangeCurrencyFromStarryCurrencies(
+          {required final StarryCurrencies starryCurrencies}) =
+      _$ChangeCurrencyFromStarryCurrenciesImpl;
+
+  StarryCurrencies get starryCurrencies;
+
+  /// Create a copy of CalculatorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeCurrencyFromStarryCurrenciesImplCopyWith<
+          _$ChangeCurrencyFromStarryCurrenciesImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1825,9 +1614,7 @@ mixin _$CalculatorState {
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)
+            String currencyValue)
         loaded,
   }) =>
       throw _privateConstructorUsedError;
@@ -1840,9 +1627,7 @@ mixin _$CalculatorState {
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)?
+            String currencyValue)?
         loaded,
   }) =>
       throw _privateConstructorUsedError;
@@ -1855,9 +1640,7 @@ mixin _$CalculatorState {
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)?
+            String currencyValue)?
         loaded,
     required TResult orElse(),
   }) =>
@@ -1960,9 +1743,7 @@ class _$CalculatorInitialImpl
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)
+            String currencyValue)
         loaded,
   }) {
     return initial();
@@ -1978,9 +1759,7 @@ class _$CalculatorInitialImpl
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)?
+            String currencyValue)?
         loaded,
   }) {
     return initial?.call();
@@ -1996,9 +1775,7 @@ class _$CalculatorInitialImpl
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)?
+            String currencyValue)?
         loaded,
     required TResult orElse(),
   }) {
@@ -2056,9 +1833,7 @@ abstract class _$$CalculatorLoadedImplCopyWith<$Res> {
       String calculatedValue,
       CurrencyType currencyType,
       CurrencyType calculatedType,
-      String currencyValue,
-      bool isMarked,
-      int? markedId});
+      String currencyValue});
 }
 
 /// @nodoc
@@ -2080,8 +1855,6 @@ class __$$CalculatorLoadedImplCopyWithImpl<$Res>
     Object? currencyType = null,
     Object? calculatedType = null,
     Object? currencyValue = null,
-    Object? isMarked = null,
-    Object? markedId = freezed,
   }) {
     return _then(_$CalculatorLoadedImpl(
       findLatestResponse: null == findLatestResponse
@@ -2108,14 +1881,6 @@ class __$$CalculatorLoadedImplCopyWithImpl<$Res>
           ? _value.currencyValue
           : currencyValue // ignore: cast_nullable_to_non_nullable
               as String,
-      isMarked: null == isMarked
-          ? _value.isMarked
-          : isMarked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      markedId: freezed == markedId
-          ? _value.markedId
-          : markedId // ignore: cast_nullable_to_non_nullable
-              as int?,
     ));
   }
 }
@@ -2131,9 +1896,7 @@ class _$CalculatorLoadedImpl
       required this.calculatedValue,
       this.currencyType = CurrencyType.USD,
       this.calculatedType = CurrencyType.EUR,
-      this.currencyValue = '1',
-      this.isMarked = false,
-      this.markedId});
+      this.currencyValue = '1'});
 
   @override
   final FindLatestResponse findLatestResponse;
@@ -2150,15 +1913,10 @@ class _$CalculatorLoadedImpl
   @override
   @JsonKey()
   final String currencyValue;
-  @override
-  @JsonKey()
-  final bool isMarked;
-  @override
-  final int? markedId;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CalculatorState.loaded(findLatestResponse: $findLatestResponse, rate: $rate, calculatedValue: $calculatedValue, currencyType: $currencyType, calculatedType: $calculatedType, currencyValue: $currencyValue, isMarked: $isMarked, markedId: $markedId)';
+    return 'CalculatorState.loaded(findLatestResponse: $findLatestResponse, rate: $rate, calculatedValue: $calculatedValue, currencyType: $currencyType, calculatedType: $calculatedType, currencyValue: $currencyValue)';
   }
 
   @override
@@ -2171,9 +1929,7 @@ class _$CalculatorLoadedImpl
       ..add(DiagnosticsProperty('calculatedValue', calculatedValue))
       ..add(DiagnosticsProperty('currencyType', currencyType))
       ..add(DiagnosticsProperty('calculatedType', calculatedType))
-      ..add(DiagnosticsProperty('currencyValue', currencyValue))
-      ..add(DiagnosticsProperty('isMarked', isMarked))
-      ..add(DiagnosticsProperty('markedId', markedId));
+      ..add(DiagnosticsProperty('currencyValue', currencyValue));
   }
 
   @override
@@ -2191,24 +1947,12 @@ class _$CalculatorLoadedImpl
             (identical(other.calculatedType, calculatedType) ||
                 other.calculatedType == calculatedType) &&
             (identical(other.currencyValue, currencyValue) ||
-                other.currencyValue == currencyValue) &&
-            (identical(other.isMarked, isMarked) ||
-                other.isMarked == isMarked) &&
-            (identical(other.markedId, markedId) ||
-                other.markedId == markedId));
+                other.currencyValue == currencyValue));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      findLatestResponse,
-      rate,
-      calculatedValue,
-      currencyType,
-      calculatedType,
-      currencyValue,
-      isMarked,
-      markedId);
+  int get hashCode => Object.hash(runtimeType, findLatestResponse, rate,
+      calculatedValue, currencyType, calculatedType, currencyValue);
 
   /// Create a copy of CalculatorState
   /// with the given fields replaced by the non-null parameter values.
@@ -2229,13 +1973,11 @@ class _$CalculatorLoadedImpl
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)
+            String currencyValue)
         loaded,
   }) {
     return loaded(findLatestResponse, rate, calculatedValue, currencyType,
-        calculatedType, currencyValue, isMarked, markedId);
+        calculatedType, currencyValue);
   }
 
   @override
@@ -2248,13 +1990,11 @@ class _$CalculatorLoadedImpl
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)?
+            String currencyValue)?
         loaded,
   }) {
     return loaded?.call(findLatestResponse, rate, calculatedValue, currencyType,
-        calculatedType, currencyValue, isMarked, markedId);
+        calculatedType, currencyValue);
   }
 
   @override
@@ -2267,15 +2007,13 @@ class _$CalculatorLoadedImpl
             String calculatedValue,
             CurrencyType currencyType,
             CurrencyType calculatedType,
-            String currencyValue,
-            bool isMarked,
-            int? markedId)?
+            String currencyValue)?
         loaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
       return loaded(findLatestResponse, rate, calculatedValue, currencyType,
-          calculatedType, currencyValue, isMarked, markedId);
+          calculatedType, currencyValue);
     }
     return orElse();
   }
@@ -2319,9 +2057,7 @@ abstract class CalculatorLoaded implements CalculatorState {
       required final String calculatedValue,
       final CurrencyType currencyType,
       final CurrencyType calculatedType,
-      final String currencyValue,
-      final bool isMarked,
-      final int? markedId}) = _$CalculatorLoadedImpl;
+      final String currencyValue}) = _$CalculatorLoadedImpl;
 
   FindLatestResponse get findLatestResponse;
   double get rate;
@@ -2329,8 +2065,6 @@ abstract class CalculatorLoaded implements CalculatorState {
   CurrencyType get currencyType;
   CurrencyType get calculatedType;
   String get currencyValue;
-  bool get isMarked;
-  int? get markedId;
 
   /// Create a copy of CalculatorState
   /// with the given fields replaced by the non-null parameter values.

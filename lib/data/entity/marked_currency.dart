@@ -17,5 +17,6 @@ class MarkedCurrency {
   String calculatedCurrencyType;
   String currencyValue;
   String calculatedCurrencyValue;
+  @Property(type: PropertyType.date)
   DateTime date;
 }

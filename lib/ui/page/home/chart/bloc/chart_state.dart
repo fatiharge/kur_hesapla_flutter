@@ -1,6 +1,14 @@
 part of 'chart_bloc.dart';
 
-@immutable
-sealed class ChartState {}
+@freezed
+class ChartState with _$ChartState {
+  const factory ChartState.initial() = ChartInitial;
 
-final class ChartInitial extends ChartState {}
+  const factory ChartState.loaded({
+    required HistoricalPricesResponse historicalPricesResponse,
+    required Date startDate,
+    required Date endDate,
+    @Default(CurrencyType.USD) CurrencyType currencyType,
+    @Default(CurrencyType.EUR) CurrencyType secondCurrencyType,
+  }) = ChartLoaded;
+}

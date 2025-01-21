@@ -19,7 +19,7 @@ const lightColorSchema = ColorScheme(
   onError: Color(0xffffffff),
   errorContainer: Color(0xffffdad6),
   onErrorContainer: Color(0xff410002),
-  surface: Color(0xfff9f9ff),
+  surface: Color(0xfff9f9ff), // scafold bg color
   onSurface: Color(0xff191c20),
   onSurfaceVariant: Color(0xff44474e),
   outline: Color(0xff74777f),
@@ -47,4 +47,5 @@ const lightColorSchema = ColorScheme(
   surfaceContainer: Color(0xffededf4),
   surfaceContainerHigh: Color(0xffe7e8ee),
   surfaceContainerHighest: Color(0xffe2e2e9),
+
 );
